@@ -1,0 +1,169 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@layer base {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #E5E4E2;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: #E5E4E2;
+    font-family: var(--font-inter), sans-serif;
+    overflow-x: hidden;
+    selection-background-color: #D4AF37;
+    selection-color: #0a0a0a;
+  }
+}
+
+/*
+  Clearance for the iPhone home-indicator bar.
+
+  The fixed bottom navigation used this class name before anything defined it,
+  so on a notched phone its icons sat underneath the gesture bar. `env()`
+  resolves to 0 everywhere else, so this costs nothing on other devices.
+*/
+.safe-area-pb {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/*
+  The storefront is dark by default. The admin panel is a light surface, so it
+  opts back into light form controls and native widget colours.
+*/
+.admin-root {
+  color-scheme: light;
+}
+
+.admin-root ::selection {
+  background: #16161a;
+  color: #ffffff;
+}
+
+/* ---------------------------------------------------------------------------
+   Ambient hero effects.
+   These run for the whole time the hero is on screen, so they are restricted to
+   `opacity` and `transform` — the only two properties the compositor can
+   animate without a repaint.
+--------------------------------------------------------------------------- */
+.hero-glow {
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(211, 169, 93, 0.2) 0%,
+    rgba(15, 15, 18, 0.95) 55%,
+    rgba(10, 10, 12, 1) 100%
+  );
+}
+
+.hero-glow-bright {
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(211, 169, 93, 0.32) 0%,
+    rgba(15, 15, 18, 0.92) 50%,
+    rgba(10, 10, 12, 1) 100%
+  );
+  animation: heroPulse 4s ease-in-out infinite;
+}
+
+@keyframes heroPulse {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.hero-orb {
+  will-change: transform;
+}
+
+.hero-orb-a {
+  animation: orbDriftA 7s ease-in-out infinite;
+}
+
+.hero-orb-b {
+  animation: orbDriftB 8s ease-in-out infinite;
+}
+
+@keyframes orbDriftA {
+  0%, 100% { transform: translate3d(-15px, -25px, 0); }
+  50% { transform: translate3d(15px, 25px, 0); }
+}
+
+@keyframes orbDriftB {
+  0%, 100% { transform: translate3d(20px, 25px, 0); }
+  50% { transform: translate3d(-20px, -25px, 0); }
+}
+
+/* Marquees: compositor-driven, no JS on the main thread per frame. */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marqueeScroll var(--marquee-duration, 30s) linear infinite;
+}
+
+.marquee-track:hover,
+.marquee-track:focus-within {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Respect the OS-level motion preference across the whole site. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Scrollbar for Luxury Aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Luxury Glassmorphic Overlay Utilities */
+.glass-panel {
+  background: rgba(18, 18, 18, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 228, 226, 0.08);
+}
+
+.glass-nav {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #E5E4E2 0%, #D4AF37 50%, #C5A880 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

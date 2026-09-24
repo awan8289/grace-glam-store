@@ -1,0 +1,15 @@
+[
+  {
+    "id": "cus_c368c233-359",
+    "name": "Google Member",
+    "email": "member.google@gmail.com",
+    "phone": "",
+    "avatar": "GM",
+    "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+    "googleId": "google_6d656d6265722e676f6f676c",
+    "addresses": [],
+    "savedCards": [],
+    "createdAt": "2026-09-11T08:23:00.189Z",
+    "updatedAt": "2026-09-11T08:23:00.891Z"
+  }
+]
