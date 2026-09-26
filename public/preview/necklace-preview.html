@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grace & Glam — Live Necklace Text Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #0f0f11;
+      color: #f5f5f5;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .customizer-card {
+      background: #18181c;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 20px;
+      padding: 32px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .brand-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      letter-spacing: 4px;
+      color: #d4af37;
+    }
+    .brand-sub {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .preview-stage {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      border-radius: 14px;
+      background: radial-gradient(circle at 50% 40%, #2a2a30 0%, #111114 80%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
+    }
+
+    .chain-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .pendant-container {
+      position: relative;
+      z-index: 5;
+      text-align: center;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+
+    .pendant-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      letter-spacing: 2px;
+      display: inline-block;
+      user-select: none;
+      transform-origin: center center;
+    }
+
+    .finish-gold {
+      background: linear-gradient(135deg, #fff2cc 0%, #d4af37 50%, #aa7c11 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 14px rgba(212, 175, 55, 0.5));
+    }
+    .finish-silver {
+      background: linear-gradient(135deg, #ffffff 0%, #d0d0d5 50%, #888890 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 14px rgba(200, 200, 210, 0.5));
+    }
+    .finish-rose {
+      background: linear-gradient(135deg, #ffe0e5 0%, #e8989e 50%, #b76e79 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 14px rgba(232, 152, 158, 0.5));
+    }
+
+    .live-badge {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      font-size: 9px;
+      font-family: monospace;
+      color: #d4af37;
+      background: rgba(0,0,0,0.6);
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .controls {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .input-group label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #bbb;
+      margin-bottom: 6px;
+    }
+
+    .name-input {
+      width: 100%;
+      background: #222228;
+      border: 1px solid #33333d;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 15px;
+      color: #fff;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .name-input:focus {
+      border-color: #d4af37;
+      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+    }
+
+    .metal-swatches {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .swatch-btn {
+      background: #222228;
+      border: 1px solid #33333d;
+      border-radius: 10px;
+      padding: 10px;
+      color: #aaa;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .swatch-btn.active {
+      border-color: #d4af37;
+      background: rgba(212, 175, 55, 0.1);
+      color: #fff;
+    }
+    .color-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .add-btn {
+      margin-top: 8px;
+      width: 100%;
+      background: #d4af37;
+      color: #111;
+      border: none;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .add-btn:hover {
+      background: #e6c555;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="customizer-card">
+    <div class="brand-header">
+      <div class="brand-title">GRACE & GLAM</div>
+      <div class="brand-sub">Atelier Inscription Visualizer</div>
+    </div>
+
+    <div class="preview-stage" id="previewStage">
+      <svg class="chain-svg" viewBox="0 0 400 320">
+        <path id="chainPath" d="M 60,0 Q 200,175 340,0" fill="none" stroke="#d4af37" stroke-width="1.8" stroke-dasharray="3,3" opacity="0.8" />
+      </svg>
+
+      <div class="pendant-container" id="pendantContainer">
+        <span class="pendant-text finish-gold" id="pendantText">Grace</span>
+      </div>
+
+      <div class="live-badge" id="liveBadge">18K Gold Plated</div>
+    </div>
+
+    <div class="controls">
+      <div class="input-group">
+        <label>
+          <span>Inscription Name</span>
+          <span id="charCount">5/12</span>
+        </label>
+        <input type="text" id="nameInput" class="name-input" maxlength="12" value="Grace" placeholder="Enter your custom name..." autocomplete="off" />
+      </div>
+
+      <div class="input-group">
+        <label><span>Metal Finish</span></label>
+        <div class="metal-swatches">
+          <button class="swatch-btn active" data-finish="finish-gold" data-color="#d4af37" data-name="18K Gold Plated">
+            <span class="color-dot" style="background: #d4af37;"></span> Gold
+          </button>
+          <button class="swatch-btn" data-finish="finish-silver" data-color="#c0c0c0" data-name="Sterling Silver">
+            <span class="color-dot" style="background: #c0c0c0;"></span> Silver
+          </button>
+          <button class="swatch-btn" data-finish="finish-rose" data-color="#b76e79" data-name="Rose Gold">
+            <span class="color-dot" style="background: #b76e79;"></span> Rose
+          </button>
+        </div>
+      </div>
+
+      <button class="add-btn" id="addToCartBtn">Confirm Inscription & Add to Bag</button>
+    </div>
+  </div>
+
+  <script>
+    const nameInput = document.getElementById('nameInput');
+    const pendantText = document.getElementById('pendantText');
+    const pendantContainer = document.getElementById('pendantContainer');
+    const charCount = document.getElementById('charCount');
+    const liveBadge = document.getElementById('liveBadge');
+    const chainPath = document.getElementById('chainPath');
+    const swatchBtns = document.querySelectorAll('.swatch-btn');
+    const addToCartBtn = document.getElementById('addToCartBtn');
+
+    gsap.to(pendantContainer, {
+      y: 6,
+      rotation: 0.8,
+      duration: 2.2,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    });
+
+    nameInput.addEventListener('input', (e) => {
+      const val = e.target.value.trim();
+      charCount.textContent = `${e.target.value.length}/12`;
+
+      gsap.killTweensOf(pendantText);
+      gsap.timeline()
+        .to(pendantText, {
+          scale: 0.92,
+          opacity: 0.7,
+          duration: 0.08,
+          onComplete: () => {
+            pendantText.textContent = val || 'Your Name';
+          }
+        })
+        .to(pendantText, {
+          scale: 1,
+          opacity: 1,
+          duration: 0.18,
+          ease: 'back.out(2)'
+        });
+    });
+
+    swatchBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        swatchBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const finishClass = btn.getAttribute('data-finish');
+        const colorHex = btn.getAttribute('data-color');
+        const nameLabel = btn.getAttribute('data-name');
+
+        pendantText.className = `pendant-text ${finishClass}`;
+        liveBadge.textContent = nameLabel;
+
+        gsap.to(chainPath, {
+          attr: { stroke: colorHex },
+          duration: 0.4
+        });
+
+        gsap.fromTo(pendantText, { filter: 'brightness(1.8)' }, { filter: 'brightness(1)', duration: 0.5 });
+      });
+    });
+
+    addToCartBtn.addEventListener('click', () => {
+      const name = nameInput.value.trim() || 'Custom Name';
+      gsap.timeline()
+        .to(addToCartBtn, { scale: 0.95, duration: 0.1 })
+        .to(addToCartBtn, { scale: 1, duration: 0.1 })
+        .call(() => {
+          alert(`✨ Inscription "${name}" saved! Added to order.`);
+        });
+    });
+  </script>
+</body>
+</html>

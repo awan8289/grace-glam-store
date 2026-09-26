@@ -144,6 +144,7 @@ export interface PlaceOrderInput {
   shippingAddress: string;
   shippingDetails?: ShippingDetails;
   paymentMethod: string;
+  customText?: string;
 }
 
 function movementsFor(items: OrderItem[]): StockMovement[] {
@@ -187,6 +188,7 @@ export async function placeOrder(input: PlaceOrderInput): Promise<PlaceOrderResu
     estimatedDelivery,
     items: input.items,
     trackingSteps: appendStep([], 'Processing', 'Online Store'),
+    customText: input.customText,
     createdAt: now.toISOString(),
     updatedAt: now.toISOString(),
   };

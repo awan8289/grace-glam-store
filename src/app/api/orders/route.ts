@@ -7,6 +7,8 @@ import { getProduct } from '@/lib/products';
 import { formatPrice } from '@/lib/format';
 import { getVariantImages } from '@/types';
 import { OrderItem, OrderStatus } from '@/types/account';
+import { sendOrderConfirmationEmail } from '@/lib/email';
+import { pushOrderToCjDropshipping } from '@/lib/cj-dropshipping';
 
 export const dynamic = 'force-dynamic';
 
@@ -28,6 +30,7 @@ interface CartLine {
   variantId?: string;
   size?: string;
   quantity?: number;
+  customText?: string;
 }
 
 /**
@@ -74,6 +77,8 @@ export async function POST(request: NextRequest) {
     // Stock is NOT checked here on purpose. `reserveStock` inside placeOrder is
     // the single authoritative check-and-take; a check at this point would be
     // stale by the time the stock is actually taken.
+    const customText = line.customText ? String(line.customText).trim().slice(0, 50) : undefined;
+
     items.push({
       productId: product.id,
       variantId: variant?.id,
@@ -84,6 +89,7 @@ export async function POST(request: NextRequest) {
       image: getVariantImages(product, variant?.id)[0] ?? '/products/placeholder.webp',
       size: String(line.size ?? product.sizes[0] ?? 'One Size'),
       color: variant?.colorName ?? 'Default',
+      customText,
     });
   }
 
@@ -96,12 +102,12 @@ export async function POST(request: NextRequest) {
     return Response.json({ error: 'Add a delivery address first.' }, { status: 400 });
   }
 
+  const primaryCustomText = items.find((it) => it.customText)?.customText;
+
   const result = await placeOrder({
     customer,
     items,
     shippingAddress: `${address.street}, ${address.city}, ${address.state} ${address.zipCode}, ${address.country}`,
-    // Copied field by field, not referenced: the shopper may edit or delete this
-    // address later, and a dispatched parcel's destination must not change with it.
     shippingDetails: {
       label: address.label ?? '',
       fullName: address.fullName ?? customer.name,
@@ -113,13 +119,24 @@ export async function POST(request: NextRequest) {
       country: address.country,
     },
     paymentMethod: String(body.paymentMethod ?? 'Card').slice(0, 60),
+    customText: primaryCustomText,
   });
 
   if (!result.ok) {
-    // Sold out, colour gone, product unpublished — all recoverable by the
-    // shopper, so 409 rather than a server error.
     return Response.json({ error: result.error }, { status: 409 });
   }
+
+  // Trigger post-purchase automated email (background, non-blocking)
+  sendOrderConfirmationEmail({
+    to: customer.email,
+    order: result.order,
+    customText: primaryCustomText,
+  }).catch((err) => console.error('Order email error:', err));
+
+  // Trigger CJ Dropshipping order dispatch (background, non-blocking)
+  pushOrderToCjDropshipping(result.order, primaryCustomText).catch((err) =>
+    console.error('CJ Dropshipping push error:', err)
+  );
 
   // Stock changed, so the storefront's cached pages are now stale.
   revalidatePath('/', 'layout');

@@ -87,6 +87,8 @@ export interface OrderItem {
   image: string;
   size: string;
   color: string;
+  /** Custom engraved or inscribed text (e.g. name for custom necklace) */
+  customText?: string;
 }
 
 /**
@@ -140,6 +142,8 @@ export interface Order {
   trackingSteps: TrackingStep[];
   /** True once stock has been returned by a cancellation. */
   stockRestored?: boolean;
+  /** Consolidated custom text for custom items in this order */
+  customText?: string;
   createdAt: string;
   updatedAt: string;
 }
