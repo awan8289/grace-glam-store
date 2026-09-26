@@ -1,5 +1,5 @@
 import { randomInt } from 'node:crypto';
-import { createJsonStore } from '@/lib/json-store';
+import { createFirestoreStore } from '@/lib/firestore-store';
 import { applyStockMovements, reserveStock, StockMovement } from '@/lib/products';
 import { formatPrice } from '@/lib/format';
 import {
@@ -13,7 +13,7 @@ import {
   TrackingStep,
 } from '@/types/account';
 
-const orderStore = createJsonStore<Order>('orders.json');
+const orderStore = createFirestoreStore<Order>('orders');
 
 const CARRIER = 'Australia Post';
 

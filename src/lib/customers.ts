@@ -1,9 +1,9 @@
 import { randomUUID } from 'node:crypto';
-import { createJsonStore } from '@/lib/json-store';
+import { createFirestoreStore } from '@/lib/firestore-store';
 import { hashPassword, verifyPassword } from '@/lib/auth';
 import { Address, Customer, PublicCustomer, SavedCard } from '@/types/account';
 
-const customerStore = createJsonStore<Customer>('customers.json');
+const customerStore = createFirestoreStore<Customer>('customers');
 
 /**
  * Strips the password hash before anything leaves the server. Every route that

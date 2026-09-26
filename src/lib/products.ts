@@ -1,10 +1,10 @@
 import { Product, ProductStatus, ProductVariant, InventoryStats, getTotalStock } from '@/types';
 import { SEED_PRODUCTS } from '@/lib/seed';
 import { slugify } from '@/lib/format';
-import { createJsonStore } from '@/lib/json-store';
+import { createFirestoreStore } from '@/lib/firestore-store';
 
 /** Cached, write-serialised, atomically-written catalogue. */
-export const productStore = createJsonStore<Product>('products.json', SEED_PRODUCTS);
+export const productStore = createFirestoreStore<Product>('products', SEED_PRODUCTS);
 
 const readFile = productStore.read;
 

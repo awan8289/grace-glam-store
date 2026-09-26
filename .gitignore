@@ -46,3 +46,7 @@ next-env.d.ts
 
 # pre-optimisation image originals (kept locally, not shipped)
 /assets-original
+
+# Firebase service account keys (NEVER commit these)
+*-firebase-adminsdk-*.json
+firebase-service-account*.json

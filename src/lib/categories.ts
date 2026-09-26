@@ -1,14 +1,35 @@
-import { createJsonStore } from '@/lib/json-store';
+import { getDb } from '@/lib/firebase-admin';
 import { PRODUCT_CATEGORIES } from '@/lib/seed';
 import { productStore } from '@/lib/products';
 
 /**
- * The admin's editable list of categories.
- *
- * Seeded once from `PRODUCT_CATEGORIES` and authoritative from then on — the
- * constant in `seed.ts` is never consulted again, exactly like the product seed.
+ * Categories are stored in Firestore as documents: { id: "hijabs", name: "Hijabs" }
+ * The admin's editable list — seeded once from PRODUCT_CATEGORIES.
  */
-const categoryStore = createJsonStore<string>('categories.json', [...PRODUCT_CATEGORIES]);
+interface CategoryDoc { id: string; name: string; }
+
+function nameToId(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+async function readCategories(): Promise<string[]> {
+  const db = getDb();
+  const snap = await db.collection('categories').orderBy('name').get();
+  if (!snap.empty) return snap.docs.map(d => (d.data() as CategoryDoc).name);
+
+  // First run — seed from constants
+  const batch = db.batch();
+  const colRef = db.collection('categories');
+  PRODUCT_CATEGORIES.forEach(name => {
+    const id = nameToId(name);
+    batch.set(colRef.doc(id), { id, name });
+  });
+  await batch.commit();
+  return [...PRODUCT_CATEGORIES];
+}
+
+// Simple in-memory mutex so concurrent category mutations stay safe.
+let _queue: Promise<unknown> = Promise.resolve();
 
 const MAX_LENGTH = 60;
 
@@ -23,19 +44,14 @@ function sameName(a: string, b: string): boolean {
 
 /** Just the stored list — what the admin manages. */
 export async function listManagedCategories(): Promise<string[]> {
-  const categories = await categoryStore.read();
-  return [...categories].sort((a, b) => a.localeCompare(b));
+  return readCategories();
 }
 
 /**
  * The stored list plus any category a product still carries.
- *
- * A product's own category must never vanish from a filter or a dropdown just
- * because it is missing from the managed list — that is how a product becomes
- * unreachable in the shop while still being on sale.
  */
 export async function listAllCategories(): Promise<string[]> {
-  const [managed, products] = await Promise.all([categoryStore.read(), productStore.read()]);
+  const [managed, products] = await Promise.all([readCategories(), productStore.read()]);
   const inUse = products.map((product) => product.category).filter(Boolean);
   return [...new Set([...managed, ...inUse])].sort((a, b) => a.localeCompare(b));
 }
@@ -46,23 +62,26 @@ export async function addCategory(rawName: string): Promise<CategoryResult> {
   const name = clean(rawName);
   if (name.length < 2) return { ok: false, error: 'Category name is too short.' };
 
-  return categoryStore.mutate(async (categories) => {
-    if (categories.some((existing) => sameName(existing, name))) {
-      return { ok: false as const, error: `"${name}" already exists.` };
-    }
-
-    const next = [...categories, name];
-    await categoryStore.write(next);
-    return { ok: true as const, categories: next.sort((a, b) => a.localeCompare(b)) };
+  const result = await new Promise<CategoryResult>((resolve, reject) => {
+    _queue = _queue.then(async () => {
+      try {
+        const categories = await readCategories();
+        if (categories.some((existing) => sameName(existing, name))) {
+          resolve({ ok: false, error: `"${name}" already exists.` }); return;
+        }
+        const db = getDb();
+        const id = nameToId(name);
+        await db.collection('categories').doc(id).set({ id, name });
+        const next = [...categories, name].sort((a, b) => a.localeCompare(b));
+        resolve({ ok: true, categories: next });
+      } catch (e) { reject(e); }
+    }, async () => { resolve({ ok: false, error: 'Server error.' }); });
   });
+  return result;
 }
 
 /**
  * Removes a category, but refuses while products still sit in it.
- *
- * Deleting anyway would leave those products pointing at a category that no
- * longer appears in any picker — they stay on sale but drop out of the shop's
- * category filter, and the next admin to edit one silently reassigns it.
  */
 export async function deleteCategory(rawName: string): Promise<CategoryResult> {
   const name = clean(rawName);
@@ -77,13 +96,18 @@ export async function deleteCategory(rawName: string): Promise<CategoryResult> {
     };
   }
 
-  return categoryStore.mutate(async (categories) => {
-    const next = categories.filter((existing) => !sameName(existing, name));
-    if (next.length === categories.length) {
-      return { ok: false as const, error: `"${name}" was not found.` };
-    }
-
-    await categoryStore.write(next);
-    return { ok: true as const, categories: next.sort((a, b) => a.localeCompare(b)) };
+  const result = await new Promise<CategoryResult>((resolve, reject) => {
+    _queue = _queue.then(async () => {
+      try {
+        const categories = await readCategories();
+        const found = categories.find((existing) => sameName(existing, name));
+        if (!found) { resolve({ ok: false, error: `"${name}" was not found.` }); return; }
+        const db = getDb();
+        await db.collection('categories').doc(nameToId(found)).delete();
+        const next = categories.filter((c) => !sameName(c, name)).sort((a, b) => a.localeCompare(b));
+        resolve({ ok: true, categories: next });
+      } catch (e) { reject(e); }
+    }, async () => { resolve({ ok: false, error: 'Server error.' }); });
   });
+  return result;
 }
