@@ -44,8 +44,8 @@ const features = [
   },
   {
     id: 5,
-    title: "Premium Fabric",
-    desc: "Elegance that stays with you. Crafted with the finest materials for lasting comfort.",
+    title: "18K Gold & 5D Drills",
+    desc: "Crafted with certified 18K gold plated stainless steel and high-definition resin diamond drills for lasting brilliance.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
@@ -55,7 +55,7 @@ const features = [
   {
     id: 6,
     title: "Secure Payment",
-    desc: "Shop with confidence. Our secure gateway ensures your information is protected every step of the way.",
+    desc: "Shop with confidence. Encrypted checkout protects your transaction every step of the way.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
@@ -64,8 +64,8 @@ const features = [
   },
   {
     id: 7,
-    title: "Style Suggestion",
-    desc: "Not sure which fabric or length suits you? WhatsApp +61 494 794 408 or email sales@graceglam.com.au.",
+    title: "Personalization Guidance",
+    desc: "Questions about your pet photo or custom necklace inscription? WhatsApp +61 494 794 408 or email graceandglame.au@gmail.com.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
@@ -74,8 +74,8 @@ const features = [
   },
   {
     id: 8,
-    title: "Careful Packaging",
-    desc: "Folded and wrapped so it reaches you crease-free and ready to wear.",
+    title: "Keepsake Gift Packaging",
+    desc: "Delivered in signature keepsake gift boxes with velvet pouches, perfectly prepared for gifting.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 19.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0-2.625V7.5m-9 0h18v2.25H3V7.5Z" />
@@ -86,16 +86,16 @@ const features = [
 
 const EXPECTATIONS = [
   {
-    title: 'Shipping',
-    body: 'Orders are packed within 1\u20132 business days. Free standard shipping on orders over A$150 to Australia and New Zealand; A$9.95 flat below that. Every parcel is tracked.',
+    title: 'Bespoke Production & Shipping',
+    body: 'Custom necklaces and photo diamond painting kits are precision crafted within 2–4 business days. Free tracked shipping on orders over A$150 across Australia & New Zealand.',
   },
   {
-    title: 'Returns',
-    body: 'Thirty days to change your mind, provided the piece is unworn with its tags attached. Underscarves and hijab tape are final sale for hygiene reasons.',
+    title: '12-Hour Modification Window',
+    body: 'Changed your mind on spelling or want a different pet photo? Reply to your confirmation email within 12 hours of placing your order for instant updates.',
   },
   {
-    title: 'Honest descriptions',
-    body: 'Fabric, length and composition are listed on every product page \u2014 blends are named as blends. If a piece needs an underscarf to sit opaque, the page says so.',
+    title: 'Artisanal Quality Guarantee',
+    body: 'Diamond painting kits arrive with HD canvas, full toolkits, and 30% extra drills. Name necklaces are guaranteed tarnish-resistant, hypoallergenic, and crafted with genuine 18K gold plating.',
   },
 ];
 
@@ -122,10 +122,10 @@ export default function BrandStoryReviews() {
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-serif text-neutral-900 tracking-wide mb-6 leading-tight">
-            Where Elegance Is <span className="text-[#b8860b]">Beautifully Wrapped</span>
+            Where Memories Turn Into <span className="text-[#b8860b]">Timeless Treasures</span>
           </h2>
           <p className="text-gray-600 text-sm md:text-base leading-relaxed font-light">
-            Welcome to Grace &amp; Glam, a modern scarf brand created for women who appreciate timeless elegance, effortless style, and everyday comfort. Whether you wear your scarf as a hijab, a neck scarf, a shoulder wrap, or simply as a beautiful finishing touch to your outfit, we believe every woman should be able to style it in a way that feels uniquely hers.
+            Welcome to Grace &amp; Glam, an Australian bespoke atelier dedicated to celebrating your deepest connections. From custom 5D diamond paintings meticulously rendered from your pet&apos;s photo to personalized 18K gold engraved name necklaces, every piece is individually handcrafted to hold meaning that lasts forever.
           </p>
         </motion.div>
 

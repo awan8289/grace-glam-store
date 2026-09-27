@@ -18,13 +18,13 @@ const inter = Inter({
 });
 
 const DESCRIPTION =
-  'Australian modest fashion. Jersey and georgette hijabs, printed and silk scarves, pashminas, stoles and hijab accessories. Free shipping over A$150 to Australia and New Zealand.';
+  'Bespoke custom keepsakes & personalized gifts Australia. Handcrafted Custom Photo Pet Diamond Paintings, Personalised 18K Gold Name Necklaces, and custom engraved jewelry. Free express delivery Australia & New Zealand.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: `${SITE.name} | Hijabs, Scarves & Modest Fashion Australia`,
+    default: `${SITE.name} | Custom Photo Pet Diamond Painting & Personalised Gold Name Necklaces`,
     template: `%s | ${SITE.name}`,
   },
   description: DESCRIPTION,
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     locale: SITE.locale,
     url: SITE_URL,
-    title: `${SITE.name} | Hijabs, Scarves & Modest Fashion Australia`,
+    title: `${SITE.name} | Custom Photo Pet Diamond Painting & Personalised Gold Name Necklaces`,
     description: DESCRIPTION,
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE.name} | Hijabs, Scarves & Modest Fashion Australia`,
+    title: `${SITE.name} | Custom Photo Pet Diamond Painting & Personalised Gold Name Necklaces`,
     description: DESCRIPTION,
   },
 

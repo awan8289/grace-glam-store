@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import TheMaisonPortal from '@/components/maison/TheMaisonPortal';
 
 export const metadata: Metadata = {
-  title: 'Fabric & Craft — How We Choose Our Cloth',
+  title: 'The Atelier — Precision Laser Engraving & 5D Diamond Art',
   description:
-    'How Grace & Glam picks fabric: drape, opacity, colour hold and finish, checked before a roll is ordered — and why we name blends honestly.',
+    'Discover the Grace & Glam bespoke process: precision laser-cut 18K gold name pendants and custom photo pet diamond paintings crafted with museum-grade brilliance.',
   alternates: { canonical: '/atelier' },
 };
 

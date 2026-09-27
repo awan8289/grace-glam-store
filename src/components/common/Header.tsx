@@ -210,7 +210,7 @@ export default function Header() {
             <div className="relative hidden md:block w-56 lg:w-64">
               <input
                 type="text"
-                placeholder="I'm looking for..."
+                placeholder="Search necklaces, pet art..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onFocus={() => setIsSearchOpen(true)}
@@ -476,7 +476,7 @@ export default function Header() {
                 {cartItems.length === 0 ? (
                   <div className="text-center py-16 text-gray-500">
                     <p className="font-serif text-lg mb-2">Your shopping bag is empty</p>
-                    <p className="text-xs font-light mb-6">Discover our hijabs, scarves and everyday essentials.</p>
+                    <p className="text-xs font-light mb-6">Discover our custom name necklaces and pet diamond paintings.</p>
                     <Link
                       href="/shop"
                       onClick={() => closeCart()}

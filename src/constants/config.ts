@@ -2,14 +2,14 @@ import { BrandConfig } from '@/types';
 
 export const BRAND_CONFIG: BrandConfig = {
   name: 'GRACE & GLAM',
-  tagline: 'Elegance, Wrapped Your Way',
+  tagline: 'Bespoke Keepsakes & Personalized Jewelry',
   country: 'Australia',
   currency: 'AUD',
   currencySymbol: 'A$',
 };
 
 export const CONTACT_INFO = {
-  email: 'sales@graceglam.com.au',
+  email: 'graceandglame.au@gmail.com',
   phone: '+61494794408',
   phoneDisplay: '+61 494 794 408',
   whatsappUrl: 'https://wa.me/61494794408',
@@ -27,9 +27,9 @@ export const REVALIDATE_INTERVAL = {
 
 // Every entry must resolve to a real route
 export const NAV_LINKS = [
-  { name: 'Shop', href: '/shop' },
-  { name: 'Trending', href: '/shop?tag=trending' },
-  { name: 'New Arrivals', href: '/shop?tag=new-arrivals' },
+  { name: 'Shop All', href: '/shop' },
+  { name: 'Name Necklaces', href: '/shop?category=Personalised%20Necklaces' },
+  { name: 'Pet Diamond Art', href: '/shop?category=Pet%20Diamond%20Paintings' },
   { name: 'The Maison', href: '/maison' },
-  { name: 'Fabric & Craft', href: '/atelier' },
+  { name: 'Bespoke Atelier', href: '/atelier' },
 ];

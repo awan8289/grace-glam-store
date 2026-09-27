@@ -53,7 +53,7 @@ export default function Footer() {
             </div>
 
             <p className="text-sm text-gray-300 font-light leading-relaxed">
-              Questions about a fabric, a length, or an order already on its way? Email us and a person will answer.
+              Questions about custom necklace engravings, pet photo rendering, or an order on its way? Email us and our atelier team will answer.
             </p>
 
             <div className="space-y-3 text-sm text-gray-300 font-light">

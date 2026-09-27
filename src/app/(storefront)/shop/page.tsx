@@ -51,16 +51,16 @@ export async function generateMetadata({
   if (tag) {
     const label = TAG_LABELS[tag] ?? 'Shop';
     return {
-      title: `${label} — Modest Luxury Fashion Australia`,
-      description: `${label} at ${SITE.name}: hijabs, scarves, pashminas and stoles. Free shipping over A$150 to Australia and New Zealand.`,
+      title: `${label} — Personalised Gifts & Name Necklaces Australia`,
+      description: `${label} at ${SITE.name}: handcrafted custom photo pet diamond paintings, personalised 18K gold name necklaces, and bespoke keepsake jewelry. Free express delivery over A$150.`,
       alternates: { canonical: `/shop?tag=${tag}` },
     };
   }
 
   return {
-    title: 'Shop Hijabs, Scarves & Pashminas',
+    title: 'Shop Custom Pet Diamond Paintings & Personalised Name Necklaces',
     description:
-      'Browse the full Grace & Glam collection: jersey and georgette hijabs, printed and silk scarves, pashminas, stoles and hijab accessories. Free shipping over A$150.',
+      'Browse the Grace & Glam bespoke collection: custom photo pet diamond painting kits, personalized 18K gold name necklaces, and engraved keepsake jewelry. Free express shipping over A$150.',
     alternates: { canonical: '/shop' },
   };
 }

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function WhatsAppButton() {
   return (
     <motion.a
-      href="https://wa.me/61494794408?text=Hello%20Grace%20%26%20Glam!%20I%20have%20an%20inquiry%20regarding%20your%20scarf%20collection."
+      href="https://wa.me/61494794408?text=Hello%20Grace%20%26%20Glam!%20I%20have%20an%20inquiry%20regarding%20custom%20necklaces%20and%20personalized%20pet%20art."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp with Grace & Glam"

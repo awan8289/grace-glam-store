@@ -10,9 +10,15 @@ let _cachedToken: { token: string; expiresAt: number } | null = null;
 export async function getCjAccessToken(): Promise<string | null> {
   const email = process.env.CJ_API_EMAIL;
   const apiKey = process.env.CJ_API_KEY;
+  const password = process.env.CJ_PASSWORD || apiKey;
 
   if (!email || !apiKey) {
     return null;
+  }
+
+  // If apiKey has the token format directly, it can be used directly as well
+  if (apiKey.startsWith("CJ") && apiKey.includes("@api@")) {
+    // API key format
   }
 
   const now = Date.now();
@@ -24,7 +30,7 @@ export async function getCjAccessToken(): Promise<string | null> {
     const res = await fetch(`${CJ_BASE_URL}/authentication/getAccessToken`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password: apiKey }),
+      body: JSON.stringify({ email, apiKey }),
     });
 
     const data = await res.json();
@@ -32,9 +38,13 @@ export async function getCjAccessToken(): Promise<string | null> {
       const token = data.data.accessToken;
       _cachedToken = { token, expiresAt: now + 14 * 86400 * 1000 };
       return token;
+    } else {
+      // Fallback: Use API key directly if authorization header accepts it
+      return apiKey;
     }
   } catch (err) {
-    console.error("[CJ Dropshipping] Token fetch failed:", err);
+    console.error("[CJ Dropshipping] Token fetch failed, using API key:", err);
+    return apiKey;
   }
   return null;
 }
@@ -68,6 +78,7 @@ export async function pushOrderToCjDropshipping(order: Order, customText?: strin
       },
       body: JSON.stringify({
         orderNumber: order.id,
+        shippingCountry: "Australia",
         shippingCountryCode: "AU",
         shippingCustomerName: order.shippingDetails?.fullName || order.customerName,
         shippingAddress: order.shippingDetails?.street || order.shippingAddress,

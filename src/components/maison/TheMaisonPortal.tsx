@@ -59,85 +59,51 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
         </div>
 
         <p className={p}>
-          Welcome to Grace &amp; Glam, a modern scarf brand created for women who appreciate timeless
-          elegance, effortless style, and everyday comfort.
+          Welcome to Grace &amp; Glam, a premier Australian bespoke atelier dedicated to immortalizing your most meaningful moments and beloved companions.
         </p>
 
         <p className={p}>
-          We believe a scarf is more than just an accessory. It can express your personality,
-          complement your outfit, and add a touch of confidence to every look.
+          We believe personalized art and jewelry are more than decorative pieces &mdash; they are emotional anchors, celebrations of loved ones, and heirlooms that tell your personal story.
         </p>
 
         <p className={p}>
-          At Grace &amp; Glam, we carefully select scarves that combine style, versatility, comfort,
-          and timeless beauty. Our collection is designed for women who love to express themselves
-          through elegant and effortless fashion.
+          At Grace &amp; Glam, we specialize in two flagship bespoke creations: <strong>Custom Photo Pet Diamond Paintings</strong>, where your favourite pet photography is transformed into a sparkling 5D masterpiece, and <strong>Personalised 18K Gold Name Necklaces</strong>, precision laser-cut to showcase your name in timeless elegance.
         </p>
 
         <p className={p}>
-          Whether you wear your scarf as a hijab, a neck scarf, a shoulder wrap, or simply as a
-          beautiful finishing touch to your outfit, we believe every woman should be able to style
-          it in a way that feels uniquely hers.
+          Every order is treated as a unique commission. Our designers carefully review each custom name spelling and calibrate pet photo hues before our artisans begin engraving and canvas production.
         </p>
 
         <p className={p}>
-          Our goal is simple: to bring beautiful scarves into your everyday wardrobe while making
-          online shopping easy, enjoyable, and inspiring.
+          Our goal is simple: to deliver museum-grade personalized keepsakes that evoke joy every single day, backed by caring support and seamless delivery across Australia and New Zealand.
         </p>
 
         <div className="pt-6 border-t border-gray-100">
           <h3 className={h3}>Our Philosophy</h3>
           <p className="text-base font-serif italic text-[#d3a95d] mb-3">
-            Timeless. Elegant. Effortless.
+            Bespoke. Meaningful. Uncompromising.
           </p>
           <p className={p}>
-            We believe true elegance does not need to be complicated.
+            We believe true luxury is personal. A mass-produced piece can never hold the same heartbeat as a necklace bearing your child&apos;s name or diamond art capturing the eyes of a cherished pet.
           </p>
           <p className={p}>
-            Rather than focusing only on short-lived trends, we love styles, colours, and textures
-            that can remain beautiful season after season.
-          </p>
-          <p className={p}>
-            Every Grace &amp; Glam piece is chosen with attention to its appearance, feel, versatility,
-            and ability to complement different personal styles.
+            Every Grace &amp; Glam commission combines high-grade materials with personal sentiment, ensuring your keepsake endures for years to come.
           </p>
         </div>
 
         <div className="pt-6 border-t border-gray-100">
-          <h3 className={h3}>Designed for Every Woman</h3>
-          <p className={p}>
-            Grace &amp; Glam celebrates women with different styles, cultures, and ways of wearing
-            scarves.
-          </p>
-          <p className={p}>
-            Our collection is suitable for modest fashion, everyday styling, special occasions, work,
-            travel, and everything in between.
-          </p>
-          <p className={p}>
-            Whether you are looking for a sophisticated everyday scarf, a beautiful shawl, or a
-            versatile piece to complete your outfit, Grace &amp; Glam is here to help you find your
-            style.
-          </p>
-        </div>
-
-        <div className="pt-6 border-t border-gray-100">
-          <h3 className={h3}>Our Promise</h3>
-          <p className={p}>
-            At Grace &amp; Glam, we are committed to providing:
-          </p>
+          <h3 className={h3}>The Grace &amp; Glam Promise</h3>
           <ul className={ul}>
-            <li>Elegant and versatile scarf designs</li>
-            <li>Carefully selected fabrics and textures</li>
-            <li>Timeless and wearable colours</li>
-            <li>Quality-focused products</li>
-            <li>Clear and honest product information</li>
-            <li>Thoughtful customer service</li>
-            <li>A simple and enjoyable shopping experience</li>
+            <li>Certified 18K gold plated stainless steel &mdash; tarnish-resistant and hypoallergenic</li>
+            <li>5D high-definition resin diamond drills with vibrant colour matching</li>
+            <li>12-hour spelling &amp; photo modification grace period after checkout</li>
+            <li>Signature velvet gift packaging ready for presentation</li>
+            <li>Dedicated Australian client support via WhatsApp and Email</li>
           </ul>
 
           <div className="mt-8 p-6 bg-[#faf8f4] border border-[#e5d5b7] rounded-2xl text-center">
             <p className="font-serif text-xl md:text-2xl text-black font-medium">
-              Grace &amp; Glam &mdash; Wrap Yourself in Elegance.
+              Grace &amp; Glam &mdash; Elegance Made Personal.
             </p>
           </div>
         </div>
@@ -153,36 +119,34 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
           <span className="text-xs uppercase tracking-[0.25em] text-[#d3a95d] font-bold block mb-2">
             The Atelier
           </span>
-          <h2 className={h2}>Where Every Detail Matters</h2>
-          <p className={subtitle}>Fabric, Finishing &amp; Craftsmanship</p>
+          <h2 className={h2}>Crafting Your Keepsakes</h2>
+          <p className={subtitle}>Precision Laser Engraving &amp; 5D Diamond Rendition</p>
         </div>
 
         <p className={p}>
-          At Grace &amp; Glam, beauty is in the details.
+          At Grace &amp; Glam, precision craftsmanship bridges the gap between digital memory and tangible heirloom.
         </p>
 
-        <p className={p}>
-          From the texture and drape of the fabric to the colours and finishing touches, every piece
-          is selected with style, comfort, and versatility in mind.
-        </p>
+        <div className="space-y-4 pt-2">
+          <h3 className={h3}>1. Personalised 18K Gold Name Necklaces</h3>
+          <p className={p}>
+            Our custom necklaces are precision laser-cut from high-grade 316L surgical stainless steel and electroplated with certified 18K Gold, Sterling Silver, or Rose Gold. Every letter curve is polished by hand to prevent snagging and guarantee lasting shine that resists water, sweat, and daily wear.
+          </p>
+        </div>
 
-        <p className={p}>
-          We believe a beautiful scarf should not only look elegant but also feel comfortable and
-          effortless to wear.
-        </p>
-
-        <p className={p}>
-          Our collection is designed to give you the freedom to style your scarf your way &mdash;
-          whether you&apos;re creating a modest look, adding a sophisticated touch to an outfit, or
-          simply enjoying the beauty of a timeless accessory.
-        </p>
+        <div className="space-y-4 pt-4 border-t border-gray-100">
+          <h3 className={h3}>2. Custom Photo Pet Diamond Painting Kits</h3>
+          <p className={p}>
+            Translating a photograph into diamond art requires expert colour calibration. Our artists review your pet photo, remove distracting noise, and generate high-density 5D poured-glue canvases with DMC-coded resin drills. Every kit includes 30% extra diamonds, ergonomic drill pens, wax, and precision trays.
+          </p>
+        </div>
 
         <div className="mt-8 p-8 bg-[#faf8f4] border border-[#e5d5b7] rounded-2xl text-center space-y-2">
           <p className="text-xs uppercase tracking-[0.3em] text-[#d3a95d] font-bold">
-            The Art of Wearing
+            The Atelier Standard
           </p>
           <p className="font-serif text-2xl md:text-3xl text-black font-semibold">
-            Simply wrap. Style. Make it yours.
+            Handcrafted with love. Built to last forever.
           </p>
         </div>
       </div>
@@ -198,49 +162,49 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
             Our Distinction
           </span>
           <h2 className={h2}>Why Grace &amp; Glam?</h2>
-          <p className={subtitle}>Built on six pillars of quality, beauty, and care</p>
+          <p className={subtitle}>Built on six pillars of personalized craftsmanship and trust</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
           <div className="p-6 bg-[#faf8f4] border border-gray-200/80 rounded-2xl space-y-2">
-            <h4 className="font-serif text-xl font-bold text-black">1. Timeless Elegance</h4>
+            <h4 className="font-serif text-xl font-bold text-black">1. Custom Photo Rendition</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
-              We choose styles that can complement your wardrobe season after season.
+              Every pet diamond painting canvas is individually colour-calibrated to preserve pet facial details and expressive eyes.
             </p>
           </div>
 
           <div className="p-6 bg-[#faf8f4] border border-gray-200/80 rounded-2xl space-y-2">
-            <h4 className="font-serif text-xl font-bold text-black">2. Versatile Styling</h4>
+            <h4 className="font-serif text-xl font-bold text-black">2. Certified 18K Gold Plated</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Style your scarf as a hijab, neck scarf, shoulder wrap, or fashion accessory.
+              Hypoallergenic 316L stainless steel dipped in certified 18K gold &mdash; shower-safe, skin-safe, and tarnish-free.
             </p>
           </div>
 
           <div className="p-6 bg-[#faf8f4] border border-gray-200/80 rounded-2xl space-y-2">
-            <h4 className="font-serif text-xl font-bold text-black">3. Comfort Meets Style</h4>
+            <h4 className="font-serif text-xl font-bold text-black">3. 12-Hour Spelling Grace Window</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
-              We believe looking beautiful should never mean compromising on comfort.
+              Spotted a typo after paying? Reply to your order email within 12 hours for instant correction before engraving begins.
             </p>
           </div>
 
           <div className="p-6 bg-[#faf8f4] border border-gray-200/80 rounded-2xl space-y-2">
-            <h4 className="font-serif text-xl font-bold text-black">4. Carefully Selected</h4>
+            <h4 className="font-serif text-xl font-bold text-black">4. Complete Artist Toolkits</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
-              We pay attention to fabric, texture, colour, finishing, and overall presentation.
+              All diamond painting kits come with high-adhesion poured glue, premium trays, applicators, and 30% spare drills.
             </p>
           </div>
 
           <div className="p-6 bg-[#faf8f4] border border-gray-200/80 rounded-2xl space-y-2">
-            <h4 className="font-serif text-xl font-bold text-black">5. Made for Modern Women</h4>
+            <h4 className="font-serif text-xl font-bold text-black">5. Keepsake Gift Packaging</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Our collection brings together timeless elegance and contemporary fashion.
+              Every necklace arrives in a branded luxury gift box and velvet pouch, ready to bring tears of joy to whoever receives it.
             </p>
           </div>
 
           <div className="p-6 bg-[#faf8f4] border border-gray-200/80 rounded-2xl space-y-2">
-            <h4 className="font-serif text-xl font-bold text-black">6. A Beautiful Shopping Experience</h4>
+            <h4 className="font-serif text-xl font-bold text-black">6. Dedicated Sydney Support</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
-              From browsing our collection to receiving your order, we want every part of your Grace &amp; Glam experience to feel special.
+              Direct access to our Australian atelier team via WhatsApp (+61 494 794 408) for custom sizing and photo advice.
             </p>
           </div>
         </div>
@@ -324,11 +288,12 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
         </p>
 
         <div className="pt-4 border-t border-gray-100">
-          <h3 className={h3}>Change of Mind</h3>
+          <h3 className={h3}>Personalized &amp; Custom Items Policy</h3>
           <p className={p}>
-            If you are returning an item because you have changed your mind, eligibility will depend
-            on the conditions outlined in our Returns Policy (within 30 days of delivery, in unworn
-            original condition with tags).
+            Because personalized name necklaces and custom photo pet diamond paintings are custom-crafted specifically for you, they enter production promptly after our 12-hour modification grace period.
+          </p>
+          <p className={p}>
+            You may request spelling changes, pet photo replacements, or order cancellations within 12 hours of placing your order. Once bespoke production or laser-cutting begins, custom items cannot be cancelled or returned for change-of-mind.
           </p>
         </div>
 

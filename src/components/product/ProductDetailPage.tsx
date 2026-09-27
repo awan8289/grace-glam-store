@@ -8,19 +8,20 @@ import { formatPrice } from '@/lib/format';
 import { useCartStore } from '@/store/useCartStore';
 import { useFavoriteStore, formatFavItem } from '@/store/useFavoriteStore';
 import { useAuthStore } from '@/store/useAuthStore';
+import NecklaceCustomizer from '@/components/product/NecklaceCustomizer';
 
 const MARQUEE_FEATURES = [
-  { title: 'Free Shipping Over A$150', desc: 'Australia and New Zealand.' },
-  { title: '30-Day Returns', desc: 'Unworn, with tags still attached.' },
+  { title: 'Free Express Shipping Over A$150', desc: 'Australia and New Zealand.' },
+  { title: '12-Hour Modification Window', desc: 'Verify spelling & custom text.' },
   { title: 'Online Support', desc: '24 hours a day, 7 days a week.' },
   {
-    title: 'Premium Online Payment',
-    desc: 'Secure online prepayment required to confirm your exclusive order. (No COD)',
+    title: 'Secure Online Payment',
+    desc: 'Encrypted checkout protects your custom commission.',
   },
-  { title: 'Premium Fabric', desc: 'Elegance that stays with you. Crafted with the finest materials.' },
-  { title: 'Secure Payment', desc: 'Shop with confidence. Our secure gateway ensures protection.' },
-  { title: 'Style Suggestion', desc: 'Not sure which fabric suits you? WhatsApp +61 494 794 408 or email sales@graceglam.com.au.' },
-  { title: 'Careful Packaging', desc: 'Folded and wrapped so it arrives crease-free.' },
+  { title: '18K Gold Plated & 5D Drills', desc: 'Crafted with genuine precious finishes and HD resin drills.' },
+  { title: 'Custom Proof Verification', desc: 'Every custom name and pet photo is checked before production.' },
+  { title: 'Bespoke Guidance', desc: 'Questions on sizing or photo resolution? WhatsApp +61 494 794 408.' },
+  { title: 'Luxury Keepsake Box', desc: 'Delivered in signature gift boxes with velvet pouches.' },
 ];
 
 const DUPLICATED_MARQUEE = [...MARQUEE_FEATURES, ...MARQUEE_FEATURES];
@@ -236,6 +237,15 @@ export default function ProductDetailPage({
                 </span>
               ) : null}
             </div>
+
+            {/* Live Necklace Inscription Customizer */}
+            {(product.category.toLowerCase().includes('necklace') ||
+              product.name.toLowerCase().includes('necklace') ||
+              product.slug.includes('necklace')) && (
+              <div className="mb-8">
+                <NecklaceCustomizer product={product} />
+              </div>
+            )}
 
             <p className="text-gray-600 mb-8 leading-relaxed font-light">{product.description}</p>
 

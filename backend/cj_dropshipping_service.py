@@ -14,16 +14,17 @@ from typing import Optional, Dict, Any, List
 import requests
 
 # ── Configuration (Load from Environment Variables) ─────────────────────────
-CJ_API_EMAIL = os.getenv("CJ_API_EMAIL", "chatgptjpan@gmail.com")
-CJ_API_KEY = os.getenv("CJ_API_KEY", "")  # Generated from CJ Developer portal
+CJ_API_EMAIL = os.getenv("CJ_API_EMAIL", "graceandglame.au@gmail.com")
+CJ_API_KEY = os.getenv("CJ_API_KEY", "CJ5869406@api@b2331e683b6b438985ae579ef814b3eb")
+CJ_PASSWORD = os.getenv("CJ_PASSWORD", "mus@1234")
 CJ_BASE_URL = "https://developers.cjdropshipping.com/api2.0/v1"
 
 # SMTP Email Config
 SMTP_HOST = os.getenv("SMTP_HOST", "smtp.gmail.com")
 SMTP_PORT = int(os.getenv("SMTP_PORT", 465))
-SMTP_USER = os.getenv("SMTP_USER", "chatgptjpan@gmail.com")
+SMTP_USER = os.getenv("SMTP_USER", "graceandglame.au@gmail.com")
 SMTP_PASS = os.getenv("SMTP_PASS", "")  # Gmail App Password (16 characters)
-SMTP_FROM = os.getenv("SMTP_FROM", "Grace & Glam <no-reply@graceandglam.com.au>")
+SMTP_FROM = os.getenv("SMTP_FROM", "Grace & Glam <graceandglame.au@gmail.com>")
 
 # Global In-Memory Token Cache
 _token_cache = {
@@ -44,7 +45,7 @@ def get_cj_access_token() -> str:
     url = f"{CJ_BASE_URL}/authentication/getAccessToken"
     payload = {
         "email": CJ_API_EMAIL,
-        "password": CJ_API_KEY  # CJ API Key acts as authentication credential
+        "apiKey": CJ_API_KEY
     }
 
     try:
@@ -114,7 +115,8 @@ def push_order_to_cj(order: Dict[str, Any], custom_text: Optional[str] = None) -
 
     payload = {
         "orderNumber": order.get("id"),
-        "shippingCountryCode": country_code,
+        "shippingCountry": "Australia",
+        "shippingCountryCode": "AU",
         "shippingCustomerName": customer_name,
         "shippingAddress": street,
         "shippingCity": city,

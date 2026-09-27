@@ -6,11 +6,11 @@ import { Great_Vibes } from 'next/font/google';
 const greatVibes = Great_Vibes({ weight: '400', subsets: ['latin'] });
 
 const loadingTexts = [
-  "Discovering Elegance...",
-  "Curating Modest Fashion...",
-  "Preparing Your Wardrobe...",
-  "Unveiling the Finest Collection...",
-  "Make a style with us, Grace & Glam."
+  "Crafting Personalized Elegance...",
+  "Curating Bespoke Keepsakes...",
+  "Preparing Custom Inscriptions...",
+  "Unveiling Handcrafted Treasures...",
+  "Elegance Made Personal — Grace & Glam."
 ];
 
 // Floating orb positions (static so SSR-safe)

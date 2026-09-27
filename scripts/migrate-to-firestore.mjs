@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * One-time migration: pushes all existing JSON data into Firestore.
  * Run ONCE: node scripts/migrate-to-firestore.mjs
@@ -90,6 +90,12 @@ await batchWrite("orders", orders);
 // Categories (stored as strings — convert to { id, name } docs)
 const categoriesRaw = readJson("categories.json");
 if (categoriesRaw && Array.isArray(categoriesRaw)) {
+  // Clear any old categories
+  const existingCats = await db.collection("categories").get();
+  const deleteBatch = db.batch();
+  existingCats.docs.forEach((doc) => deleteBatch.delete(doc.ref));
+  await deleteBatch.commit();
+
   const catDocs = categoriesRaw.map(name => ({
     id: name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
     name,
