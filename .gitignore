@@ -50,3 +50,17 @@ next-env.d.ts
 # Firebase service account keys (NEVER commit these)
 *-firebase-adminsdk-*.json
 firebase-service-account*.json
+
+# Source archives and photo drops kept beside the project, never shipped.
+# GitHub rejects any push containing a file over 100 MB, and "New folder.rar"
+# alone is 287 MB — without these rules a plain `git add -A` makes the whole
+# push fail with a pre-receive hook error that names the file, not the cause.
+*.rar
+*.zip
+/Products
+
+# Throwaway screenshots from local checking.
+/mobile-*.png
+/hero-*.png
+/shop-*.png
+/check-*.png
