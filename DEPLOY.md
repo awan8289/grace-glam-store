@@ -34,38 +34,37 @@ your machine — the password itself is never stored anywhere.
 
 ## 2. Upload
 
-The zip ships your **11 real products** and their media, and **zero customers
-and zero orders** — a shop about to take real money should not open with test
-orders already in its books, inflating the revenue figure on the dashboard.
-
-
-Unzip and upload the contents to your app's directory, **or** push the same
-files to a Git repository and point Hostinger at it. Git is easier to update
-later.
-
-Do not upload `node_modules` or `.next` — Hostinger builds both itself.
+Push to the `main` branch of the Git repository and point Hostinger at it; every
+push redeploys. Do not upload `node_modules` or `.next` — Hostinger builds both.
+`build` must keep `--webpack` (see `AGENTS.md`).
 
 ---
 
 ## 3. Environment variables
 
-Set these three in Hostinger's environment-variables panel, then deploy.
+Set these in Hostinger's environment-variables panel, then deploy.
 
 | Variable | Value |
 |---|---|
 | `ADMIN_PASSWORD_HASH` | from step 1 |
 | `ADMIN_SESSION_SECRET` | from step 1 |
-| `NEXT_PUBLIC_SITE_URL` | `https://yourdomain.com.au` — your real domain, no trailing slash |
+| `NEXT_PUBLIC_SITE_URL` | `https://graceandglame.com` — no trailing slash |
+| `FIREBASE_PROJECT_ID` | Firebase service account |
+| `FIREBASE_CLIENT_EMAIL` | Firebase service account |
+| `FIREBASE_PRIVATE_KEY` | Firebase service account, keep the `\n` line breaks |
 | `GOOGLE_CLIENT_ID` | optional — see below |
 | `GOOGLE_CLIENT_SECRET` | optional — see below |
+
+Without the three `FIREBASE_*` variables the build still succeeds and pages
+return 200, but the shop shows "No products found." — that means the variables
+are missing, not that the build is broken.
 
 **`NEXT_PUBLIC_SITE_URL` must be set before the build runs.** Anything prefixed
 `NEXT_PUBLIC_` is baked into the compiled output, so setting it afterwards
 changes nothing until you rebuild. Get it wrong and every canonical URL,
 sitemap entry and social-share card points at the wrong domain.
 
-The app refuses to start without the first two, by design — a live admin panel
-with no password is worse than a site that will not boot.
+The app refuses to start without the admin variables, by design.
 
 ### "Continue with Google" (optional)
 
@@ -75,7 +74,7 @@ does not appear — everything else works. To switch it on:
 1. Google Cloud Console → **APIs & Services → Credentials → Create OAuth client
    ID**, application type **Web application**.
 2. Under **Authorised redirect URIs**, add — exactly, no trailing slash:
-   `https://yourdomain.com.au/api/account/google/callback`
+   `https://graceandglame.com/api/account/google/callback`
    Google compares this as a literal string, so add a separate line for every
    domain you serve from, including the temporary `*.hostingersite.com` one.
 3. Paste the generated Client ID and Client secret into the two variables.
@@ -101,48 +100,35 @@ Once it is up, check each of these:
 
 ---
 
-## 5. The one thing you must test before trusting it with real orders
+## 5. Firestore catalogue
 
-**This app stores its data on disk**, in two places:
+Products, customers and orders live in Firestore. The seed products in
+`data/products.json` are written only into an **empty** collection, so an
+already-populated Firestore does not pick up new seed products. To push the
+seed into an existing database, run `node scripts/migrate-to-firestore.mjs`
+locally with the `FIREBASE_*` values in a git-ignored `.env.local`.
 
-- `data/*.json` — products, customers, orders
-- `public/uploads/` — images and videos you upload in the admin panel
+After the first deploy, check persistence: add a product called
+`PERSISTENCE TEST` in the admin panel, redeploy, and confirm it is still there.
+Uploaded media in `public/uploads/` is on the container disk, which some hosts
+reset on every deploy — confirm that too before relying on uploads.
 
-That is fine on a normal server with a persistent disk. It is **not** fine on a
-host that rebuilds the container from source on every deploy — there, each
-deploy silently resets the site to whatever was in the zip. Orders placed by
-real customers would vanish.
-
-Test it, do not assume:
-
-1. Deploy.
-2. In the admin panel, add a product called `PERSISTENCE TEST`.
-3. Redeploy without changing anything.
-4. Look for the product.
-
-**Still there** → the disk persists. You are done; just take regular copies of
-the `data/` folder as a backup.
-
-**Gone** → the filesystem is ephemeral. Do not launch on it. The app needs a
-real database (Postgres, e.g. Supabase or Hostinger's own) and object storage
-for uploads before it can take a single real order.
+Edit the catalogue in `data/products.json`, then run `node scripts/sync-seed.mjs`
+to regenerate `src/lib/seed.ts`.
 
 ---
 
 ## Updating later
 
-Upload the changed files (or `git push`), then trigger a redeploy. Hostinger
-reruns `npm ci && npm run build`.
-
-**Never overwrite `data/` on the server with your local copy** — the live one
-holds real customer orders. Exclude it from every upload after the first.
+Push to `main` and Hostinger reruns the build. Orders and customers are in
+Firestore, so a redeploy does not touch them.
 
 ---
 
 ## Local development
 
 ```bash
-cp .env.example .env.local     # then fill in the three values
+# create .env.local (git-ignored) with the variables from step 3
 npm install
 npm run dev                    # http://localhost:3000
 ```

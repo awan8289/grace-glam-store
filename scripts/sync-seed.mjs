@@ -4,8 +4,6 @@ const products = JSON.parse(fs.readFileSync("data/products.json", "utf-8"));
 const categories = [
   "Personalised Necklaces",
   "Pet Diamond Paintings",
-  "Custom Photo Art",
-  "Name Jewelry",
   "Gift Keepsakes",
   "Pendant Necklaces",
   "Pet Jewellery",

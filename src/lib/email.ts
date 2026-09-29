@@ -35,7 +35,7 @@ function getTransporter() {
  */
 export async function sendOrderConfirmationEmail({ to, order, customText }: EmailOptions): Promise<boolean> {
   const transporter = getTransporter();
-  const from = process.env.SMTP_FROM || `"Grace & Glam" <${process.env.SMTP_USER || "no-reply@graceandglam.com.au"}>`;
+  const from = process.env.SMTP_FROM || `"Grace & Glam" <${process.env.SMTP_USER || "no-reply@graceandglame.com"}>`;
 
   const customTextNotice = customText
     ? `

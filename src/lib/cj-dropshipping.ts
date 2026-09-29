@@ -10,7 +10,6 @@ let _cachedToken: { token: string; expiresAt: number } | null = null;
 export async function getCjAccessToken(): Promise<string | null> {
   const email = process.env.CJ_API_EMAIL;
   const apiKey = process.env.CJ_API_KEY;
-  const password = process.env.CJ_PASSWORD || apiKey;
 
   if (!email || !apiKey) {
     return null;

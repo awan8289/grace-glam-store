@@ -100,7 +100,7 @@ export const SEED_PRODUCTS: Product[] = [
       "top-selling",
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T14:38:43.912Z",
     "compareAtPrice": 79
@@ -232,7 +232,7 @@ export const SEED_PRODUCTS: Product[] = [
       "top-selling",
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 89
@@ -351,7 +351,7 @@ export const SEED_PRODUCTS: Product[] = [
       "top-selling",
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 85
@@ -411,7 +411,7 @@ export const SEED_PRODUCTS: Product[] = [
       "top-selling",
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 79
@@ -547,7 +547,7 @@ export const SEED_PRODUCTS: Product[] = [
       "top-selling",
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 65
@@ -615,7 +615,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 89
@@ -663,7 +663,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 79
@@ -730,7 +730,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 95
@@ -807,7 +807,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 75
@@ -866,7 +866,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 110
@@ -922,7 +922,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 85
@@ -969,7 +969,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 95
@@ -1016,7 +1016,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 79
@@ -1142,7 +1142,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 75
@@ -1208,7 +1208,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 79
@@ -1243,7 +1243,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 99
@@ -1279,7 +1279,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 69
@@ -1314,7 +1314,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 95
@@ -1349,7 +1349,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 72
@@ -1386,7 +1386,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 105
@@ -1422,7 +1422,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 85
@@ -1458,7 +1458,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 82
@@ -1492,7 +1492,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 88
@@ -1526,7 +1526,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 55
@@ -1560,7 +1560,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 105
@@ -1594,7 +1594,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 59
@@ -1629,7 +1629,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 70
@@ -1664,7 +1664,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 80
@@ -1699,7 +1699,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 75
@@ -1734,7 +1734,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 78
@@ -1769,7 +1769,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 95
@@ -1804,7 +1804,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 85
@@ -1839,7 +1839,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 98
@@ -1873,7 +1873,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 82
@@ -1939,7 +1939,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 72
@@ -1972,7 +1972,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 48
@@ -2028,7 +2028,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 70
@@ -2064,7 +2064,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 42
@@ -2097,7 +2097,7 @@ export const SEED_PRODUCTS: Product[] = [
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 120
@@ -2841,7 +2841,7 @@ export const SEED_PRODUCTS: Product[] = [
     "slug": "leopard-print-leaf-pendant-necklace",
     "name": "Leopard Print Leaf Pendant Necklace",
     "subtitle": "Statement necklace with a gold leaf",
-    "description": "A leopard-print beaded necklace with a gold-plated leaf pendant. Stainless steel with an 18K gold-plated finish.",
+    "description": "A leopard-print beaded necklace with a gold-tone leaf pendant.",
     "price": 28.95,
     "category": "Pendant Necklaces",
     "images": [
@@ -2858,7 +2858,7 @@ export const SEED_PRODUCTS: Product[] = [
     "lowStockThreshold": 5,
     "sizes": [],
     "details": [
-      "Gold-plated stainless steel",
+      "Stainless steel with a gold-tone finish",
       "Chain 47 cm plus 5 cm extension",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
@@ -3647,7 +3647,7 @@ export const SEED_PRODUCTS: Product[] = [
     "slug": "rose-gold-drop-pendant-necklace",
     "name": "Rose Gold Drop Pendant Necklace",
     "subtitle": "A single crystal drop",
-    "description": "A slim rose gold-tone drop necklace with single crystals, made in stainless steel with an 18K rose gold-plated finish.",
+    "description": "A slim rose gold-tone drop necklace with single crystals, made in stainless steel with a rose gold-tone finish.",
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
@@ -3659,7 +3659,7 @@ export const SEED_PRODUCTS: Product[] = [
     "lowStockThreshold": 5,
     "sizes": [],
     "details": [
-      "Stainless steel with 18K rose gold-plated finish",
+      "Stainless steel with rose gold-tone finish",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
     ],
@@ -6709,8 +6709,6 @@ export const SEED_PRODUCTS: Product[] = [
 export const PRODUCT_CATEGORIES = [
   "Personalised Necklaces",
   "Pet Diamond Paintings",
-  "Custom Photo Art",
-  "Name Jewelry",
   "Gift Keepsakes",
   "Pendant Necklaces",
   "Pet Jewellery",

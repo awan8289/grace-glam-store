@@ -59,8 +59,8 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-gray-300 font-light">
               <div className="flex items-center gap-3 group">
                 <Mail className="w-4 h-4 text-[#d3a95d] shrink-0" />
-                <a href="mailto:sales@graceglam.com.au" className="hover:text-[#d3a95d] transition-colors">
-                  sales@graceglam.com.au
+                <a href="mailto:graceandglame.au@gmail.com" className="hover:text-[#d3a95d] transition-colors">
+                  graceandglame.au@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3 group">

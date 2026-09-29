@@ -470,7 +470,7 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
           </span>
           <h2 className={h2}>We’d Love to Hear From You</h2>
           <p className={subtitle}>
-            Have a question about a scarf, your order, shipping, returns, or styling?
+            Have a question about a necklace, your order, shipping, or returns?
           </p>
         </div>
 
@@ -482,10 +482,10 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
           <div className="p-6 bg-[#faf8f4] border border-gray-200 rounded-2xl">
             <p className="text-xs uppercase tracking-widest text-[#d3a95d] font-bold mb-1">Email</p>
             <a
-              href="mailto:sales@graceglam.com.au"
+              href="mailto:graceandglame.au@gmail.com"
               className="text-black font-semibold text-sm sm:text-base hover:text-[#d3a95d] transition-colors break-all"
             >
-              sales@graceglam.com.au
+              graceandglame.au@gmail.com
             </a>
           </div>
 

@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, Check, AlertCircle, ShoppingBag } from "lucide-react";
+import React, { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import { Sparkles, Check, ShoppingBag } from "lucide-react";
 import { useCartStore } from "@/store/useCartStore";
 import { Product } from "@/types";
 
@@ -19,7 +18,7 @@ const MATERIALS = [
   { id: "rose", name: "Rose Gold", hex: "#B76E79", fontGradient: "from-[#FAD0C4] via-[#E8989E] to-[#B76E79]", shadow: "rgba(183, 110, 121, 0.4)" },
 ];
 
-export default function NecklaceCustomizer({ product, baseImage, onAddToCart }: NecklaceCustomizerProps) {
+export default function NecklaceCustomizer({ product, onAddToCart }: NecklaceCustomizerProps) {
   const [nameText, setNameText] = useState("");
   const [selectedMaterial, setSelectedMaterial] = useState(MATERIALS[0]);
   const [chainLength, setChainLength] = useState("45cm (Standard)");

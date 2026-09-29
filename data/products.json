@@ -94,7 +94,7 @@
       "top-selling",
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T14:38:43.912Z",
     "compareAtPrice": 79
@@ -226,7 +226,7 @@
       "top-selling",
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 89
@@ -345,7 +345,7 @@
       "top-selling",
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 85
@@ -405,7 +405,7 @@
       "top-selling",
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 79
@@ -541,7 +541,7 @@
       "top-selling",
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 65
@@ -609,7 +609,7 @@
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 89
@@ -657,7 +657,7 @@
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 79
@@ -724,7 +724,7 @@
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 95
@@ -801,7 +801,7 @@
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 75
@@ -860,7 +860,7 @@
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 110
@@ -916,7 +916,7 @@
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 85
@@ -963,7 +963,7 @@
     "tags": [
       "trending"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 95
@@ -1010,7 +1010,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 79
@@ -1136,7 +1136,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 75
@@ -1202,7 +1202,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 79
@@ -1237,7 +1237,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 99
@@ -1273,7 +1273,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 69
@@ -1308,7 +1308,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 95
@@ -1343,7 +1343,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 72
@@ -1380,7 +1380,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 105
@@ -1416,7 +1416,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 85
@@ -1452,7 +1452,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 82
@@ -1486,7 +1486,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 88
@@ -1520,7 +1520,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 55
@@ -1554,7 +1554,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 105
@@ -1588,7 +1588,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 59
@@ -1623,7 +1623,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 70
@@ -1658,7 +1658,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 80
@@ -1693,7 +1693,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 75
@@ -1728,7 +1728,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 78
@@ -1763,7 +1763,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 95
@@ -1798,7 +1798,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 85
@@ -1833,7 +1833,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 98
@@ -1867,7 +1867,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 82
@@ -1933,7 +1933,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 72
@@ -1966,7 +1966,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 48
@@ -2022,7 +2022,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 70
@@ -2058,7 +2058,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 42
@@ -2091,7 +2091,7 @@
     "tags": [
       "new-arrivals"
     ],
-    "status": "active",
+    "status": "draft",
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 120
@@ -2835,7 +2835,7 @@
     "slug": "leopard-print-leaf-pendant-necklace",
     "name": "Leopard Print Leaf Pendant Necklace",
     "subtitle": "Statement necklace with a gold leaf",
-    "description": "A leopard-print beaded necklace with a gold-plated leaf pendant. Stainless steel with an 18K gold-plated finish.",
+    "description": "A leopard-print beaded necklace with a gold-tone leaf pendant.",
     "price": 28.95,
     "category": "Pendant Necklaces",
     "images": [
@@ -2852,7 +2852,7 @@
     "lowStockThreshold": 5,
     "sizes": [],
     "details": [
-      "Gold-plated stainless steel",
+      "Stainless steel with a gold-tone finish",
       "Chain 47 cm plus 5 cm extension",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
@@ -3641,7 +3641,7 @@
     "slug": "rose-gold-drop-pendant-necklace",
     "name": "Rose Gold Drop Pendant Necklace",
     "subtitle": "A single crystal drop",
-    "description": "A slim rose gold-tone drop necklace with single crystals, made in stainless steel with an 18K rose gold-plated finish.",
+    "description": "A slim rose gold-tone drop necklace with single crystals, made in stainless steel with a rose gold-tone finish.",
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
@@ -3653,7 +3653,7 @@
     "lowStockThreshold": 5,
     "sizes": [],
     "details": [
-      "Stainless steel with 18K rose gold-plated finish",
+      "Stainless steel with rose gold-tone finish",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
     ],

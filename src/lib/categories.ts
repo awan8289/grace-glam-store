@@ -3,7 +3,7 @@ import { PRODUCT_CATEGORIES } from '@/lib/seed';
 import { productStore } from '@/lib/products';
 
 /**
- * Categories are stored in Firestore as documents: { id: "hijabs", name: "Hijabs" }
+ * Categories are stored in Firestore as documents: { id: "pendant-necklaces", name: "Pendant Necklaces" }
  * The admin's editable list — seeded once from PRODUCT_CATEGORIES.
  */
 interface CategoryDoc { id: string; name: string; }

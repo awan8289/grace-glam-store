@@ -215,7 +215,7 @@ export default function ProductForm({
                   type="text"
                   value={form.name}
                   onChange={(event) => set('name', event.target.value)}
-                  placeholder="Signature Royal Abaya"
+                  placeholder="Personalised Gold Name Necklace"
                   required
                   className={fieldClass}
                 />
