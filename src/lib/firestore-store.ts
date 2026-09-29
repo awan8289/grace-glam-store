@@ -59,21 +59,26 @@ export function createFirestoreStore<T extends WithId>(
     const db     = getDb();
     const colRef = db.collection(collectionName);
 
-    // 1. Delete every existing document (chunked to stay under 500-op limit).
-    const existing = await colRef.get();
-    for (const batch_docs of chunkArray(existing.docs, 400)) {
-      const batch = db.batch();
-      batch_docs.forEach((doc) => batch.delete(doc.ref));
-      await batch.commit();
-    }
-
-    // 2. Write new documents (use item.id as the Firestore doc ID).
+    // 1. Write first (use item.id as the Firestore doc ID). If any document is
+    //    rejected this throws with nothing deleted. Deleting first meant one bad
+    //    field wiped the whole collection, and an empty collection is re-seeded
+    //    on the next read — so the failed save also silently discarded every
+    //    earlier admin edit, and for orders (no seed) it discarded all of them.
     for (const batch_items of chunkArray(items, 400)) {
       const batch = db.batch();
       batch_items.forEach((item) => {
-        const docRef = colRef.doc(item.id);
-        batch.set(docRef, item);
+        batch.set(colRef.doc(item.id), item);
       });
+      await batch.commit();
+    }
+
+    // 2. Only now remove documents that are no longer in the list.
+    const keep     = new Set(items.map((item) => item.id));
+    const existing = await colRef.get();
+    const stale    = existing.docs.filter((doc) => !keep.has(doc.id));
+    for (const batch_docs of chunkArray(stale, 400)) {
+      const batch = db.batch();
+      batch_docs.forEach((doc) => batch.delete(doc.ref));
       await batch.commit();
     }
   }

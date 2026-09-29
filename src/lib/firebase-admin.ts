@@ -36,5 +36,15 @@ export function getDb(): Firestore {
   if (_db) return _db;
   getApp();
   _db = getFirestore();
+  try {
+    // The app models optional fields as `undefined` (subtitle, compareAtPrice,
+    // a Google avatar...). Firestore rejects those by default, so any product
+    // saved without a subtitle failed. Skipping them stores the document without
+    // that key, which reads back as undefined again.
+    _db.settings({ ignoreUndefinedProperties: true });
+  } catch {
+    // settings() throws if this instance was already configured, e.g. after a
+    // dev hot reload re-evaluates this module. The first call already applied it.
+  }
   return _db;
 }
