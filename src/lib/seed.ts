@@ -2138,7 +2138,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-stainless-steel-script-pendant-necklace.webp"
+      "/products/cj-stainless-steel-script-pendant-necklace.webp",
+      "/products/cj-stainless-steel-script-pendant-necklace-2.webp",
+      "/products/cj-stainless-steel-script-pendant-necklace-3.webp",
+      "/products/cj-stainless-steel-script-pendant-necklace-4.webp",
+      "/products/cj-stainless-steel-script-pendant-necklace-5.webp",
+      "/products/cj-stainless-steel-script-pendant-necklace-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -2147,6 +2152,7 @@ export const SEED_PRODUCTS: Product[] = [
     "sizes": [],
     "details": [
       "Stainless steel",
+      "Chain length 41 to 50 cm",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
     ],
@@ -2155,7 +2161,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "42",
@@ -2221,7 +2227,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-hollow-circle-pendant-necklace.webp"
+      "/products/cj-hollow-circle-pendant-necklace.webp",
+      "/products/cj-hollow-circle-pendant-necklace-2.webp",
+      "/products/cj-hollow-circle-pendant-necklace-3.webp",
+      "/products/cj-hollow-circle-pendant-necklace-4.webp",
+      "/products/cj-hollow-circle-pendant-necklace-5.webp",
+      "/products/cj-hollow-circle-pendant-necklace-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -2237,7 +2248,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "44",
@@ -2275,7 +2286,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-vintage-star-pendant-cord-necklace.webp"
+      "/products/cj-vintage-star-pendant-cord-necklace.webp",
+      "/products/cj-vintage-star-pendant-cord-necklace-2.webp",
+      "/products/cj-vintage-star-pendant-cord-necklace-3.webp",
+      "/products/cj-vintage-star-pendant-cord-necklace-4.webp",
+      "/products/cj-vintage-star-pendant-cord-necklace-5.webp",
+      "/products/cj-vintage-star-pendant-cord-necklace-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -2291,7 +2307,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "46",
@@ -2302,7 +2318,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 20.95,
     "category": "Pet Jewellery",
     "images": [
-      "/products/cj-black-cat-and-moon-pendant-necklace.webp"
+      "/products/cj-black-cat-and-moon-pendant-necklace.webp",
+      "/products/cj-black-cat-and-moon-pendant-necklace-2.webp",
+      "/products/cj-black-cat-and-moon-pendant-necklace-3.webp",
+      "/products/cj-black-cat-and-moon-pendant-necklace-4.webp",
+      "/products/cj-black-cat-and-moon-pendant-necklace-5.webp",
+      "/products/cj-black-cat-and-moon-pendant-necklace-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -2318,7 +2339,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "47",
@@ -2329,7 +2350,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 22.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-lucky-compass-pendant-necklace.webp"
+      "/products/cj-lucky-compass-pendant-necklace.webp",
+      "/products/cj-lucky-compass-pendant-necklace-2.webp",
+      "/products/cj-lucky-compass-pendant-necklace-3.webp",
+      "/products/cj-lucky-compass-pendant-necklace-4.webp",
+      "/products/cj-lucky-compass-pendant-necklace-5.webp",
+      "/products/cj-lucky-compass-pendant-necklace-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -2346,7 +2372,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "48",
@@ -2357,7 +2383,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 26.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-teardrop-stone-pendant-necklace.webp"
+      "/products/cj-teardrop-stone-pendant-necklace.webp",
+      "/products/cj-teardrop-stone-pendant-necklace-2.webp",
+      "/products/cj-teardrop-stone-pendant-necklace-3.webp",
+      "/products/cj-teardrop-stone-pendant-necklace-4.webp",
+      "/products/cj-teardrop-stone-pendant-necklace-5.webp",
+      "/products/cj-teardrop-stone-pendant-necklace-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -2365,6 +2396,7 @@ export const SEED_PRODUCTS: Product[] = [
     "lowStockThreshold": 5,
     "sizes": [],
     "details": [
+      "Chain about 40.5 cm",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
     ],
@@ -2373,7 +2405,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "49",
@@ -2438,7 +2470,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-double-heart-zircon-necklace.webp"
+      "/products/cj-double-heart-zircon-necklace.webp",
+      "/products/cj-double-heart-zircon-necklace-2.webp",
+      "/products/cj-double-heart-zircon-necklace-3.webp",
+      "/products/cj-double-heart-zircon-necklace-4.webp",
+      "/products/cj-double-heart-zircon-necklace-5.webp",
+      "/products/cj-double-heart-zircon-necklace-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -2454,7 +2491,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "51",
@@ -2519,7 +2556,11 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-butterfly-charm-clavicle-necklace.webp"
+      "/products/cj-butterfly-charm-clavicle-necklace.webp",
+      "/products/cj-butterfly-charm-clavicle-necklace-2.webp",
+      "/products/cj-butterfly-charm-clavicle-necklace-3.webp",
+      "/products/cj-butterfly-charm-clavicle-necklace-4.webp",
+      "/products/cj-butterfly-charm-clavicle-necklace-5.webp"
     ],
     "video": null,
     "variants": [],
@@ -2527,6 +2568,7 @@ export const SEED_PRODUCTS: Product[] = [
     "lowStockThreshold": 5,
     "sizes": [],
     "details": [
+      "Chain 40 cm plus 5 cm extension",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
     ],
@@ -2535,7 +2577,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "54",
@@ -2546,7 +2588,10 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pet Jewellery",
     "images": [
-      "/products/cj-pet-lover-charm-keyring.webp"
+      "/products/cj-pet-lover-charm-keyring.webp",
+      "/products/cj-pet-lover-charm-keyring-2.webp",
+      "/products/cj-pet-lover-charm-keyring-3.webp",
+      "/products/cj-pet-lover-charm-keyring-4.webp"
     ],
     "video": null,
     "variants": [],
@@ -2562,7 +2607,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "55",
@@ -2681,7 +2726,11 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pet Jewellery",
     "images": [
-      "/products/cj-cartoon-dog-pendant-necklace.webp"
+      "/products/cj-cartoon-dog-pendant-necklace.webp",
+      "/products/cj-cartoon-dog-pendant-necklace-2.webp",
+      "/products/cj-cartoon-dog-pendant-necklace-3.webp",
+      "/products/cj-cartoon-dog-pendant-necklace-4.webp",
+      "/products/cj-cartoon-dog-pendant-necklace-5.webp"
     ],
     "video": null,
     "variants": [],
@@ -2689,6 +2738,7 @@ export const SEED_PRODUCTS: Product[] = [
     "lowStockThreshold": 5,
     "sizes": [],
     "details": [
+      "Pendant about 2 x 2.5 cm, chain 50 cm",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
     ],
@@ -2697,7 +2747,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "60",
@@ -2708,7 +2758,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pet Jewellery",
     "images": [
-      "/products/cj-pearl-bead-pet-collar-with-charms.webp"
+      "/products/cj-pearl-bead-pet-collar-with-charms.webp",
+      "/products/cj-pearl-bead-pet-collar-with-charms-2.webp",
+      "/products/cj-pearl-bead-pet-collar-with-charms-3.webp",
+      "/products/cj-pearl-bead-pet-collar-with-charms-4.webp",
+      "/products/cj-pearl-bead-pet-collar-with-charms-5.webp",
+      "/products/cj-pearl-bead-pet-collar-with-charms-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -2724,7 +2779,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "61",
@@ -2790,7 +2845,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 28.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-leopard-print-leaf-pendant-necklace.webp"
+      "/products/cj-leopard-print-leaf-pendant-necklace.webp",
+      "/products/cj-leopard-print-leaf-pendant-necklace-2.webp",
+      "/products/cj-leopard-print-leaf-pendant-necklace-3.webp",
+      "/products/cj-leopard-print-leaf-pendant-necklace-4.webp",
+      "/products/cj-leopard-print-leaf-pendant-necklace-5.webp",
+      "/products/cj-leopard-print-leaf-pendant-necklace-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -2799,6 +2859,7 @@ export const SEED_PRODUCTS: Product[] = [
     "sizes": [],
     "details": [
       "Gold-plated stainless steel",
+      "Chain 47 cm plus 5 cm extension",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
     ],
@@ -2807,7 +2868,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "64",
@@ -2981,7 +3042,11 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-rectangular-crystal-pendant-cord-necklace.webp"
+      "/products/cj-rectangular-crystal-pendant-cord-necklace.webp",
+      "/products/cj-rectangular-crystal-pendant-cord-necklace-2.webp",
+      "/products/cj-rectangular-crystal-pendant-cord-necklace-3.webp",
+      "/products/cj-rectangular-crystal-pendant-cord-necklace-4.webp",
+      "/products/cj-rectangular-crystal-pendant-cord-necklace-5.webp"
     ],
     "video": null,
     "variants": [],
@@ -2989,6 +3054,7 @@ export const SEED_PRODUCTS: Product[] = [
     "lowStockThreshold": 5,
     "sizes": [],
     "details": [
+      "Pendant about 7 x 24 mm, adjustable cord 45 to 65 cm",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
     ],
@@ -2997,7 +3063,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "71",
@@ -3089,7 +3155,10 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-round-crystal-bead-pendant-necklace.webp"
+      "/products/cj-round-crystal-bead-pendant-necklace.webp",
+      "/products/cj-round-crystal-bead-pendant-necklace-2.webp",
+      "/products/cj-round-crystal-bead-pendant-necklace-3.webp",
+      "/products/cj-round-crystal-bead-pendant-necklace-4.webp"
     ],
     "video": null,
     "variants": [],
@@ -3105,7 +3174,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "75",
@@ -3116,7 +3185,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-hollow-heart-layered-necklace.webp"
+      "/products/cj-hollow-heart-layered-necklace.webp",
+      "/products/cj-hollow-heart-layered-necklace-2.webp",
+      "/products/cj-hollow-heart-layered-necklace-3.webp",
+      "/products/cj-hollow-heart-layered-necklace-4.webp",
+      "/products/cj-hollow-heart-layered-necklace-5.webp",
+      "/products/cj-hollow-heart-layered-necklace-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -3132,7 +3206,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "76",
@@ -3143,7 +3217,10 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-geometric-butterfly-pendant-necklace.webp"
+      "/products/cj-geometric-butterfly-pendant-necklace.webp",
+      "/products/cj-geometric-butterfly-pendant-necklace-2.webp",
+      "/products/cj-geometric-butterfly-pendant-necklace-3.webp",
+      "/products/cj-geometric-butterfly-pendant-necklace-4.webp"
     ],
     "video": null,
     "variants": [],
@@ -3159,7 +3236,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "77",
@@ -3170,7 +3247,10 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Gift Keepsakes",
     "images": [
-      "/products/cj-constellation-moon-pendant-necklace.webp"
+      "/products/cj-constellation-moon-pendant-necklace.webp",
+      "/products/cj-constellation-moon-pendant-necklace-2.webp",
+      "/products/cj-constellation-moon-pendant-necklace-3.webp",
+      "/products/cj-constellation-moon-pendant-necklace-4.webp"
     ],
     "video": null,
     "variants": [],
@@ -3178,6 +3258,8 @@ export const SEED_PRODUCTS: Product[] = [
     "lowStockThreshold": 5,
     "sizes": [],
     "details": [
+      "Chain 60 cm, crescent moon 2.8 cm across",
+      "Glows in the dark after light exposure",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
     ],
@@ -3186,7 +3268,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "78",
@@ -3252,7 +3334,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pet Jewellery",
     "images": [
-      "/products/cj-cartoon-dog-and-cat-pendant-necklaces.webp"
+      "/products/cj-cartoon-dog-and-cat-pendant-necklaces.webp",
+      "/products/cj-cartoon-dog-and-cat-pendant-necklaces-2.webp",
+      "/products/cj-cartoon-dog-and-cat-pendant-necklaces-3.webp",
+      "/products/cj-cartoon-dog-and-cat-pendant-necklaces-4.webp",
+      "/products/cj-cartoon-dog-and-cat-pendant-necklaces-5.webp",
+      "/products/cj-cartoon-dog-and-cat-pendant-necklaces-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -3268,7 +3355,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "81",
@@ -3279,7 +3366,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-crystal-sea-turtle-pendant-necklace.webp"
+      "/products/cj-crystal-sea-turtle-pendant-necklace.webp",
+      "/products/cj-crystal-sea-turtle-pendant-necklace-2.webp",
+      "/products/cj-crystal-sea-turtle-pendant-necklace-3.webp",
+      "/products/cj-crystal-sea-turtle-pendant-necklace-4.webp",
+      "/products/cj-crystal-sea-turtle-pendant-necklace-5.webp",
+      "/products/cj-crystal-sea-turtle-pendant-necklace-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -3287,6 +3379,7 @@ export const SEED_PRODUCTS: Product[] = [
     "lowStockThreshold": 5,
     "sizes": [],
     "details": [
+      "Turtle pendant about 3 cm, chain about 45 cm",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
     ],
@@ -3295,7 +3388,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "82",
@@ -3306,7 +3399,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pet Jewellery",
     "images": [
-      "/products/cj-rhinestone-cat-pendant-necklace.webp"
+      "/products/cj-rhinestone-cat-pendant-necklace.webp",
+      "/products/cj-rhinestone-cat-pendant-necklace-2.webp",
+      "/products/cj-rhinestone-cat-pendant-necklace-3.webp",
+      "/products/cj-rhinestone-cat-pendant-necklace-4.webp",
+      "/products/cj-rhinestone-cat-pendant-necklace-5.webp",
+      "/products/cj-rhinestone-cat-pendant-necklace-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -3322,7 +3420,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "83",
@@ -3608,7 +3706,11 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-geometric-ellipse-pendant-necklace.webp"
+      "/products/cj-geometric-ellipse-pendant-necklace.webp",
+      "/products/cj-geometric-ellipse-pendant-necklace-2.webp",
+      "/products/cj-geometric-ellipse-pendant-necklace-3.webp",
+      "/products/cj-geometric-ellipse-pendant-necklace-4.webp",
+      "/products/cj-geometric-ellipse-pendant-necklace-5.webp"
     ],
     "video": null,
     "variants": [],
@@ -3616,6 +3718,7 @@ export const SEED_PRODUCTS: Product[] = [
     "lowStockThreshold": 5,
     "sizes": [],
     "details": [
+      "Chain 41 cm plus 5 cm extension",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
     ],
@@ -3624,7 +3727,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "92",
@@ -3662,7 +3765,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 28.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-puffy-heart-cord-necklace-gold-tone.webp"
+      "/products/cj-puffy-heart-cord-necklace-gold-tone.webp",
+      "/products/cj-puffy-heart-cord-necklace-gold-tone-2.webp",
+      "/products/cj-puffy-heart-cord-necklace-gold-tone-3.webp",
+      "/products/cj-puffy-heart-cord-necklace-gold-tone-4.webp",
+      "/products/cj-puffy-heart-cord-necklace-gold-tone-5.webp",
+      "/products/cj-puffy-heart-cord-necklace-gold-tone-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -3670,6 +3778,7 @@ export const SEED_PRODUCTS: Product[] = [
     "lowStockThreshold": 5,
     "sizes": [],
     "details": [
+      "Cord length 68 cm",
       "Ships as pictured. Not custom-made",
       "Gift-ready and easy to wrap"
     ],
@@ -3678,7 +3787,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "94",
@@ -3878,7 +3987,12 @@ export const SEED_PRODUCTS: Product[] = [
     "price": 19.95,
     "category": "Pendant Necklaces",
     "images": [
-      "/products/cj-letter-and-heart-double-layer-necklace.webp"
+      "/products/cj-letter-and-heart-double-layer-necklace.webp",
+      "/products/cj-letter-and-heart-double-layer-necklace-2.webp",
+      "/products/cj-letter-and-heart-double-layer-necklace-3.webp",
+      "/products/cj-letter-and-heart-double-layer-necklace-4.webp",
+      "/products/cj-letter-and-heart-double-layer-necklace-5.webp",
+      "/products/cj-letter-and-heart-double-layer-necklace-6.webp"
     ],
     "video": null,
     "variants": [],
@@ -3894,7 +4008,7 @@ export const SEED_PRODUCTS: Product[] = [
     ],
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-09-30T00:00:00.000Z"
+    "updatedAt": "2026-09-30T12:00:00.000Z"
   },
   {
     "id": "99",
