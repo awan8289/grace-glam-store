@@ -3916,5 +3916,2672 @@
     "status": "active",
     "createdAt": "2026-09-30T00:00:00.000Z",
     "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "100",
+    "slug": "layered-heart-and-star-choker-necklace",
+    "name": "Layered Heart and Star Choker Necklace",
+    "subtitle": "Layered chains, heart pendant",
+    "description": "A layered choker with a polished heart pendant and small moon and star accents. Worn short at the collar, it stacks neatly with a longer chain.",
+    "price": 23.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-layered-heart-and-star-choker-necklace.webp",
+      "/products/cj-layered-heart-and-star-choker-necklace-2.webp",
+      "/products/cj-layered-heart-and-star-choker-necklace-3.webp",
+      "/products/cj-layered-heart-and-star-choker-necklace-4.webp",
+      "/products/cj-layered-heart-and-star-choker-necklace-5.webp",
+      "/products/cj-layered-heart-and-star-choker-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: copper",
+      "Chain length: 41 to 50 cm",
+      "Chain style: O-ring links",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "101",
+    "slug": "dancing-heart-rhinestone-necklace",
+    "name": "Dancing Heart Rhinestone Necklace",
+    "subtitle": "Sparkling heart pendant",
+    "description": "A heart-shaped pendant set with rhinestones on a fine clavicle chain. Choose the metal tone that suits your look. A pretty, easy gift for Valentine's Day or a birthday.",
+    "price": 19.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-dancing-heart-rhinestone-necklace.webp",
+      "/products/cj-dancing-heart-rhinestone-necklace-2.webp",
+      "/products/cj-dancing-heart-rhinestone-necklace-3.webp",
+      "/products/cj-dancing-heart-rhinestone-necklace-4.webp",
+      "/products/cj-dancing-heart-rhinestone-necklace-5.webp",
+      "/products/cj-dancing-heart-rhinestone-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-101-blue",
+        "colorName": "Blue",
+        "hex": "#3b6fd4",
+        "sku": "GG-101-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-dancing-heart-rhinestone-necklace-3.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace-2.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace-4.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace-5.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-101-gold",
+        "colorName": "Gold",
+        "hex": "#d4af37",
+        "sku": "GG-101-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-dancing-heart-rhinestone-necklace-4.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace-2.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace-3.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace-5.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-101-silver",
+        "colorName": "Silver",
+        "hex": "#c0c0c0",
+        "sku": "GG-101-03",
+        "stock": 50,
+        "images": [
+          "/products/cj-dancing-heart-rhinestone-necklace-5.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace-2.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace-3.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace-4.webp",
+          "/products/cj-dancing-heart-rhinestone-necklace-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Finish: electroplated",
+      "Stone: rhinestones",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "102",
+    "slug": "heart-curb-chain-necklace",
+    "name": "Heart Curb Chain Necklace",
+    "subtitle": "Everyday chain with a small heart",
+    "description": "A curb-style chain with a small heart at the centre, sitting right at the collarbone. Simple enough to wear every day.",
+    "price": 24.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-heart-curb-chain-necklace.webp",
+      "/products/cj-heart-curb-chain-necklace-2.webp",
+      "/products/cj-heart-curb-chain-necklace-3.webp",
+      "/products/cj-heart-curb-chain-necklace-4.webp",
+      "/products/cj-heart-curb-chain-necklace-5.webp",
+      "/products/cj-heart-curb-chain-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Chain style: curb",
+      "Chain length: up to 50 cm",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "103",
+    "slug": "double-layer-pearl-and-heart-necklace",
+    "name": "Double Layer Pearl and Heart Necklace",
+    "subtitle": "Two chains, tiny heart charm",
+    "description": "A two-layer chain with pearl-style beads and a small gold-tone heart. The layers are already set, so it looks styled without any effort.",
+    "price": 19.95,
+    "category": "Pearl Necklaces",
+    "images": [
+      "/products/cj-double-layer-pearl-and-heart-necklace.webp",
+      "/products/cj-double-layer-pearl-and-heart-necklace-2.webp",
+      "/products/cj-double-layer-pearl-and-heart-necklace-3.webp",
+      "/products/cj-double-layer-pearl-and-heart-necklace-4.webp",
+      "/products/cj-double-layer-pearl-and-heart-necklace-5.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy",
+      "Finish: electroplated, gold tone",
+      "Chain length: 31 to 40 cm",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "104",
+    "slug": "cross-and-heart-zircon-necklace",
+    "name": "Cross and Heart Zircon Necklace",
+    "subtitle": "Cross pendant set with zircon",
+    "description": "A cross pendant with a heart ring and zircon detail, in gold or silver tone. A quiet, meaningful piece for a birthday or a gift of faith.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-cross-and-heart-zircon-necklace.webp",
+      "/products/cj-cross-and-heart-zircon-necklace-2.webp",
+      "/products/cj-cross-and-heart-zircon-necklace-3.webp",
+      "/products/cj-cross-and-heart-zircon-necklace-4.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-104-gold",
+        "colorName": "Gold",
+        "hex": "#d4af37",
+        "sku": "GG-104-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-cross-and-heart-zircon-necklace-2.webp",
+          "/products/cj-cross-and-heart-zircon-necklace.webp",
+          "/products/cj-cross-and-heart-zircon-necklace-3.webp",
+          "/products/cj-cross-and-heart-zircon-necklace-4.webp"
+        ]
+      },
+      {
+        "id": "v-104-silver",
+        "colorName": "Silver",
+        "hex": "#c0c0c0",
+        "sku": "GG-104-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-cross-and-heart-zircon-necklace-3.webp",
+          "/products/cj-cross-and-heart-zircon-necklace.webp",
+          "/products/cj-cross-and-heart-zircon-necklace-2.webp",
+          "/products/cj-cross-and-heart-zircon-necklace-4.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: titanium steel",
+      "Finish: electroplated",
+      "Chain length: 41 to 50 cm",
+      "Chain style: O-ring links",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "105",
+    "slug": "butterfly-heart-rhinestone-necklace",
+    "name": "Butterfly Heart Rhinestone Necklace",
+    "subtitle": "Hollow heart with butterflies",
+    "description": "A hollow heart pendant with butterflies and rhinestones, engraved with a message of love. Available in three colours.",
+    "price": 19.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-butterfly-heart-rhinestone-necklace.webp",
+      "/products/cj-butterfly-heart-rhinestone-necklace-2.webp",
+      "/products/cj-butterfly-heart-rhinestone-necklace-3.webp",
+      "/products/cj-butterfly-heart-rhinestone-necklace-4.webp",
+      "/products/cj-butterfly-heart-rhinestone-necklace-5.webp",
+      "/products/cj-butterfly-heart-rhinestone-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-105-pink",
+        "colorName": "Pink",
+        "hex": "#f4a6c0",
+        "sku": "GG-105-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-butterfly-heart-rhinestone-necklace-4.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace-2.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace-3.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace-5.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-105-purple",
+        "colorName": "Purple",
+        "hex": "#8e5bd0",
+        "sku": "GG-105-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-butterfly-heart-rhinestone-necklace-5.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace-2.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace-3.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace-4.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-105-white",
+        "colorName": "White",
+        "hex": "#f5f5f5",
+        "sku": "GG-105-03",
+        "stock": 50,
+        "images": [
+          "/products/cj-butterfly-heart-rhinestone-necklace-6.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace-2.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace-3.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace-4.webp",
+          "/products/cj-butterfly-heart-rhinestone-necklace-5.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy",
+      "Finish: electroplated",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "106",
+    "slug": "gold-tone-butterfly-pendant-necklace",
+    "name": "Gold-Tone Butterfly Pendant Necklace",
+    "subtitle": "Two small butterflies at the collar",
+    "description": "A delicate necklace with a pair of small butterflies in gold or steel tone. Light enough to wear all day and to layer.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-gold-tone-butterfly-pendant-necklace.webp",
+      "/products/cj-gold-tone-butterfly-pendant-necklace-2.webp",
+      "/products/cj-gold-tone-butterfly-pendant-necklace-3.webp",
+      "/products/cj-gold-tone-butterfly-pendant-necklace-4.webp",
+      "/products/cj-gold-tone-butterfly-pendant-necklace-5.webp",
+      "/products/cj-gold-tone-butterfly-pendant-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-106-gold",
+        "colorName": "Gold",
+        "hex": "#d4af37",
+        "sku": "GG-106-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-gold-tone-butterfly-pendant-necklace-2.webp",
+          "/products/cj-gold-tone-butterfly-pendant-necklace.webp",
+          "/products/cj-gold-tone-butterfly-pendant-necklace-3.webp",
+          "/products/cj-gold-tone-butterfly-pendant-necklace-4.webp",
+          "/products/cj-gold-tone-butterfly-pendant-necklace-5.webp",
+          "/products/cj-gold-tone-butterfly-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-106-steel",
+        "colorName": "Steel",
+        "hex": "#c0c0c0",
+        "sku": "GG-106-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-gold-tone-butterfly-pendant-necklace-3.webp",
+          "/products/cj-gold-tone-butterfly-pendant-necklace.webp",
+          "/products/cj-gold-tone-butterfly-pendant-necklace-2.webp",
+          "/products/cj-gold-tone-butterfly-pendant-necklace-4.webp",
+          "/products/cj-gold-tone-butterfly-pendant-necklace-5.webp",
+          "/products/cj-gold-tone-butterfly-pendant-necklace-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: stainless steel",
+      "Chain style: O-ring links",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "top-selling"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "107",
+    "slug": "coloured-cross-pendant-necklace",
+    "name": "Coloured Cross Pendant Necklace",
+    "subtitle": "Slim cross in four colours",
+    "description": "A slim cross pendant on a chunky chain, in blue, green, pink or orange with a gold or silver tone. Works as a unisex gift.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-coloured-cross-pendant-necklace.webp",
+      "/products/cj-coloured-cross-pendant-necklace-2.webp",
+      "/products/cj-coloured-cross-pendant-necklace-3.webp",
+      "/products/cj-coloured-cross-pendant-necklace-4.webp",
+      "/products/cj-coloured-cross-pendant-necklace-5.webp",
+      "/products/cj-coloured-cross-pendant-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-107-pink-gold-tone",
+        "colorName": "Pink, Gold Tone",
+        "hex": "#f4a6c0",
+        "sku": "GG-107-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-coloured-cross-pendant-necklace-2.webp",
+          "/products/cj-coloured-cross-pendant-necklace.webp",
+          "/products/cj-coloured-cross-pendant-necklace-3.webp",
+          "/products/cj-coloured-cross-pendant-necklace-4.webp",
+          "/products/cj-coloured-cross-pendant-necklace-5.webp",
+          "/products/cj-coloured-cross-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-107-pink-silver-tone",
+        "colorName": "Pink, Silver Tone",
+        "hex": "#e8b7cc",
+        "sku": "GG-107-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-coloured-cross-pendant-necklace-7.webp",
+          "/products/cj-coloured-cross-pendant-necklace.webp",
+          "/products/cj-coloured-cross-pendant-necklace-2.webp",
+          "/products/cj-coloured-cross-pendant-necklace-3.webp",
+          "/products/cj-coloured-cross-pendant-necklace-4.webp",
+          "/products/cj-coloured-cross-pendant-necklace-5.webp",
+          "/products/cj-coloured-cross-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-107-blue-gold-tone",
+        "colorName": "Blue, Gold Tone",
+        "hex": "#3b6fd4",
+        "sku": "GG-107-03",
+        "stock": 50,
+        "images": [
+          "/products/cj-coloured-cross-pendant-necklace-8.webp",
+          "/products/cj-coloured-cross-pendant-necklace.webp",
+          "/products/cj-coloured-cross-pendant-necklace-2.webp",
+          "/products/cj-coloured-cross-pendant-necklace-3.webp",
+          "/products/cj-coloured-cross-pendant-necklace-4.webp",
+          "/products/cj-coloured-cross-pendant-necklace-5.webp",
+          "/products/cj-coloured-cross-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-107-blue-silver-tone",
+        "colorName": "Blue, Silver Tone",
+        "hex": "#6f97dd",
+        "sku": "GG-107-04",
+        "stock": 50,
+        "images": [
+          "/products/cj-coloured-cross-pendant-necklace-9.webp",
+          "/products/cj-coloured-cross-pendant-necklace.webp",
+          "/products/cj-coloured-cross-pendant-necklace-2.webp",
+          "/products/cj-coloured-cross-pendant-necklace-3.webp",
+          "/products/cj-coloured-cross-pendant-necklace-4.webp",
+          "/products/cj-coloured-cross-pendant-necklace-5.webp",
+          "/products/cj-coloured-cross-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-107-green-gold-tone",
+        "colorName": "Green, Gold Tone",
+        "hex": "#3fa66b",
+        "sku": "GG-107-05",
+        "stock": 50,
+        "images": [
+          "/products/cj-coloured-cross-pendant-necklace-10.webp",
+          "/products/cj-coloured-cross-pendant-necklace.webp",
+          "/products/cj-coloured-cross-pendant-necklace-2.webp",
+          "/products/cj-coloured-cross-pendant-necklace-3.webp",
+          "/products/cj-coloured-cross-pendant-necklace-4.webp",
+          "/products/cj-coloured-cross-pendant-necklace-5.webp",
+          "/products/cj-coloured-cross-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-107-green-silver-tone",
+        "colorName": "Green, Silver Tone",
+        "hex": "#76c096",
+        "sku": "GG-107-06",
+        "stock": 50,
+        "images": [
+          "/products/cj-coloured-cross-pendant-necklace-11.webp",
+          "/products/cj-coloured-cross-pendant-necklace.webp",
+          "/products/cj-coloured-cross-pendant-necklace-2.webp",
+          "/products/cj-coloured-cross-pendant-necklace-3.webp",
+          "/products/cj-coloured-cross-pendant-necklace-4.webp",
+          "/products/cj-coloured-cross-pendant-necklace-5.webp",
+          "/products/cj-coloured-cross-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-107-orange-gold-tone",
+        "colorName": "Orange, Gold Tone",
+        "hex": "#f08a24",
+        "sku": "GG-107-07",
+        "stock": 50,
+        "images": [
+          "/products/cj-coloured-cross-pendant-necklace-12.webp",
+          "/products/cj-coloured-cross-pendant-necklace.webp",
+          "/products/cj-coloured-cross-pendant-necklace-2.webp",
+          "/products/cj-coloured-cross-pendant-necklace-3.webp",
+          "/products/cj-coloured-cross-pendant-necklace-4.webp",
+          "/products/cj-coloured-cross-pendant-necklace-5.webp",
+          "/products/cj-coloured-cross-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-107-orange-silver-tone",
+        "colorName": "Orange, Silver Tone",
+        "hex": "#f4ad66",
+        "sku": "GG-107-08",
+        "stock": 50,
+        "images": [
+          "/products/cj-coloured-cross-pendant-necklace-13.webp",
+          "/products/cj-coloured-cross-pendant-necklace.webp",
+          "/products/cj-coloured-cross-pendant-necklace-2.webp",
+          "/products/cj-coloured-cross-pendant-necklace-3.webp",
+          "/products/cj-coloured-cross-pendant-necklace-4.webp",
+          "/products/cj-coloured-cross-pendant-necklace-5.webp",
+          "/products/cj-coloured-cross-pendant-necklace-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: titanium steel",
+      "Finish: electroplated",
+      "Chain style: large link chain",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "108",
+    "slug": "rose-heart-coloured-stone-necklace",
+    "name": "Rose Heart Coloured Stone Necklace",
+    "subtitle": "Heart pendant with a rose accent",
+    "description": "A heart pendant with a rose and a coloured stone at the centre. Pick the colour that means the most to her.",
+    "price": 19.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-rose-heart-coloured-stone-necklace.webp",
+      "/products/cj-rose-heart-coloured-stone-necklace-2.webp",
+      "/products/cj-rose-heart-coloured-stone-necklace-3.webp",
+      "/products/cj-rose-heart-coloured-stone-necklace-4.webp",
+      "/products/cj-rose-heart-coloured-stone-necklace-5.webp",
+      "/products/cj-rose-heart-coloured-stone-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-108-blue",
+        "colorName": "Blue",
+        "hex": "#3b6fd4",
+        "sku": "GG-108-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-rose-heart-coloured-stone-necklace-6.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-2.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-3.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-4.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-5.webp"
+        ]
+      },
+      {
+        "id": "v-108-purple",
+        "colorName": "Purple",
+        "hex": "#8e5bd0",
+        "sku": "GG-108-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-rose-heart-coloured-stone-necklace-8.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-2.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-3.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-4.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-5.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-108-red",
+        "colorName": "Red",
+        "hex": "#c62b3a",
+        "sku": "GG-108-03",
+        "stock": 50,
+        "images": [
+          "/products/cj-rose-heart-coloured-stone-necklace-7.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-2.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-3.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-4.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-5.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-108-white",
+        "colorName": "White",
+        "hex": "#f5f5f5",
+        "sku": "GG-108-04",
+        "stock": 50,
+        "images": [
+          "/products/cj-rose-heart-coloured-stone-necklace-5.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-2.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-3.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-4.webp",
+          "/products/cj-rose-heart-coloured-stone-necklace-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: copper",
+      "Finish: electroplated",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "109",
+    "slug": "peach-heart-mom-pendant-necklace",
+    "name": "Peach Heart MOM Pendant Necklace",
+    "subtitle": "A Mother's Day gift with colourful stones",
+    "description": "A heart pendant spelling MOM, set with tiny multicoloured stones. A ready-to-give Mother's Day gift, in gold or silver tone.",
+    "price": 20.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-peach-heart-mom-pendant-necklace.webp",
+      "/products/cj-peach-heart-mom-pendant-necklace-2.webp",
+      "/products/cj-peach-heart-mom-pendant-necklace-3.webp",
+      "/products/cj-peach-heart-mom-pendant-necklace-4.webp",
+      "/products/cj-peach-heart-mom-pendant-necklace-5.webp",
+      "/products/cj-peach-heart-mom-pendant-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-109-gold",
+        "colorName": "Gold",
+        "hex": "#d4af37",
+        "sku": "GG-109-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-peach-heart-mom-pendant-necklace-5.webp",
+          "/products/cj-peach-heart-mom-pendant-necklace.webp",
+          "/products/cj-peach-heart-mom-pendant-necklace-2.webp",
+          "/products/cj-peach-heart-mom-pendant-necklace-3.webp",
+          "/products/cj-peach-heart-mom-pendant-necklace-4.webp",
+          "/products/cj-peach-heart-mom-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-109-silver",
+        "colorName": "Silver",
+        "hex": "#c0c0c0",
+        "sku": "GG-109-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-peach-heart-mom-pendant-necklace-6.webp",
+          "/products/cj-peach-heart-mom-pendant-necklace.webp",
+          "/products/cj-peach-heart-mom-pendant-necklace-2.webp",
+          "/products/cj-peach-heart-mom-pendant-necklace-3.webp",
+          "/products/cj-peach-heart-mom-pendant-necklace-4.webp",
+          "/products/cj-peach-heart-mom-pendant-necklace-5.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: copper",
+      "Style: micro-inlaid stones",
+      "Extension chain: up to 10 cm",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "top-selling"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "110",
+    "slug": "cross-tassel-pearl-choker-necklace",
+    "name": "Cross Tassel Pearl Choker Necklace",
+    "subtitle": "Statement choker with cross charms",
+    "description": "A choker of pearl-style beads with cross charms and tassels hanging at the front. A bold piece for evenings out.",
+    "price": 19.95,
+    "category": "Pearl Necklaces",
+    "images": [
+      "/products/cj-cross-tassel-pearl-choker-necklace.webp",
+      "/products/cj-cross-tassel-pearl-choker-necklace-2.webp",
+      "/products/cj-cross-tassel-pearl-choker-necklace-3.webp",
+      "/products/cj-cross-tassel-pearl-choker-necklace-4.webp",
+      "/products/cj-cross-tassel-pearl-choker-necklace-5.webp",
+      "/products/cj-cross-tassel-pearl-choker-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy",
+      "Finish: electroplated",
+      "Style: clavicle chain",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "111",
+    "slug": "colourful-rhinestone-love-necklace",
+    "name": "Colourful Rhinestone Love Necklace",
+    "subtitle": "Bright heart pendant",
+    "description": "A heart pendant with colourful rhinestones on a fine chain. Adds a little colour to a plain top.",
+    "price": 19.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-colourful-rhinestone-love-necklace.webp",
+      "/products/cj-colourful-rhinestone-love-necklace-2.webp",
+      "/products/cj-colourful-rhinestone-love-necklace-3.webp",
+      "/products/cj-colourful-rhinestone-love-necklace-4.webp",
+      "/products/cj-colourful-rhinestone-love-necklace-5.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: copper",
+      "Finish: electroplated",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "112",
+    "slug": "heart-letter-rhinestone-necklace",
+    "name": "Heart Letter Rhinestone Necklace",
+    "subtitle": "Heart pendant with a stone centre",
+    "description": "A heart pendant with letter detail and a coloured rhinestone in the centre, in four colours. A simple present for Valentine's Day.",
+    "price": 19.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-heart-letter-rhinestone-necklace.webp",
+      "/products/cj-heart-letter-rhinestone-necklace-2.webp",
+      "/products/cj-heart-letter-rhinestone-necklace-3.webp",
+      "/products/cj-heart-letter-rhinestone-necklace-4.webp",
+      "/products/cj-heart-letter-rhinestone-necklace-5.webp",
+      "/products/cj-heart-letter-rhinestone-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-112-blue",
+        "colorName": "Blue",
+        "hex": "#3b6fd4",
+        "sku": "GG-112-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-heart-letter-rhinestone-necklace-5.webp",
+          "/products/cj-heart-letter-rhinestone-necklace.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-2.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-3.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-4.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-112-purple",
+        "colorName": "Purple",
+        "hex": "#8e5bd0",
+        "sku": "GG-112-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-heart-letter-rhinestone-necklace-6.webp",
+          "/products/cj-heart-letter-rhinestone-necklace.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-2.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-3.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-4.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-5.webp"
+        ]
+      },
+      {
+        "id": "v-112-red",
+        "colorName": "Red",
+        "hex": "#c62b3a",
+        "sku": "GG-112-03",
+        "stock": 50,
+        "images": [
+          "/products/cj-heart-letter-rhinestone-necklace-3.webp",
+          "/products/cj-heart-letter-rhinestone-necklace.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-2.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-4.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-5.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-112-white",
+        "colorName": "White",
+        "hex": "#f5f5f5",
+        "sku": "GG-112-04",
+        "stock": 50,
+        "images": [
+          "/products/cj-heart-letter-rhinestone-necklace-4.webp",
+          "/products/cj-heart-letter-rhinestone-necklace.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-2.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-3.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-5.webp",
+          "/products/cj-heart-letter-rhinestone-necklace-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: copper",
+      "Finish: electroplated",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "113",
+    "slug": "cross-and-infinity-pendant-necklace",
+    "name": "Cross and Infinity Pendant Necklace",
+    "subtitle": "Simple cross with an infinity sign",
+    "description": "A cross with an infinity sign in gold or silver tone. Small enough to wear every day.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-cross-and-infinity-pendant-necklace.webp",
+      "/products/cj-cross-and-infinity-pendant-necklace-2.webp",
+      "/products/cj-cross-and-infinity-pendant-necklace-3.webp",
+      "/products/cj-cross-and-infinity-pendant-necklace-4.webp",
+      "/products/cj-cross-and-infinity-pendant-necklace-5.webp",
+      "/products/cj-cross-and-infinity-pendant-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-113-gold",
+        "colorName": "Gold",
+        "hex": "#d4af37",
+        "sku": "GG-113-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-cross-and-infinity-pendant-necklace-6.webp",
+          "/products/cj-cross-and-infinity-pendant-necklace.webp",
+          "/products/cj-cross-and-infinity-pendant-necklace-2.webp",
+          "/products/cj-cross-and-infinity-pendant-necklace-3.webp",
+          "/products/cj-cross-and-infinity-pendant-necklace-4.webp",
+          "/products/cj-cross-and-infinity-pendant-necklace-5.webp"
+        ]
+      },
+      {
+        "id": "v-113-silver",
+        "colorName": "Silver",
+        "hex": "#c0c0c0",
+        "sku": "GG-113-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-cross-and-infinity-pendant-necklace-7.webp",
+          "/products/cj-cross-and-infinity-pendant-necklace.webp",
+          "/products/cj-cross-and-infinity-pendant-necklace-2.webp",
+          "/products/cj-cross-and-infinity-pendant-necklace-3.webp",
+          "/products/cj-cross-and-infinity-pendant-necklace-4.webp",
+          "/products/cj-cross-and-infinity-pendant-necklace-5.webp",
+          "/products/cj-cross-and-infinity-pendant-necklace-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: copper",
+      "Finish: electroplated",
+      "Chain length: 45 cm plus 5 cm extension",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "114",
+    "slug": "long-tassel-bead-necklace",
+    "name": "Long Tassel Bead Necklace",
+    "subtitle": "Long chain with round beads",
+    "description": "A long, light chain with round beads and a tassel end. Wear it long, or double it for a layered look.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-long-tassel-bead-necklace.webp",
+      "/products/cj-long-tassel-bead-necklace-2.webp",
+      "/products/cj-long-tassel-bead-necklace-3.webp",
+      "/products/cj-long-tassel-bead-necklace-4.webp",
+      "/products/cj-long-tassel-bead-necklace-5.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-114-gold",
+        "colorName": "Gold",
+        "hex": "#d4af37",
+        "sku": "GG-114-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-long-tassel-bead-necklace-4.webp",
+          "/products/cj-long-tassel-bead-necklace.webp",
+          "/products/cj-long-tassel-bead-necklace-2.webp",
+          "/products/cj-long-tassel-bead-necklace-3.webp",
+          "/products/cj-long-tassel-bead-necklace-5.webp"
+        ]
+      },
+      {
+        "id": "v-114-silver",
+        "colorName": "Silver",
+        "hex": "#c0c0c0",
+        "sku": "GG-114-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-long-tassel-bead-necklace-5.webp",
+          "/products/cj-long-tassel-bead-necklace.webp",
+          "/products/cj-long-tassel-bead-necklace-2.webp",
+          "/products/cj-long-tassel-bead-necklace-3.webp",
+          "/products/cj-long-tassel-bead-necklace-4.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy",
+      "Finish: electroplated",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "115",
+    "slug": "double-layer-cross-and-star-necklace",
+    "name": "Double Layer Cross and Star Necklace",
+    "subtitle": "Two chains, cross and star",
+    "description": "A double-layer necklace with a cross and a small star charm. The two chains are already joined, so the layers hang the same way every time.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-double-layer-cross-and-star-necklace.webp",
+      "/products/cj-double-layer-cross-and-star-necklace-2.webp",
+      "/products/cj-double-layer-cross-and-star-necklace-3.webp",
+      "/products/cj-double-layer-cross-and-star-necklace-4.webp",
+      "/products/cj-double-layer-cross-and-star-necklace-5.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Style: double layer",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "116",
+    "slug": "rose-cross-rhinestone-necklace",
+    "name": "Rose Cross Rhinestone Necklace",
+    "subtitle": "Cross with a rose and coloured stone",
+    "description": "A cross wrapped with a rose and set with a coloured rhinestone. Choose from blue, purple or white.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-rose-cross-rhinestone-necklace.webp",
+      "/products/cj-rose-cross-rhinestone-necklace-2.webp",
+      "/products/cj-rose-cross-rhinestone-necklace-3.webp",
+      "/products/cj-rose-cross-rhinestone-necklace-4.webp",
+      "/products/cj-rose-cross-rhinestone-necklace-5.webp",
+      "/products/cj-rose-cross-rhinestone-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-116-blue",
+        "colorName": "Blue",
+        "hex": "#3b6fd4",
+        "sku": "GG-116-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-rose-cross-rhinestone-necklace-5.webp",
+          "/products/cj-rose-cross-rhinestone-necklace.webp",
+          "/products/cj-rose-cross-rhinestone-necklace-2.webp",
+          "/products/cj-rose-cross-rhinestone-necklace-3.webp",
+          "/products/cj-rose-cross-rhinestone-necklace-4.webp",
+          "/products/cj-rose-cross-rhinestone-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-116-purple",
+        "colorName": "Purple",
+        "hex": "#8e5bd0",
+        "sku": "GG-116-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-rose-cross-rhinestone-necklace-6.webp",
+          "/products/cj-rose-cross-rhinestone-necklace.webp",
+          "/products/cj-rose-cross-rhinestone-necklace-2.webp",
+          "/products/cj-rose-cross-rhinestone-necklace-3.webp",
+          "/products/cj-rose-cross-rhinestone-necklace-4.webp",
+          "/products/cj-rose-cross-rhinestone-necklace-5.webp"
+        ]
+      },
+      {
+        "id": "v-116-white",
+        "colorName": "White",
+        "hex": "#f5f5f5",
+        "sku": "GG-116-03",
+        "stock": 50,
+        "images": [
+          "/products/cj-rose-cross-rhinestone-necklace-4.webp",
+          "/products/cj-rose-cross-rhinestone-necklace.webp",
+          "/products/cj-rose-cross-rhinestone-necklace-2.webp",
+          "/products/cj-rose-cross-rhinestone-necklace-3.webp",
+          "/products/cj-rose-cross-rhinestone-necklace-5.webp",
+          "/products/cj-rose-cross-rhinestone-necklace-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy",
+      "Finish: electroplated",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "117",
+    "slug": "zircon-butterfly-clavicle-necklace",
+    "name": "Zircon Butterfly Clavicle Necklace",
+    "subtitle": "Small butterfly in many colours",
+    "description": "A small zircon butterfly on a fine clavicle chain, in eight colours. Small enough for every day.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-zircon-butterfly-clavicle-necklace.webp",
+      "/products/cj-zircon-butterfly-clavicle-necklace-2.webp",
+      "/products/cj-zircon-butterfly-clavicle-necklace-3.webp",
+      "/products/cj-zircon-butterfly-clavicle-necklace-4.webp",
+      "/products/cj-zircon-butterfly-clavicle-necklace-5.webp",
+      "/products/cj-zircon-butterfly-clavicle-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-117-black",
+        "colorName": "Black",
+        "hex": "#222222",
+        "sku": "GG-117-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-butterfly-clavicle-necklace-8.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-2.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-3.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-4.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-5.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-117-ab-iridescent",
+        "colorName": "AB Iridescent",
+        "hex": "#b8c7ea",
+        "sku": "GG-117-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-butterfly-clavicle-necklace-9.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-2.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-3.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-4.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-5.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-117-light-blue",
+        "colorName": "Light Blue",
+        "hex": "#8fc3f0",
+        "sku": "GG-117-03",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-butterfly-clavicle-necklace-10.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-2.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-3.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-4.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-5.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-117-bright-pink",
+        "colorName": "Bright Pink",
+        "hex": "#f0509b",
+        "sku": "GG-117-04",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-butterfly-clavicle-necklace-11.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-2.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-3.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-4.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-5.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-117-multicolour",
+        "colorName": "Multicolour",
+        "hex": "#c86dd7",
+        "sku": "GG-117-05",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-butterfly-clavicle-necklace-12.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-2.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-3.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-4.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-5.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-117-purple",
+        "colorName": "Purple",
+        "hex": "#9b7ed8",
+        "sku": "GG-117-06",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-butterfly-clavicle-necklace-13.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-2.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-3.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-4.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-5.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-117-lake-blue",
+        "colorName": "Lake Blue",
+        "hex": "#1f9fc4",
+        "sku": "GG-117-07",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-butterfly-clavicle-necklace-14.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-2.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-3.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-4.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-5.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-117-golden-yellow",
+        "colorName": "Golden Yellow",
+        "hex": "#f2c230",
+        "sku": "GG-117-08",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-butterfly-clavicle-necklace-15.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-2.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-3.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-4.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-5.webp",
+          "/products/cj-zircon-butterfly-clavicle-necklace-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: copper with zircon",
+      "Finish: electroplated",
+      "Chain style: lip chain",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "top-selling"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "118",
+    "slug": "solitaire-zircon-short-necklace",
+    "name": "Solitaire Zircon Short Necklace",
+    "subtitle": "A single stone on a fine chain",
+    "description": "A single zircon on a fine box chain, sitting at the base of the neck. Gold or steel tone.",
+    "price": 24.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-solitaire-zircon-short-necklace.webp",
+      "/products/cj-solitaire-zircon-short-necklace-2.webp",
+      "/products/cj-solitaire-zircon-short-necklace-3.webp",
+      "/products/cj-solitaire-zircon-short-necklace-4.webp",
+      "/products/cj-solitaire-zircon-short-necklace-5.webp",
+      "/products/cj-solitaire-zircon-short-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-118-gold",
+        "colorName": "Gold",
+        "hex": "#d4af37",
+        "sku": "GG-118-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-solitaire-zircon-short-necklace-7.webp",
+          "/products/cj-solitaire-zircon-short-necklace.webp",
+          "/products/cj-solitaire-zircon-short-necklace-2.webp",
+          "/products/cj-solitaire-zircon-short-necklace-3.webp",
+          "/products/cj-solitaire-zircon-short-necklace-4.webp",
+          "/products/cj-solitaire-zircon-short-necklace-5.webp",
+          "/products/cj-solitaire-zircon-short-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-118-steel",
+        "colorName": "Steel",
+        "hex": "#c0c0c0",
+        "sku": "GG-118-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-solitaire-zircon-short-necklace-6.webp",
+          "/products/cj-solitaire-zircon-short-necklace.webp",
+          "/products/cj-solitaire-zircon-short-necklace-2.webp",
+          "/products/cj-solitaire-zircon-short-necklace-3.webp",
+          "/products/cj-solitaire-zircon-short-necklace-4.webp",
+          "/products/cj-solitaire-zircon-short-necklace-5.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: titanium steel",
+      "Finish: electroplated",
+      "Chain style: box chain",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "119",
+    "slug": "blue-ice-heart-necklace",
+    "name": "Blue Ice Heart Necklace",
+    "subtitle": "Sculpted heart pendant",
+    "description": "A textured, sculpted heart in a cool platinum tone on a beaded chain. Each heart has a slightly different surface.",
+    "price": 19.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-blue-ice-heart-necklace.webp",
+      "/products/cj-blue-ice-heart-necklace-2.webp",
+      "/products/cj-blue-ice-heart-necklace-3.webp",
+      "/products/cj-blue-ice-heart-necklace-4.webp",
+      "/products/cj-blue-ice-heart-necklace-5.webp",
+      "/products/cj-blue-ice-heart-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: brass",
+      "Finish: electroplated",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "120",
+    "slug": "butterfly-friendship-necklace-pair",
+    "name": "Butterfly Friendship Necklace Pair",
+    "subtitle": "Two halves, one butterfly",
+    "description": "Two necklaces whose butterfly wings fit together. Keep one, give one, in blue, green, pink or white enamel.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-butterfly-friendship-necklace-pair.webp",
+      "/products/cj-butterfly-friendship-necklace-pair-2.webp",
+      "/products/cj-butterfly-friendship-necklace-pair-3.webp",
+      "/products/cj-butterfly-friendship-necklace-pair-4.webp",
+      "/products/cj-butterfly-friendship-necklace-pair-5.webp",
+      "/products/cj-butterfly-friendship-necklace-pair-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-120-blue",
+        "colorName": "Blue",
+        "hex": "#3b6fd4",
+        "sku": "GG-120-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-butterfly-friendship-necklace-pair-8.webp",
+          "/products/cj-butterfly-friendship-necklace-pair.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-2.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-3.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-4.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-5.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-6.webp"
+        ]
+      },
+      {
+        "id": "v-120-green",
+        "colorName": "Green",
+        "hex": "#3fa66b",
+        "sku": "GG-120-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-butterfly-friendship-necklace-pair-5.webp",
+          "/products/cj-butterfly-friendship-necklace-pair.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-2.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-3.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-4.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-6.webp"
+        ]
+      },
+      {
+        "id": "v-120-pink",
+        "colorName": "Pink",
+        "hex": "#f4a6c0",
+        "sku": "GG-120-03",
+        "stock": 50,
+        "images": [
+          "/products/cj-butterfly-friendship-necklace-pair-6.webp",
+          "/products/cj-butterfly-friendship-necklace-pair.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-2.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-3.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-4.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-5.webp"
+        ]
+      },
+      {
+        "id": "v-120-white",
+        "colorName": "White",
+        "hex": "#f5f5f5",
+        "sku": "GG-120-04",
+        "stock": 50,
+        "images": [
+          "/products/cj-butterfly-friendship-necklace-pair-7.webp",
+          "/products/cj-butterfly-friendship-necklace-pair.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-2.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-3.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-4.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-5.webp",
+          "/products/cj-butterfly-friendship-necklace-pair-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy",
+      "Finish: electroplated, oil-drip enamel",
+      "Comes as one pair of necklaces",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "121",
+    "slug": "fantasy-butterfly-tassel-necklace",
+    "name": "Fantasy Butterfly Tassel Necklace",
+    "subtitle": "Coloured butterfly with a tassel",
+    "description": "A butterfly in warm gold and orange with a fine tassel hanging below. A pretty piece for a summer outfit.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-fantasy-butterfly-tassel-necklace.webp",
+      "/products/cj-fantasy-butterfly-tassel-necklace-2.webp",
+      "/products/cj-fantasy-butterfly-tassel-necklace-3.webp",
+      "/products/cj-fantasy-butterfly-tassel-necklace-4.webp",
+      "/products/cj-fantasy-butterfly-tassel-necklace-5.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: titanium steel",
+      "Finish: electroplated, gold tone",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "122",
+    "slug": "luminous-heart-pendant-necklace",
+    "name": "Luminous Heart Pendant Necklace",
+    "subtitle": "Heart pendant in four glow colours",
+    "description": "A luminous heart pendant on a chain, in blue, green, teal or orange. See the photos for how each colour looks.",
+    "price": 19.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-luminous-heart-pendant-necklace.webp",
+      "/products/cj-luminous-heart-pendant-necklace-2.webp",
+      "/products/cj-luminous-heart-pendant-necklace-3.webp",
+      "/products/cj-luminous-heart-pendant-necklace-4.webp",
+      "/products/cj-luminous-heart-pendant-necklace-5.webp",
+      "/products/cj-luminous-heart-pendant-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-122-blue-glow",
+        "colorName": "Blue Glow",
+        "hex": "#3b6fd4",
+        "sku": "GG-122-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-luminous-heart-pendant-necklace-6.webp",
+          "/products/cj-luminous-heart-pendant-necklace.webp",
+          "/products/cj-luminous-heart-pendant-necklace-2.webp",
+          "/products/cj-luminous-heart-pendant-necklace-3.webp",
+          "/products/cj-luminous-heart-pendant-necklace-4.webp",
+          "/products/cj-luminous-heart-pendant-necklace-5.webp"
+        ]
+      },
+      {
+        "id": "v-122-green-glow",
+        "colorName": "Green Glow",
+        "hex": "#3fa66b",
+        "sku": "GG-122-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-luminous-heart-pendant-necklace-7.webp",
+          "/products/cj-luminous-heart-pendant-necklace.webp",
+          "/products/cj-luminous-heart-pendant-necklace-2.webp",
+          "/products/cj-luminous-heart-pendant-necklace-3.webp",
+          "/products/cj-luminous-heart-pendant-necklace-4.webp",
+          "/products/cj-luminous-heart-pendant-necklace-5.webp",
+          "/products/cj-luminous-heart-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-122-teal-glow",
+        "colorName": "Teal Glow",
+        "hex": "#1fb5a8",
+        "sku": "GG-122-03",
+        "stock": 50,
+        "images": [
+          "/products/cj-luminous-heart-pendant-necklace-8.webp",
+          "/products/cj-luminous-heart-pendant-necklace.webp",
+          "/products/cj-luminous-heart-pendant-necklace-2.webp",
+          "/products/cj-luminous-heart-pendant-necklace-3.webp",
+          "/products/cj-luminous-heart-pendant-necklace-4.webp",
+          "/products/cj-luminous-heart-pendant-necklace-5.webp",
+          "/products/cj-luminous-heart-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-122-orange-glow",
+        "colorName": "Orange Glow",
+        "hex": "#f08a24",
+        "sku": "GG-122-04",
+        "stock": 50,
+        "images": [
+          "/products/cj-luminous-heart-pendant-necklace-9.webp",
+          "/products/cj-luminous-heart-pendant-necklace.webp",
+          "/products/cj-luminous-heart-pendant-necklace-2.webp",
+          "/products/cj-luminous-heart-pendant-necklace-3.webp",
+          "/products/cj-luminous-heart-pendant-necklace-4.webp",
+          "/products/cj-luminous-heart-pendant-necklace-5.webp",
+          "/products/cj-luminous-heart-pendant-necklace-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: zinc alloy",
+      "Finish: electroplated",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "123",
+    "slug": "carved-vintage-cross-necklace",
+    "name": "Carved Vintage Cross Necklace",
+    "subtitle": "Silver-tone cross with engraved detail",
+    "description": "A large cross with vintage engraving on a heavy chain. A bold, unisex piece.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-carved-vintage-cross-necklace.webp",
+      "/products/cj-carved-vintage-cross-necklace-2.webp",
+      "/products/cj-carved-vintage-cross-necklace-3.webp",
+      "/products/cj-carved-vintage-cross-necklace-4.webp",
+      "/products/cj-carved-vintage-cross-necklace-5.webp",
+      "/products/cj-carved-vintage-cross-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy and stainless steel",
+      "Chain style: box chain",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "124",
+    "slug": "butterfly-tassel-natural-stone-necklace",
+    "name": "Butterfly Tassel Natural Stone Necklace",
+    "subtitle": "Long bead necklace, bohemian look",
+    "description": "A long necklace of mixed natural stone beads with a butterfly pendant and tassels. Wear it over a plain top.",
+    "price": 24.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-butterfly-tassel-natural-stone-necklace.webp",
+      "/products/cj-butterfly-tassel-natural-stone-necklace-2.webp",
+      "/products/cj-butterfly-tassel-natural-stone-necklace-3.webp",
+      "/products/cj-butterfly-tassel-natural-stone-necklace-4.webp",
+      "/products/cj-butterfly-tassel-natural-stone-necklace-5.webp",
+      "/products/cj-butterfly-tassel-natural-stone-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy and natural stone",
+      "Finish: electroplated",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "125",
+    "slug": "peach-heart-drop-chain-necklace",
+    "name": "Peach Heart Drop Chain Necklace",
+    "subtitle": "Slim chain with a drop heart",
+    "description": "A gold-tone chain that ends in a heart hanging below the collar. It is a very simple, modern piece.",
+    "price": 22.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-peach-heart-drop-chain-necklace.webp",
+      "/products/cj-peach-heart-drop-chain-necklace-2.webp",
+      "/products/cj-peach-heart-drop-chain-necklace-3.webp",
+      "/products/cj-peach-heart-drop-chain-necklace-4.webp",
+      "/products/cj-peach-heart-drop-chain-necklace-5.webp",
+      "/products/cj-peach-heart-drop-chain-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: titanium steel",
+      "Finish: electroplated, gold tone",
+      "Chain length: 41 to 50 cm",
+      "Chain style: snake chain",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "126",
+    "slug": "pearl-and-shell-starfish-necklace",
+    "name": "Pearl and Shell Starfish Necklace",
+    "subtitle": "Beach-style pearl chain",
+    "description": "A necklace of pearl-style beads with shells and a starfish. A summer piece that suits a day at the beach.",
+    "price": 19.95,
+    "category": "Pearl Necklaces",
+    "images": [
+      "/products/cj-pearl-and-shell-starfish-necklace.webp",
+      "/products/cj-pearl-and-shell-starfish-necklace-2.webp",
+      "/products/cj-pearl-and-shell-starfish-necklace-3.webp",
+      "/products/cj-pearl-and-shell-starfish-necklace-4.webp",
+      "/products/cj-pearl-and-shell-starfish-necklace-5.webp",
+      "/products/cj-pearl-and-shell-starfish-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-126-sky-blue",
+        "colorName": "Sky Blue",
+        "hex": "#8fc3f0",
+        "sku": "GG-126-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-pearl-and-shell-starfish-necklace-6.webp",
+          "/products/cj-pearl-and-shell-starfish-necklace.webp",
+          "/products/cj-pearl-and-shell-starfish-necklace-2.webp",
+          "/products/cj-pearl-and-shell-starfish-necklace-3.webp",
+          "/products/cj-pearl-and-shell-starfish-necklace-4.webp",
+          "/products/cj-pearl-and-shell-starfish-necklace-5.webp"
+        ]
+      },
+      {
+        "id": "v-126-yellow",
+        "colorName": "Yellow",
+        "hex": "#f2c230",
+        "sku": "GG-126-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-pearl-and-shell-starfish-necklace-7.webp",
+          "/products/cj-pearl-and-shell-starfish-necklace.webp",
+          "/products/cj-pearl-and-shell-starfish-necklace-2.webp",
+          "/products/cj-pearl-and-shell-starfish-necklace-3.webp",
+          "/products/cj-pearl-and-shell-starfish-necklace-4.webp",
+          "/products/cj-pearl-and-shell-starfish-necklace-5.webp",
+          "/products/cj-pearl-and-shell-starfish-necklace-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: mixed material",
+      "Type: pendant necklace",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "127",
+    "slug": "pearl-bow-and-heart-necklace",
+    "name": "Pearl Bow and Heart Necklace",
+    "subtitle": "Pearls, a bow and small charms",
+    "description": "A curb chain with pearl-style beads, a bow, a heart and star charms. Sweet with a slightly edgy chain.",
+    "price": 21.95,
+    "category": "Pearl Necklaces",
+    "images": [
+      "/products/cj-pearl-bow-and-heart-necklace.webp",
+      "/products/cj-pearl-bow-and-heart-necklace-2.webp",
+      "/products/cj-pearl-bow-and-heart-necklace-3.webp",
+      "/products/cj-pearl-bow-and-heart-necklace-4.webp",
+      "/products/cj-pearl-bow-and-heart-necklace-5.webp",
+      "/products/cj-pearl-bow-and-heart-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: titanium steel with alloy pendant",
+      "Chain style: curb",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "128",
+    "slug": "pearl-gold-pendant-necklace",
+    "name": "Pearl Gold Pendant Necklace",
+    "subtitle": "One pearl on a fine gold-tone chain",
+    "description": "A single pearl-style bead on a fine gold-tone chain. Small and easy to layer.",
+    "price": 21.95,
+    "category": "Pearl Necklaces",
+    "images": [
+      "/products/cj-pearl-gold-pendant-necklace.webp",
+      "/products/cj-pearl-gold-pendant-necklace-2.webp",
+      "/products/cj-pearl-gold-pendant-necklace-3.webp",
+      "/products/cj-pearl-gold-pendant-necklace-4.webp",
+      "/products/cj-pearl-gold-pendant-necklace-5.webp",
+      "/products/cj-pearl-gold-pendant-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: titanium steel",
+      "Chain style: O-ring links",
+      "Chain length: 41 to 50 cm",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "129",
+    "slug": "magnetic-heart-necklace",
+    "name": "Magnetic Heart Necklace",
+    "subtitle": "Heart that closes with a magnet",
+    "description": "A heart pendant that closes with a magnet, on a fine chain. A smooth polished finish, easy to wear.",
+    "price": 19.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-magnetic-heart-necklace.webp",
+      "/products/cj-magnetic-heart-necklace-2.webp",
+      "/products/cj-magnetic-heart-necklace-3.webp",
+      "/products/cj-magnetic-heart-necklace-4.webp",
+      "/products/cj-magnetic-heart-necklace-5.webp",
+      "/products/cj-magnetic-heart-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy",
+      "Chain style: regular",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "130",
+    "slug": "water-drop-heart-necklace",
+    "name": "Water Drop Heart Necklace",
+    "subtitle": "Smooth polished drop pendant",
+    "description": "A smooth drop-shaped pendant with a heart cut-out and a pearl-style detail, in gold or silver tone.",
+    "price": 19.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-water-drop-heart-necklace.webp",
+      "/products/cj-water-drop-heart-necklace-2.webp",
+      "/products/cj-water-drop-heart-necklace-3.webp",
+      "/products/cj-water-drop-heart-necklace-4.webp",
+      "/products/cj-water-drop-heart-necklace-5.webp",
+      "/products/cj-water-drop-heart-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-130-gold",
+        "colorName": "Gold",
+        "hex": "#d4af37",
+        "sku": "GG-130-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-water-drop-heart-necklace-6.webp",
+          "/products/cj-water-drop-heart-necklace.webp",
+          "/products/cj-water-drop-heart-necklace-2.webp",
+          "/products/cj-water-drop-heart-necklace-3.webp",
+          "/products/cj-water-drop-heart-necklace-4.webp",
+          "/products/cj-water-drop-heart-necklace-5.webp"
+        ]
+      },
+      {
+        "id": "v-130-silver",
+        "colorName": "Silver",
+        "hex": "#c0c0c0",
+        "sku": "GG-130-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-water-drop-heart-necklace-7.webp",
+          "/products/cj-water-drop-heart-necklace.webp",
+          "/products/cj-water-drop-heart-necklace-2.webp",
+          "/products/cj-water-drop-heart-necklace-3.webp",
+          "/products/cj-water-drop-heart-necklace-4.webp",
+          "/products/cj-water-drop-heart-necklace-5.webp",
+          "/products/cj-water-drop-heart-necklace-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: titanium steel",
+      "Finish: electroplated",
+      "Chain length: 40 cm",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "131",
+    "slug": "hollow-butterfly-pearl-necklace",
+    "name": "Hollow Butterfly Pearl Necklace",
+    "subtitle": "Beaded chain, open butterfly",
+    "description": "A beaded chain with an open butterfly in the centre. Light and delicate.",
+    "price": 19.95,
+    "category": "Pearl Necklaces",
+    "images": [
+      "/products/cj-hollow-butterfly-pearl-necklace.webp",
+      "/products/cj-hollow-butterfly-pearl-necklace-2.webp",
+      "/products/cj-hollow-butterfly-pearl-necklace-3.webp",
+      "/products/cj-hollow-butterfly-pearl-necklace-4.webp",
+      "/products/cj-hollow-butterfly-pearl-necklace-5.webp",
+      "/products/cj-hollow-butterfly-pearl-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy with imitation pearl",
+      "Finish: electroplated",
+      "Chain length: 45 cm plus 5 cm extension",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "132",
+    "slug": "zircon-cross-pendant-necklace",
+    "name": "Zircon Cross Pendant Necklace",
+    "subtitle": "Coloured stones in a gold-tone cross",
+    "description": "A cross of oval zircon stones set in a gold-tone frame, in seven colours. Each colour is a different pendant, so pick the one you like best.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-zircon-cross-pendant-necklace.webp",
+      "/products/cj-zircon-cross-pendant-necklace-2.webp",
+      "/products/cj-zircon-cross-pendant-necklace-3.webp",
+      "/products/cj-zircon-cross-pendant-necklace-4.webp",
+      "/products/cj-zircon-cross-pendant-necklace-5.webp",
+      "/products/cj-zircon-cross-pendant-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-132-blue",
+        "colorName": "Blue",
+        "hex": "#3b6fd4",
+        "sku": "GG-132-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-cross-pendant-necklace-6.webp",
+          "/products/cj-zircon-cross-pendant-necklace.webp",
+          "/products/cj-zircon-cross-pendant-necklace-2.webp",
+          "/products/cj-zircon-cross-pendant-necklace-3.webp",
+          "/products/cj-zircon-cross-pendant-necklace-4.webp",
+          "/products/cj-zircon-cross-pendant-necklace-5.webp"
+        ]
+      },
+      {
+        "id": "v-132-black",
+        "colorName": "Black",
+        "hex": "#222222",
+        "sku": "GG-132-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-cross-pendant-necklace-7.webp",
+          "/products/cj-zircon-cross-pendant-necklace.webp",
+          "/products/cj-zircon-cross-pendant-necklace-2.webp",
+          "/products/cj-zircon-cross-pendant-necklace-3.webp",
+          "/products/cj-zircon-cross-pendant-necklace-4.webp",
+          "/products/cj-zircon-cross-pendant-necklace-5.webp",
+          "/products/cj-zircon-cross-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-132-clear",
+        "colorName": "Clear",
+        "hex": "#f2f2f2",
+        "sku": "GG-132-03",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-cross-pendant-necklace-8.webp",
+          "/products/cj-zircon-cross-pendant-necklace.webp",
+          "/products/cj-zircon-cross-pendant-necklace-2.webp",
+          "/products/cj-zircon-cross-pendant-necklace-3.webp",
+          "/products/cj-zircon-cross-pendant-necklace-4.webp",
+          "/products/cj-zircon-cross-pendant-necklace-5.webp",
+          "/products/cj-zircon-cross-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-132-lilac",
+        "colorName": "Lilac",
+        "hex": "#c9a0dc",
+        "sku": "GG-132-04",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-cross-pendant-necklace-9.webp",
+          "/products/cj-zircon-cross-pendant-necklace.webp",
+          "/products/cj-zircon-cross-pendant-necklace-2.webp",
+          "/products/cj-zircon-cross-pendant-necklace-3.webp",
+          "/products/cj-zircon-cross-pendant-necklace-4.webp",
+          "/products/cj-zircon-cross-pendant-necklace-5.webp",
+          "/products/cj-zircon-cross-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-132-champagne",
+        "colorName": "Champagne",
+        "hex": "#f0d3b0",
+        "sku": "GG-132-05",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-cross-pendant-necklace-10.webp",
+          "/products/cj-zircon-cross-pendant-necklace.webp",
+          "/products/cj-zircon-cross-pendant-necklace-2.webp",
+          "/products/cj-zircon-cross-pendant-necklace-3.webp",
+          "/products/cj-zircon-cross-pendant-necklace-4.webp",
+          "/products/cj-zircon-cross-pendant-necklace-5.webp",
+          "/products/cj-zircon-cross-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-132-red",
+        "colorName": "Red",
+        "hex": "#c62b3a",
+        "sku": "GG-132-06",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-cross-pendant-necklace-12.webp",
+          "/products/cj-zircon-cross-pendant-necklace.webp",
+          "/products/cj-zircon-cross-pendant-necklace-2.webp",
+          "/products/cj-zircon-cross-pendant-necklace-3.webp",
+          "/products/cj-zircon-cross-pendant-necklace-4.webp",
+          "/products/cj-zircon-cross-pendant-necklace-5.webp",
+          "/products/cj-zircon-cross-pendant-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-132-green",
+        "colorName": "Green",
+        "hex": "#3fa66b",
+        "sku": "GG-132-07",
+        "stock": 50,
+        "images": [
+          "/products/cj-zircon-cross-pendant-necklace-13.webp",
+          "/products/cj-zircon-cross-pendant-necklace.webp",
+          "/products/cj-zircon-cross-pendant-necklace-2.webp",
+          "/products/cj-zircon-cross-pendant-necklace-3.webp",
+          "/products/cj-zircon-cross-pendant-necklace-4.webp",
+          "/products/cj-zircon-cross-pendant-necklace-5.webp",
+          "/products/cj-zircon-cross-pendant-necklace-6.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: copper",
+      "Style: inlaid zircon",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "top-selling"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "133",
+    "slug": "black-heart-leather-choker",
+    "name": "Black Heart Leather Choker",
+    "subtitle": "Heart charm on a punk-style choker",
+    "description": "A choker with a black heart charm, metal links and a leather band. A bold statement at the neck.",
+    "price": 19.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-black-heart-leather-choker.webp",
+      "/products/cj-black-heart-leather-choker-2.webp",
+      "/products/cj-black-heart-leather-choker-3.webp",
+      "/products/cj-black-heart-leather-choker-4.webp",
+      "/products/cj-black-heart-leather-choker-5.webp",
+      "/products/cj-black-heart-leather-choker-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy and leather",
+      "Style: choker",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "134",
+    "slug": "french-vintage-pearl-necklace",
+    "name": "French Vintage Pearl Necklace",
+    "subtitle": "Short pearl-style chain",
+    "description": "A short chain of pearl-style beads in a soft vintage style, in gold or silver tone.",
+    "price": 19.95,
+    "category": "Pearl Necklaces",
+    "images": [
+      "/products/cj-french-vintage-pearl-necklace.webp",
+      "/products/cj-french-vintage-pearl-necklace-2.webp",
+      "/products/cj-french-vintage-pearl-necklace-3.webp",
+      "/products/cj-french-vintage-pearl-necklace-4.webp",
+      "/products/cj-french-vintage-pearl-necklace-5.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-134-gold",
+        "colorName": "Gold",
+        "hex": "#d4af37",
+        "sku": "GG-134-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-french-vintage-pearl-necklace-4.webp",
+          "/products/cj-french-vintage-pearl-necklace.webp",
+          "/products/cj-french-vintage-pearl-necklace-2.webp",
+          "/products/cj-french-vintage-pearl-necklace-3.webp",
+          "/products/cj-french-vintage-pearl-necklace-5.webp"
+        ]
+      },
+      {
+        "id": "v-134-silver",
+        "colorName": "Silver",
+        "hex": "#c0c0c0",
+        "sku": "GG-134-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-french-vintage-pearl-necklace-3.webp",
+          "/products/cj-french-vintage-pearl-necklace.webp",
+          "/products/cj-french-vintage-pearl-necklace-2.webp",
+          "/products/cj-french-vintage-pearl-necklace-4.webp",
+          "/products/cj-french-vintage-pearl-necklace-5.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy",
+      "Finish: electroplated",
+      "Chain length: 31 to 40 cm",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "135",
+    "slug": "double-ring-pearl-clavicle-necklace",
+    "name": "Double Ring Pearl Clavicle Necklace",
+    "subtitle": "Interlocked rings and pearls",
+    "description": "A clavicle chain with two interlocked rings and pearl-style beads. A neat, modern design.",
+    "price": 19.95,
+    "category": "Pearl Necklaces",
+    "images": [
+      "/products/cj-double-ring-pearl-clavicle-necklace.webp",
+      "/products/cj-double-ring-pearl-clavicle-necklace-2.webp",
+      "/products/cj-double-ring-pearl-clavicle-necklace-3.webp",
+      "/products/cj-double-ring-pearl-clavicle-necklace-4.webp",
+      "/products/cj-double-ring-pearl-clavicle-necklace-5.webp",
+      "/products/cj-double-ring-pearl-clavicle-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: copper",
+      "Finish: electroplated",
+      "Chain style: cross chain",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "136",
+    "slug": "blue-butterfly-crystal-necklace",
+    "name": "Blue Butterfly Crystal Necklace",
+    "subtitle": "Butterfly with blue crystal drops",
+    "description": "A butterfly with blue crystal drops on a clavicle chain. A statement piece for a formal dress.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-blue-butterfly-crystal-necklace.webp",
+      "/products/cj-blue-butterfly-crystal-necklace-2.webp",
+      "/products/cj-blue-butterfly-crystal-necklace-3.webp",
+      "/products/cj-blue-butterfly-crystal-necklace-4.webp",
+      "/products/cj-blue-butterfly-crystal-necklace-5.webp",
+      "/products/cj-blue-butterfly-crystal-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy",
+      "Finish: electroplated",
+      "Chain length: 35.5 cm plus 5 cm extension",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "137",
+    "slug": "butterfly-and-cross-hollow-necklace",
+    "name": "Butterfly and Cross Hollow Necklace",
+    "subtitle": "Openwork butterfly with a small cross",
+    "description": "A hollow butterfly with a small cross, on a chunky curb chain.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-butterfly-and-cross-hollow-necklace.webp",
+      "/products/cj-butterfly-and-cross-hollow-necklace-2.webp",
+      "/products/cj-butterfly-and-cross-hollow-necklace-3.webp",
+      "/products/cj-butterfly-and-cross-hollow-necklace-4.webp",
+      "/products/cj-butterfly-and-cross-hollow-necklace-5.webp",
+      "/products/cj-butterfly-and-cross-hollow-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: titanium steel with alloy pendant",
+      "Chain style: curb",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "138",
+    "slug": "bow-and-pearl-chain-necklace",
+    "name": "Bow and Pearl Chain Necklace",
+    "subtitle": "Bow charm with pearl-style beads",
+    "description": "A bow charm with a heart and pearl-style beads on a curb chain.",
+    "price": 21.95,
+    "category": "Pearl Necklaces",
+    "images": [
+      "/products/cj-bow-and-pearl-chain-necklace.webp",
+      "/products/cj-bow-and-pearl-chain-necklace-2.webp",
+      "/products/cj-bow-and-pearl-chain-necklace-3.webp",
+      "/products/cj-bow-and-pearl-chain-necklace-4.webp",
+      "/products/cj-bow-and-pearl-chain-necklace-5.webp",
+      "/products/cj-bow-and-pearl-chain-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: titanium steel with alloy pendant",
+      "Chain style: curb",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "139",
+    "slug": "turquoise-cross-pendant-necklace",
+    "name": "Turquoise Cross Pendant Necklace",
+    "subtitle": "Cross on a turquoise bead chain",
+    "description": "A cross on a chain of turquoise-coloured beads. It suits a warm-weather outfit.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-turquoise-cross-pendant-necklace.webp",
+      "/products/cj-turquoise-cross-pendant-necklace-2.webp",
+      "/products/cj-turquoise-cross-pendant-necklace-3.webp",
+      "/products/cj-turquoise-cross-pendant-necklace-4.webp",
+      "/products/cj-turquoise-cross-pendant-necklace-5.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: turquoise beads with alloy cross",
+      "Chain style: bamboo-link",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "140",
+    "slug": "pearl-heart-pendant-necklace",
+    "name": "Pearl Heart Pendant Necklace",
+    "subtitle": "Pearl chain with a heart",
+    "description": "A pearl-style chain with a small heart pendant in the centre. An easy present.",
+    "price": 19.95,
+    "category": "Pearl Necklaces",
+    "images": [
+      "/products/cj-pearl-heart-pendant-necklace.webp",
+      "/products/cj-pearl-heart-pendant-necklace-2.webp",
+      "/products/cj-pearl-heart-pendant-necklace-3.webp",
+      "/products/cj-pearl-heart-pendant-necklace-4.webp",
+      "/products/cj-pearl-heart-pendant-necklace-5.webp",
+      "/products/cj-pearl-heart-pendant-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy with imitation pearl",
+      "Chain length: 43 cm plus 5 cm extension",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "141",
+    "slug": "beaded-tigereye-and-pearl-necklace",
+    "name": "Beaded Tigereye and Pearl Necklace",
+    "subtitle": "Handmade bead necklace",
+    "description": "A short necklace of hand-strung beads and pearl-style beads. Worn at the collar.",
+    "price": 21.95,
+    "category": "Pearl Necklaces",
+    "images": [
+      "/products/cj-beaded-tigereye-and-pearl-necklace.webp",
+      "/products/cj-beaded-tigereye-and-pearl-necklace-2.webp",
+      "/products/cj-beaded-tigereye-and-pearl-necklace-3.webp",
+      "/products/cj-beaded-tigereye-and-pearl-necklace-4.webp",
+      "/products/cj-beaded-tigereye-and-pearl-necklace-5.webp",
+      "/products/cj-beaded-tigereye-and-pearl-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: titanium steel with imitation pearl",
+      "Chain length: 36.5 cm plus extension",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "142",
+    "slug": "large-pearl-open-collar-necklace",
+    "name": "Large Pearl Open Collar Necklace",
+    "subtitle": "Big pearl-style beads, open collar",
+    "description": "An open collar of large pearl-style beads that sits round the neck. A statement piece.",
+    "price": 24.95,
+    "category": "Pearl Necklaces",
+    "images": [
+      "/products/cj-large-pearl-open-collar-necklace.webp",
+      "/products/cj-large-pearl-open-collar-necklace-2.webp",
+      "/products/cj-large-pearl-open-collar-necklace-3.webp",
+      "/products/cj-large-pearl-open-collar-necklace-4.webp",
+      "/products/cj-large-pearl-open-collar-necklace-5.webp",
+      "/products/cj-large-pearl-open-collar-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: beads",
+      "Style: open collar",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "143",
+    "slug": "flower-and-pearl-tassel-necklace",
+    "name": "Flower and Pearl Tassel Necklace",
+    "subtitle": "Pink flower with a pearl drop",
+    "description": "A pink flower with crystal detail and a pearl tassel, on a clavicle chain.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-flower-and-pearl-tassel-necklace.webp",
+      "/products/cj-flower-and-pearl-tassel-necklace-2.webp",
+      "/products/cj-flower-and-pearl-tassel-necklace-3.webp",
+      "/products/cj-flower-and-pearl-tassel-necklace-4.webp",
+      "/products/cj-flower-and-pearl-tassel-necklace-5.webp",
+      "/products/cj-flower-and-pearl-tassel-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: alloy",
+      "Finish: electroplated",
+      "Chain length: 45 cm",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "144",
+    "slug": "colour-heart-clavicle-necklace",
+    "name": "Colour Heart Clavicle Necklace",
+    "subtitle": "Small enamel heart on a wave chain",
+    "description": "A small coloured heart on a water-wave chain, in beige, pink or red.",
+    "price": 21.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-colour-heart-clavicle-necklace.webp",
+      "/products/cj-colour-heart-clavicle-necklace-2.webp",
+      "/products/cj-colour-heart-clavicle-necklace-3.webp",
+      "/products/cj-colour-heart-clavicle-necklace-4.webp",
+      "/products/cj-colour-heart-clavicle-necklace-5.webp",
+      "/products/cj-colour-heart-clavicle-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [
+      {
+        "id": "v-144-beige",
+        "colorName": "Beige",
+        "hex": "#e8d5b5",
+        "sku": "GG-144-01",
+        "stock": 50,
+        "images": [
+          "/products/cj-colour-heart-clavicle-necklace-5.webp",
+          "/products/cj-colour-heart-clavicle-necklace.webp",
+          "/products/cj-colour-heart-clavicle-necklace-2.webp",
+          "/products/cj-colour-heart-clavicle-necklace-3.webp",
+          "/products/cj-colour-heart-clavicle-necklace-4.webp",
+          "/products/cj-colour-heart-clavicle-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-144-pink",
+        "colorName": "Pink",
+        "hex": "#f4a6c0",
+        "sku": "GG-144-02",
+        "stock": 50,
+        "images": [
+          "/products/cj-colour-heart-clavicle-necklace-4.webp",
+          "/products/cj-colour-heart-clavicle-necklace.webp",
+          "/products/cj-colour-heart-clavicle-necklace-2.webp",
+          "/products/cj-colour-heart-clavicle-necklace-3.webp",
+          "/products/cj-colour-heart-clavicle-necklace-5.webp",
+          "/products/cj-colour-heart-clavicle-necklace-6.webp"
+        ]
+      },
+      {
+        "id": "v-144-red",
+        "colorName": "Red",
+        "hex": "#c62b3a",
+        "sku": "GG-144-03",
+        "stock": 50,
+        "images": [
+          "/products/cj-colour-heart-clavicle-necklace-6.webp",
+          "/products/cj-colour-heart-clavicle-necklace.webp",
+          "/products/cj-colour-heart-clavicle-necklace-2.webp",
+          "/products/cj-colour-heart-clavicle-necklace-3.webp",
+          "/products/cj-colour-heart-clavicle-necklace-4.webp",
+          "/products/cj-colour-heart-clavicle-necklace-5.webp"
+        ]
+      }
+    ],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: titanium steel",
+      "Chain style: water wave",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "145",
+    "slug": "layered-heart-chain-necklace",
+    "name": "Layered Heart Chain Necklace",
+    "subtitle": "Three layers, with heart accents",
+    "description": "A three-layer necklace in a steel tone with curb, heart and beaded chains. The layers are joined so they sit as styled.",
+    "price": 26.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-layered-heart-chain-necklace.webp",
+      "/products/cj-layered-heart-chain-necklace-2.webp",
+      "/products/cj-layered-heart-chain-necklace-3.webp",
+      "/products/cj-layered-heart-chain-necklace-4.webp",
+      "/products/cj-layered-heart-chain-necklace-5.webp",
+      "/products/cj-layered-heart-chain-necklace-6.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: stainless steel",
+      "Layer lengths: 37, 42 and 48 cm",
+      "Extension chain: 5 cm",
+      "Net weight: about 38 g",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "top-selling"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "146",
+    "slug": "triple-heart-pendant-necklace",
+    "name": "Triple Heart Pendant Necklace",
+    "subtitle": "Three polished hearts",
+    "description": "A gold-tone chain with three polished heart pendants.",
+    "price": 22.95,
+    "category": "Heart Necklaces",
+    "images": [
+      "/products/cj-triple-heart-pendant-necklace.webp",
+      "/products/cj-triple-heart-pendant-necklace-2.webp",
+      "/products/cj-triple-heart-pendant-necklace-3.webp",
+      "/products/cj-triple-heart-pendant-necklace-4.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Material: stainless steel",
+      "Chain style: O-link",
+      "Chain length: 45 cm plus 5 cm extension",
+      "Net weight: about 5.1 g",
+      "Comes as one necklace",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
   }
 ]

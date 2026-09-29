@@ -8,7 +8,9 @@ const categories = [
   "Name Jewelry",
   "Gift Keepsakes",
   "Pendant Necklaces",
-  "Pet Jewellery"
+  "Pet Jewellery",
+  "Heart Necklaces",
+  "Pearl Necklaces"
 ];
 
 const content = `/**
