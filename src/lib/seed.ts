@@ -2101,6 +2101,1827 @@ export const SEED_PRODUCTS: Product[] = [
     "createdAt": "2026-08-22T00:00:00.000Z",
     "updatedAt": "2026-08-22T00:00:00.000Z",
     "compareAtPrice": 120
+  },
+  {
+    "id": "40",
+    "slug": "mother-s-day-circle-pendant-necklace",
+    "name": "Mother's Day Circle Pendant Necklace",
+    "subtitle": "A little gift for Mum",
+    "description": "A circle pendant necklace with lettered charms, a sweet gift idea for Mother's Day or any day. Shown in silver, gold and rose gold tones.",
+    "price": 28.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-mother-s-day-circle-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "41",
+    "slug": "stainless-steel-script-pendant-necklace",
+    "name": "Stainless Steel Script Pendant Necklace",
+    "subtitle": "Delicate cursive pendant",
+    "description": "A fine chain with a small cursive-style pendant, made in stainless steel. Light enough for everyday wear.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-stainless-steel-script-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Stainless steel",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "42",
+    "slug": "crystal-initial-necklace-gold-tone",
+    "name": "Crystal Initial Necklace, Gold Tone",
+    "subtitle": "Choose your letter, A to Z",
+    "description": "A dainty gold-tone initial pendant set with clear crystals. Pick your letter and it arrives ready to gift.",
+    "price": 19.95,
+    "category": "Personalised Necklaces",
+    "images": [
+      "/products/cj-crystal-initial-necklace-gold-tone.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "details": [
+      "Gold-tone finish with crystal detail",
+      "Ships as pictured. Not custom-made, pick your letter at checkout",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "43",
+    "slug": "hollow-circle-pendant-necklace",
+    "name": "Hollow Circle Pendant Necklace",
+    "subtitle": "Simple, light, easy to layer",
+    "description": "A hollow circle pendant on a fine chain. Minimal enough to wear alone or stacked with other necklaces.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-hollow-circle-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "44",
+    "slug": "gold-tone-chain-bracelet",
+    "name": "Gold-Tone Chain Bracelet",
+    "subtitle": "A slim chain for stacking",
+    "description": "A slim gold-tone chain bracelet that stacks with other bracelets or wears on its own. Not personalised, it ships as pictured.",
+    "price": 25.95,
+    "category": "Gift Keepsakes",
+    "images": [
+      "/products/cj-gold-tone-chain-bracelet.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "45",
+    "slug": "vintage-star-pendant-cord-necklace",
+    "name": "Vintage Star Pendant Cord Necklace",
+    "subtitle": "Boho star and sun pendants",
+    "description": "A star pendant on an adjustable cord in a vintage boho style. Wear it long or short.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-vintage-star-pendant-cord-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "46",
+    "slug": "black-cat-and-moon-pendant-necklace",
+    "name": "Black Cat and Moon Pendant Necklace",
+    "subtitle": "For the cat lover",
+    "description": "A pendant of a black cat sitting on a crescent moon with a soft moonstone-style glow. A thoughtful gift for a cat owner.",
+    "price": 20.95,
+    "category": "Pet Jewellery",
+    "images": [
+      "/products/cj-black-cat-and-moon-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "47",
+    "slug": "lucky-compass-pendant-necklace",
+    "name": "Lucky Compass Pendant Necklace",
+    "subtitle": "A little guide for every day",
+    "description": "A round compass pendant on a fine chain, made in titanium steel. Shown in silver and gold tones.",
+    "price": 22.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-lucky-compass-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Titanium steel",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "48",
+    "slug": "teardrop-stone-pendant-necklace",
+    "name": "Teardrop Stone Pendant Necklace",
+    "subtitle": "Colour on a gold-tone chain",
+    "description": "A teardrop stone pendant on a beaded gold-tone chain. Each stone shows its own natural variation in colour.",
+    "price": 26.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-teardrop-stone-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "49",
+    "slug": "heart-letter-necklace-gold-tone",
+    "name": "Heart Letter Necklace, Gold Tone",
+    "subtitle": "Choose your letter, A to Z",
+    "description": "A small heart pendant with a pearly finish and a gold-tone letter. Choose your initial for yourself or someone you love.",
+    "price": 19.95,
+    "category": "Personalised Necklaces",
+    "images": [
+      "/products/cj-heart-letter-necklace-gold-tone.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "details": [
+      "Ships as pictured. Not custom-made, pick your letter at checkout",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "50",
+    "slug": "double-heart-zircon-necklace",
+    "name": "Double Heart Zircon Necklace",
+    "subtitle": "Two hearts, one sparkle",
+    "description": "An open double-heart pendant set with zircon-style stones. Comes in silver and rose gold tones.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-double-heart-zircon-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "51",
+    "slug": "pearl-style-beaded-drop-necklace",
+    "name": "Pearl-Style Beaded Drop Necklace",
+    "subtitle": "Long, delicate, easy to dress up",
+    "description": "A long beaded necklace with pearl-style beads and a drop end. Sits neatly at the collarbone or layers over a top.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-pearl-style-beaded-drop-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "52",
+    "slug": "crystal-love-knot-necklace",
+    "name": "Crystal Love Knot Necklace",
+    "subtitle": "A sparkling knot pendant",
+    "description": "A silver-tone love knot pendant set with clear crystals on a fine chain. A classic gift for an anniversary or birthday.",
+    "price": 26.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-crystal-love-knot-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "53",
+    "slug": "butterfly-charm-clavicle-necklace",
+    "name": "Butterfly Charm Clavicle Necklace",
+    "subtitle": "Tiny butterflies on a gold-tone chain",
+    "description": "A fine gold-tone chain with small butterfly charms. Sits at the collarbone.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-butterfly-charm-clavicle-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "54",
+    "slug": "pet-lover-charm-keyring",
+    "name": "Pet Lover Charm Keyring",
+    "subtitle": "Paws, bones and best friends",
+    "description": "A keyring with dog and cat charms, a paw print and a Best Friend heart. A small gift for anyone who loves their pet.",
+    "price": 19.95,
+    "category": "Pet Jewellery",
+    "images": [
+      "/products/cj-pet-lover-charm-keyring.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "55",
+    "slug": "gold-tone-chain-dog-collar",
+    "name": "Gold-Tone Chain Dog Collar",
+    "subtitle": "A chunky chain collar for small pets",
+    "description": "A lightweight chain collar in a gold tone, worn by small and medium dogs. Not a lead or restraint, for dress-up wear only, and always supervise your pet.",
+    "price": 19.95,
+    "category": "Pet Jewellery",
+    "images": [
+      "/products/cj-gold-tone-chain-dog-collar.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "56",
+    "slug": "diamante-cuban-link-pet-collar",
+    "name": "Diamante Cuban Link Pet Collar",
+    "subtitle": "Sparkle for small dogs",
+    "description": "A Cuban link chain collar set with sparkling stones for small and medium dogs. For dress-up wear only, always supervise your pet.",
+    "price": 19.95,
+    "category": "Pet Jewellery",
+    "images": [
+      "/products/cj-diamante-cuban-link-pet-collar.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "57",
+    "slug": "crystal-heart-pearl-pet-necklace",
+    "name": "Crystal Heart Pearl Pet Necklace",
+    "subtitle": "Pearl beads and a heart crystal",
+    "description": "A pearl-bead pet necklace with a crystal heart charm, made for cats and small dogs. For dress-up wear only, always supervise your pet.",
+    "price": 19.95,
+    "category": "Pet Jewellery",
+    "images": [
+      "/products/cj-crystal-heart-pearl-pet-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "58",
+    "slug": "gold-diamante-cuban-link-pet-collar",
+    "name": "Gold Diamante Cuban Link Pet Collar",
+    "subtitle": "Gold-tone chain with crystal links",
+    "description": "A gold-tone Cuban link collar with crystal detail and a secure clasp, made for small and medium dogs. For dress-up wear only, always supervise your pet.",
+    "price": 19.95,
+    "category": "Pet Jewellery",
+    "images": [
+      "/products/cj-gold-diamante-cuban-link-pet-collar.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "59",
+    "slug": "cartoon-dog-pendant-necklace",
+    "name": "Cartoon Dog Pendant Necklace",
+    "subtitle": "A little pup on a chain",
+    "description": "A cartoon dog pendant with crystal detail on a fine chain, made for the person who loves their dog.",
+    "price": 19.95,
+    "category": "Pet Jewellery",
+    "images": [
+      "/products/cj-cartoon-dog-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "60",
+    "slug": "pearl-bead-pet-collar-with-charms",
+    "name": "Pearl Bead Pet Collar with Charms",
+    "subtitle": "Pearl beads with small charms",
+    "description": "A pearl-bead pet collar with small charms, made for cats and small dogs. For dress-up wear only, always supervise your pet.",
+    "price": 19.95,
+    "category": "Pet Jewellery",
+    "images": [
+      "/products/cj-pearl-bead-pet-collar-with-charms.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "61",
+    "slug": "celtic-bear-paw-pendant-necklace",
+    "name": "Celtic Bear Paw Pendant Necklace",
+    "subtitle": "Bold stainless steel pendant",
+    "description": "A bold bear paw pendant with a Celtic knot pattern, made in stainless steel on a chain.",
+    "price": 22.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-celtic-bear-paw-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Stainless steel",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "62",
+    "slug": "silver-tone-rhinestone-dog-collar",
+    "name": "Silver-Tone Rhinestone Dog Collar",
+    "subtitle": "Chain collar with rhinestones",
+    "description": "A silver-tone chain collar with rhinestones for small and medium dogs. For dress-up wear only, always supervise your pet.",
+    "price": 19.95,
+    "category": "Pet Jewellery",
+    "images": [
+      "/products/cj-silver-tone-rhinestone-dog-collar.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "63",
+    "slug": "leopard-print-leaf-pendant-necklace",
+    "name": "Leopard Print Leaf Pendant Necklace",
+    "subtitle": "Statement necklace with a gold leaf",
+    "description": "A leopard-print beaded necklace with a gold-plated leaf pendant. Stainless steel with an 18K gold-plated finish.",
+    "price": 28.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-leopard-print-leaf-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Gold-plated stainless steel",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "64",
+    "slug": "diamond-painting-kit-panda-on-the-moon",
+    "name": "Diamond Painting Kit, Panda on the Moon",
+    "subtitle": "5D DIY kit",
+    "description": "A 5D DIY diamond painting kit of two pandas resting on a crescent moon. This is a ready-made design, not a custom photo kit.",
+    "price": 19.95,
+    "category": "Pet Diamond Paintings",
+    "images": [
+      "/products/cj-diamond-painting-kit-panda-on-the-moon.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "65",
+    "slug": "diamond-painting-kit-galloping-horses",
+    "name": "Diamond Painting Kit, Galloping Horses",
+    "subtitle": "DIY kit in bold colour",
+    "description": "A DIY diamond painting kit of galloping horses in bold colour. This is a ready-made design, not a custom photo kit.",
+    "price": 19.95,
+    "category": "Pet Diamond Paintings",
+    "images": [
+      "/products/cj-diamond-painting-kit-galloping-horses.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "66",
+    "slug": "heart-projection-necklace-with-rose-gift-box",
+    "name": "Heart Projection Necklace with Rose Gift Box",
+    "subtitle": "Gift-ready, in a display box",
+    "description": "A titanium steel heart pendant necklace with a hidden-image projection stone, presented in a gift box with a rose as pictured. A ready-to-give present.",
+    "price": 19.95,
+    "category": "Gift Keepsakes",
+    "images": [
+      "/products/cj-heart-projection-necklace-with-rose-gift-box.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Titanium steel",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "67",
+    "slug": "labradorite-cord-pendant-necklace",
+    "name": "Labradorite Cord Pendant Necklace",
+    "subtitle": "Flashes of blue",
+    "description": "A labradorite pendant on an adjustable woven cord. Every stone is different, so shape and flash vary from the photo.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-labradorite-cord-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "68",
+    "slug": "cosmic-nebula-orb-pendant-necklace",
+    "name": "Cosmic Nebula Orb Pendant Necklace",
+    "subtitle": "A galaxy you can wear",
+    "description": "A round pendant with a swirling galaxy design on a cord, a good gift for stargazers.",
+    "price": 43.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-cosmic-nebula-orb-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "69",
+    "slug": "bubble-letter-pendant-necklace-gold-tone",
+    "name": "Bubble Letter Pendant Necklace, Gold Tone",
+    "subtitle": "Puffed gold-tone lettering",
+    "description": "A puffed bubble-letter pendant necklace in a gold tone. Wear it alone or layered.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-bubble-letter-pendant-necklace-gold-tone.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "70",
+    "slug": "rectangular-crystal-pendant-cord-necklace",
+    "name": "Rectangular Crystal Pendant Cord Necklace",
+    "subtitle": "Simple stone on a black cord",
+    "description": "A rectangular crystal pendant on a black adjustable cord. Simple and easy to wear every day.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-rectangular-crystal-pendant-cord-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "71",
+    "slug": "natural-black-stone-cord-pendant-necklace",
+    "name": "Natural Black Stone Cord Pendant Necklace",
+    "subtitle": "Raw stone, woven cord",
+    "description": "A raw black stone pendant on a woven cord. Each stone is natural, so shape and finish vary.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-natural-black-stone-cord-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "72",
+    "slug": "butterfly-statement-necklace",
+    "name": "Butterfly Statement Necklace",
+    "subtitle": "A flutter of black and silver",
+    "description": "A statement necklace of black and white butterflies on a silver-tone chain with a black cord.",
+    "price": 20.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-butterfly-statement-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "73",
+    "slug": "purple-heart-pendant-necklace",
+    "name": "Purple Heart Pendant Necklace",
+    "subtitle": "A crystal heart on a fine chain",
+    "description": "A purple crystal-style heart pendant on a fine silver-tone chain. A sweet gift for a birthday or a zodiac fan.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-purple-heart-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "74",
+    "slug": "round-crystal-bead-pendant-necklace",
+    "name": "Round Crystal Bead Pendant Necklace",
+    "subtitle": "Colourful round pendants",
+    "description": "A round crystal-style bead pendant on a gold-tone chain, available in a range of colours.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-round-crystal-bead-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "75",
+    "slug": "hollow-heart-layered-necklace",
+    "name": "Hollow Heart Layered Necklace",
+    "subtitle": "Two chains, one heart",
+    "description": "A layered gold-tone necklace with a hollow heart and a small pendant. Worn as pictured for an easy stacked look.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-hollow-heart-layered-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "76",
+    "slug": "geometric-butterfly-pendant-necklace",
+    "name": "Geometric Butterfly Pendant Necklace",
+    "subtitle": "A small gold-tone butterfly",
+    "description": "A geometric butterfly pendant on a fine gold-tone chain, light enough for everyday wear.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-geometric-butterfly-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "77",
+    "slug": "constellation-moon-pendant-necklace",
+    "name": "Constellation Moon Pendant Necklace",
+    "subtitle": "One for each star sign",
+    "description": "A crescent moon pendant with a zodiac constellation stone, on a silver-tone chain. A birthday gift for any star sign.",
+    "price": 19.95,
+    "category": "Gift Keepsakes",
+    "images": [
+      "/products/cj-constellation-moon-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "78",
+    "slug": "stainless-steel-large-letter-necklace",
+    "name": "Stainless Steel Large Letter Necklace",
+    "subtitle": "Bold gold-tone initial",
+    "description": "A bold, slanted gold-tone letter pendant on a fine chain, made in stainless steel.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-stainless-steel-large-letter-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Stainless steel",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "79",
+    "slug": "tree-of-life-ladybug-pendant-necklace",
+    "name": "Tree of Life Ladybug Pendant Necklace",
+    "subtitle": "Silver tone with a tiny red ladybug",
+    "description": "A tree of life pendant with a small red ladybug on a fine silver-tone chain. A gift with meaning.",
+    "price": 45.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-tree-of-life-ladybug-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "80",
+    "slug": "cartoon-dog-and-cat-pendant-necklaces",
+    "name": "Cartoon Dog and Cat Pendant Necklaces",
+    "subtitle": "Fun black pet pendants",
+    "description": "Cartoon dog and cat pendants on fine chains with a bone and a small ladybug detail. A fun gift for pet lovers.",
+    "price": 19.95,
+    "category": "Pet Jewellery",
+    "images": [
+      "/products/cj-cartoon-dog-and-cat-pendant-necklaces.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "81",
+    "slug": "crystal-sea-turtle-pendant-necklace",
+    "name": "Crystal Sea Turtle Pendant Necklace",
+    "subtitle": "Ocean-blue crystal turtle",
+    "description": "A sea turtle pendant set with blue crystals and a rose gold shell detail, on a silver-tone chain.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-crystal-sea-turtle-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "82",
+    "slug": "rhinestone-cat-pendant-necklace",
+    "name": "Rhinestone Cat Pendant Necklace",
+    "subtitle": "A little cat with sparkle",
+    "description": "A clear cat pendant set with rhinestones on a fine silver-tone chain, for cat lovers.",
+    "price": 19.95,
+    "category": "Pet Jewellery",
+    "images": [
+      "/products/cj-rhinestone-cat-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "83",
+    "slug": "rainbow-dog-tag-necklace",
+    "name": "Rainbow Dog Tag Necklace",
+    "subtitle": "Love wins, in colour",
+    "description": "A rainbow dog tag pendant in titanium steel, available as Pride or Love tags as pictured.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-rainbow-dog-tag-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Titanium steel",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "84",
+    "slug": "double-butterfly-layered-necklace",
+    "name": "Double Butterfly Layered Necklace",
+    "subtitle": "Two delicate butterflies",
+    "description": "A layered necklace with two butterfly pendants. Silver and gold-plated finishes as pictured.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-double-butterfly-layered-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "85",
+    "slug": "stainless-steel-square-initial-necklace",
+    "name": "Stainless Steel Square Initial Necklace",
+    "subtitle": "Choose your letter, A to Z",
+    "description": "A small square initial pendant in stainless steel with a gold-tone or silver-tone finish. Choose your letter.",
+    "price": 19.95,
+    "category": "Personalised Necklaces",
+    "images": [
+      "/products/cj-stainless-steel-square-initial-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "details": [
+      "Stainless steel",
+      "Ships as pictured. Not custom-made, pick your letter at checkout",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "top-selling"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "86",
+    "slug": "gold-tone-flat-chain-necklace",
+    "name": "Gold-Tone Flat Chain Necklace",
+    "subtitle": "A smooth flat snake chain",
+    "description": "A smooth flat snake chain in a gold tone. Wear it alone or as a base for your favourite pendants.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-gold-tone-flat-chain-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "87",
+    "slug": "crystal-bubble-letter-pendant-necklace",
+    "name": "Crystal Bubble Letter Pendant Necklace",
+    "subtitle": "Sparkling puffed lettering",
+    "description": "A crystal-set bubble letter pendant on a gold-tone chain, made in stainless steel.",
+    "price": 45.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-crystal-bubble-letter-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Stainless steel",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "88",
+    "slug": "bubble-letter-necklace-gold-tone",
+    "name": "Bubble Letter Necklace, Gold Tone",
+    "subtitle": "Choose your letter, A to Z",
+    "description": "A puffed bubble-letter necklace in stainless steel with a gold-plated finish. Choose your initial.",
+    "price": 19.95,
+    "category": "Personalised Necklaces",
+    "images": [
+      "/products/cj-bubble-letter-necklace-gold-tone.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "details": [
+      "Stainless steel with gold-plated finish",
+      "Ships as pictured. Not custom-made, pick your letter at checkout",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "top-selling"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "89",
+    "slug": "rose-gold-drop-pendant-necklace",
+    "name": "Rose Gold Drop Pendant Necklace",
+    "subtitle": "A single crystal drop",
+    "description": "A slim rose gold-tone drop necklace with single crystals, made in stainless steel with an 18K rose gold-plated finish.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-rose-gold-drop-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Stainless steel with 18K rose gold-plated finish",
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "90",
+    "slug": "gold-tone-bubble-letter-pendant-necklace",
+    "name": "Gold-Tone Bubble Letter Pendant Necklace",
+    "subtitle": "Puffed gold letters on a beaded chain",
+    "description": "A puffed bubble-letter pendant on a beaded gold-tone chain. Shown with the letters A and B.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-gold-tone-bubble-letter-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "91",
+    "slug": "geometric-ellipse-pendant-necklace",
+    "name": "Geometric Ellipse Pendant Necklace",
+    "subtitle": "Minimal shape, easy to wear",
+    "description": "A small geometric ellipse pendant on a fine chain. A quiet necklace for every day.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-geometric-ellipse-pendant-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "92",
+    "slug": "large-letter-pendant-necklace-gold-tone",
+    "name": "Large Letter Pendant Necklace, Gold Tone",
+    "subtitle": "A bold statement letter",
+    "description": "A large gold-tone letter pendant on a fine chain, made for a bold, clean look.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-large-letter-pendant-necklace-gold-tone.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "93",
+    "slug": "puffy-heart-cord-necklace-gold-tone",
+    "name": "Puffy Heart Cord Necklace, Gold Tone",
+    "subtitle": "A smooth gold-tone heart",
+    "description": "A smooth puffed heart pendant in a gold tone on an adjustable cord.",
+    "price": 28.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-puffy-heart-cord-necklace-gold-tone.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "94",
+    "slug": "layered-crescent-moon-choker",
+    "name": "Layered Crescent Moon Choker",
+    "subtitle": "Three layers, one moon",
+    "description": "A layered choker with a small crescent moon pendant and a fine chain. Adjustable length.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-layered-crescent-moon-choker.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "95",
+    "slug": "gold-tone-bubble-letter-necklace",
+    "name": "Gold-Tone Bubble Letter Necklace",
+    "subtitle": "Choose your letter, A to Z",
+    "description": "A puffed bubble-letter pendant necklace in gold tone. Choose your initial for a gift that's personal.",
+    "price": 19.95,
+    "category": "Personalised Necklaces",
+    "images": [
+      "/products/cj-gold-tone-bubble-letter-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "details": [
+      "Ships as pictured. Not custom-made, pick your letter at checkout",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "top-selling"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "96",
+    "slug": "dainty-letter-clavicle-necklace",
+    "name": "Dainty Letter Clavicle Necklace",
+    "subtitle": "Choose your letter, A to Z",
+    "description": "A dainty initial pendant on a fine clavicle chain. Choose your letter.",
+    "price": 19.95,
+    "category": "Personalised Necklaces",
+    "images": [
+      "/products/cj-dainty-letter-clavicle-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "details": [
+      "Ships as pictured. Not custom-made, pick your letter at checkout",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "97",
+    "slug": "minimalist-letter-necklace-gold-tone",
+    "name": "Minimalist Letter Necklace, Gold Tone",
+    "subtitle": "Choose your letter, A to Z",
+    "description": "A minimalist gold-tone initial pendant on a fine chain. Choose your letter.",
+    "price": 19.95,
+    "category": "Personalised Necklaces",
+    "images": [
+      "/products/cj-minimalist-letter-necklace-gold-tone.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "details": [
+      "Ships as pictured. Not custom-made, pick your letter at checkout",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "trending"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "98",
+    "slug": "letter-and-heart-double-layer-necklace",
+    "name": "Letter and Heart Double Layer Necklace",
+    "subtitle": "Two chains, one small heart",
+    "description": "A double-layer necklace with a small heart pendant on one chain. Worn as pictured.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-letter-and-heart-double-layer-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "new-arrivals"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
+  },
+  {
+    "id": "99",
+    "slug": "tree-of-life-gold-tone-necklace",
+    "name": "Tree of Life Gold-Tone Necklace",
+    "subtitle": "A pendant with meaning",
+    "description": "An openwork tree of life pendant in a gold tone on a fine chain. A gift for growth, family and new beginnings.",
+    "price": 19.95,
+    "category": "Pendant Necklaces",
+    "images": [
+      "/products/cj-tree-of-life-gold-tone-necklace.webp"
+    ],
+    "video": null,
+    "variants": [],
+    "stock": 50,
+    "lowStockThreshold": 5,
+    "sizes": [],
+    "details": [
+      "Ships as pictured. Not custom-made",
+      "Gift-ready and easy to wrap"
+    ],
+    "tags": [
+      "top-selling"
+    ],
+    "status": "active",
+    "createdAt": "2026-09-30T00:00:00.000Z",
+    "updatedAt": "2026-09-30T00:00:00.000Z"
   }
 ];
 
@@ -2109,7 +3930,9 @@ export const PRODUCT_CATEGORIES = [
   "Pet Diamond Paintings",
   "Custom Photo Art",
   "Name Jewelry",
-  "Gift Keepsakes"
+  "Gift Keepsakes",
+  "Pendant Necklaces",
+  "Pet Jewellery"
 ];
 
 export const PRODUCT_TAGS = [

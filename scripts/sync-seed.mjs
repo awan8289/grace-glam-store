@@ -6,7 +6,9 @@ const categories = [
   "Pet Diamond Paintings",
   "Custom Photo Art",
   "Name Jewelry",
-  "Gift Keepsakes"
+  "Gift Keepsakes",
+  "Pendant Necklaces",
+  "Pet Jewellery"
 ];
 
 const content = `/**
