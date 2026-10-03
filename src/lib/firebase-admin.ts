@@ -5,14 +5,18 @@
 import { initializeApp, getApps, cert, type App } from "firebase-admin/app";
 import { getFirestore, type Firestore } from "firebase-admin/firestore";
 
-let _app: App | null = null;
-let _db: Firestore | null = null;
+// Use a global to survive Next.js hot-reload module cache resets.
+const globalForFirebase = globalThis as typeof globalThis & {
+  _firebaseApp?: App;
+  _firestoreDb?: Firestore;
+  _firestoreSettingsApplied?: boolean;
+};
 
 function getApp(): App {
-  if (_app) return _app;
+  if (globalForFirebase._firebaseApp) return globalForFirebase._firebaseApp;
   if (getApps().length > 0) {
-    _app = getApps()[0]!;
-    return _app;
+    globalForFirebase._firebaseApp = getApps()[0]!;
+    return globalForFirebase._firebaseApp;
   }
 
   const projectId   = process.env.FIREBASE_PROJECT_ID;
@@ -27,24 +31,27 @@ function getApp(): App {
     );
   }
 
-  _app = initializeApp({ credential: cert({ projectId, clientEmail, privateKey }) });
-  return _app;
+  globalForFirebase._firebaseApp = initializeApp({
+    credential: cert({ projectId, clientEmail, privateKey }),
+  });
+  return globalForFirebase._firebaseApp;
 }
 
 /** Returns the Firestore instance (creates it once). */
 export function getDb(): Firestore {
-  if (_db) return _db;
+  if (globalForFirebase._firestoreDb) return globalForFirebase._firestoreDb;
   getApp();
-  _db = getFirestore();
-  try {
-    // The app models optional fields as `undefined` (subtitle, compareAtPrice,
-    // a Google avatar...). Firestore rejects those by default, so any product
-    // saved without a subtitle failed. Skipping them stores the document without
-    // that key, which reads back as undefined again.
-    _db.settings({ ignoreUndefinedProperties: true });
-  } catch {
-    // settings() throws if this instance was already configured, e.g. after a
-    // dev hot reload re-evaluates this module. The first call already applied it.
+  globalForFirebase._firestoreDb = getFirestore();
+  // settings() must only be called once, before any other Firestore call.
+  if (!globalForFirebase._firestoreSettingsApplied) {
+    globalForFirebase._firestoreDb.settings({ ignoreUndefinedProperties: true });
+    globalForFirebase._firestoreSettingsApplied = true;
   }
-  return _db;
+  return globalForFirebase._firestoreDb;
+}
+
+
+/** The initialised Admin app, for services other than Firestore (e.g. Storage). */
+export function getFirebaseApp(): App {
+  return getApp();
 }

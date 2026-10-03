@@ -10,7 +10,7 @@ import { Product, getAllImages, getDiscountPercent, getTotalStock } from '@/type
  * NEXT_PUBLIC_SITE_URL in the deployment environment.
  */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://graceandglame.com'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://graceandglam.com.au'
 ).replace(/\/$/, '');
 
 interface PostalAddress {
@@ -29,7 +29,7 @@ export const SITE = {
   language: 'en-AU',
   country: 'AU',
   currency: BRAND_CONFIG.currency,
-  email: 'graceandglame.au@gmail.com',
+  email: 'sales@graceglam.com.au',
   // No street address or phone until real ones exist. The placeholders that
   // were here ("72 Luxury Boulevard, Suite 4B" and a made-up 1800 number) were
   // being published in the Organization JSON-LD, where a false address is the
@@ -52,8 +52,8 @@ export const SITE = {
  * and the product page badges. They are stated once here so the structured data
  * cannot drift away from what the site actually says.
  */
-export const FREE_SHIPPING_THRESHOLD = 150;
-export const FREE_SHIPPING_UNDER_RATE = '9.95';
+export const FREE_SHIPPING_THRESHOLD = 0;
+export const FREE_SHIPPING_UNDER_RATE = '0';
 
 export function absoluteUrl(path = '/'): string {
   return `${SITE_URL}${path.startsWith('/') ? path : `/${path}`}`;
@@ -93,7 +93,6 @@ export function organizationSchema() {
     ...(SITE.address ? { address: { '@type': 'PostalAddress', ...SITE.address } } : {}),
     areaServed: [
       { '@type': 'Country', name: 'Australia' },
-      { '@type': 'Country', name: 'New Zealand' },
     ],
     sameAs: SITE.social,
   };
@@ -156,7 +155,6 @@ export function productSchema(product: Product) {
       },
       shippingDestination: [
         { '@type': 'DefinedRegion', addressCountry: 'AU' },
-        { '@type': 'DefinedRegion', addressCountry: 'NZ' },
       ],
       deliveryTime: {
         '@type': 'ShippingDeliveryTime',
@@ -273,7 +271,7 @@ export function productDescription(product: Product): string {
     product.description || product.subtitle || product.name,
     colours > 1 ? `${colours} colours.` : '',
     discount ? `Save ${discount}%.` : '',
-    `Free shipping over A$${FREE_SHIPPING_THRESHOLD}.`,
+    'Free delivery in Australia on every order.',
   ].filter(Boolean);
 
   const text = parts.join(' ');

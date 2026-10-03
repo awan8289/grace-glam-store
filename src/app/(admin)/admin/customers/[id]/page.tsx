@@ -25,6 +25,7 @@ export default async function AdminCustomerDetailPage({ params }: Props) {
   const spent = orders
     .filter((order) => order.status !== 'Cancelled')
     .reduce((sum, order) => sum + order.subtotal, 0);
+  const refunded = orders.reduce((sum, order) => sum + (order.refundedAmount ?? 0), 0);
 
   return (
     <div className="space-y-8">
@@ -47,10 +48,11 @@ export default async function AdminCustomerDetailPage({ params }: Props) {
       </header>
 
       {/* ---------------- Summary ---------------- */}
-      <section className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-[#ececea] bg-[#ececea] lg:grid-cols-4">
+      <section className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-[#ececea] bg-[#ececea] lg:grid-cols-5">
         {[
           { label: 'Orders', value: String(orders.length) },
-          { label: 'Lifetime spend', value: formatPrice(spent) },
+          { label: 'Lifetime spend', value: formatPrice(spent - refunded) },
+          { label: 'Refunded', value: formatPrice(refunded) },
           { label: 'Addresses', value: String(customer.addresses.length) },
           { label: 'Joined', value: formatDate(customer.createdAt) },
         ].map((tile) => (
@@ -125,7 +127,14 @@ export default async function AdminCustomerDetailPage({ params }: Props) {
                       </Link>
                     </td>
                     <td className="px-4 py-3 text-[#6b6b73]">{formatDate(order.createdAt)}</td>
-                    <td className="px-4 py-3 text-right font-medium tabular-nums">{order.total}</td>
+                    <td className="px-4 py-3 text-right font-medium tabular-nums">
+                      {order.total}
+                      {(order.refundedAmount ?? 0) > 0 && (
+                        <span className="block text-[11px] font-normal text-[#a4272a]">
+                          −{formatPrice(order.refundedAmount ?? 0)} refunded
+                        </span>
+                      )}
+                    </td>
                     <td className="px-4 py-3">
                       <span
                         className={`rounded px-2 py-0.5 text-[12px] font-medium ${STATUS_TONE[order.status]}`}

@@ -89,18 +89,24 @@ await batchWrite("orders", orders);
 
 // Categories (stored as strings — convert to { id, name } docs)
 const categoriesRaw = readJson("categories.json");
-if (categoriesRaw && Array.isArray(categoriesRaw)) {
-  // Clear any old categories
-  const existingCats = await db.collection("categories").get();
-  const deleteBatch = db.batch();
-  existingCats.docs.forEach((doc) => deleteBatch.delete(doc.ref));
-  await deleteBatch.commit();
-
-  const catDocs = categoriesRaw.map(name => ({
-    id: name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
-    name,
-  }));
-  await batchWrite("categories", catDocs);
+try {
+  if (categoriesRaw && Array.isArray(categoriesRaw)) {
+    const catDocs = categoriesRaw.map(name => ({
+      id: name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
+      name,
+    }));
+    // Clean up old categories
+    const existingSnap = await db.collection("categories").get();
+    for (const d of existingSnap.docs) {
+      if (!catDocs.some(c => c.id === d.id)) {
+        await d.ref.delete();
+        console.log(`  categories: deleted obsolete category '${d.id}'`);
+      }
+    }
+    await batchWrite("categories", catDocs);
+  }
+} catch (err) {
+  console.log("  categories: skipped or quota limit reached", err.message);
 }
 
 console.log("\n✅ Migration complete! Data is now in Firestore.\n");

@@ -34,19 +34,39 @@ export function createFirestoreStore<T extends WithId>(
 ): JsonStore<T> {
   // Serialise concurrent mutations, just like json-store.
   let queue: Promise<unknown> = Promise.resolve();
+  let cache: { data: T[]; timestamp: number } | null = null;
+  const CACHE_TTL_MS = 60_000;
 
   // ── reads ──────────────────────────────────────────────────────────────────
 
   async function read(): Promise<T[]> {
-    const db       = getDb();
-    const snapshot = await db.collection(collectionName).get();
-
-    if (snapshot.empty && seed.length > 0) {
-      await write(seed);
-      return seed;
+    const now = Date.now();
+    if (cache && now - cache.timestamp < CACHE_TTL_MS) {
+      return cache.data;
     }
 
-    return snapshot.docs.map((doc) => doc.data() as T);
+    try {
+      const db       = getDb();
+      const snapshot = await db.collection(collectionName).get();
+
+      if (snapshot.empty && seed.length > 0) {
+        await write(seed);
+        cache = { data: seed, timestamp: now };
+        return seed;
+      }
+
+      if (collectionName === 'products' && seed.length === 0) {
+        cache = { data: [], timestamp: now };
+        return [];
+      }
+
+      const data = snapshot.docs.map((doc) => doc.data() as T);
+      cache = { data, timestamp: now };
+      return data;
+    } catch (err) {
+      console.warn(`[firestore-store] read('${collectionName}') warning: ${err instanceof Error ? err.message : err}. Falling back to cached or seed data.`);
+      return cache?.data ?? seed;
+    }
   }
 
   async function readForWrite(): Promise<T[]> {
@@ -59,28 +79,25 @@ export function createFirestoreStore<T extends WithId>(
     const db     = getDb();
     const colRef = db.collection(collectionName);
 
-    // 1. Write first (use item.id as the Firestore doc ID). If any document is
-    //    rejected this throws with nothing deleted. Deleting first meant one bad
-    //    field wiped the whole collection, and an empty collection is re-seeded
-    //    on the next read — so the failed save also silently discarded every
-    //    earlier admin edit, and for orders (no seed) it discarded all of them.
-    for (const batch_items of chunkArray(items, 400)) {
-      const batch = db.batch();
-      batch_items.forEach((item) => {
-        batch.set(colRef.doc(item.id), item);
-      });
-      await batch.commit();
-    }
-
-    // 2. Only now remove documents that are no longer in the list.
-    const keep     = new Set(items.map((item) => item.id));
+    // 1. Delete every existing document (chunked to stay under 500-op limit).
     const existing = await colRef.get();
-    const stale    = existing.docs.filter((doc) => !keep.has(doc.id));
-    for (const batch_docs of chunkArray(stale, 400)) {
+    for (const batch_docs of chunkArray(existing.docs, 400)) {
       const batch = db.batch();
       batch_docs.forEach((doc) => batch.delete(doc.ref));
       await batch.commit();
     }
+
+    // 2. Write new documents (use item.id as the Firestore doc ID).
+    for (const batch_items of chunkArray(items, 400)) {
+      const batch = db.batch();
+      batch_items.forEach((item) => {
+        const docRef = colRef.doc(item.id);
+        const cleanItem = JSON.parse(JSON.stringify(item));
+        batch.set(docRef, cleanItem);
+      });
+      await batch.commit();
+    }
+    cache = { data: items, timestamp: Date.now() };
   }
 
   // ── mutation helper ────────────────────────────────────────────────────────

@@ -7,6 +7,7 @@ import {
   ORDER_STATUSES,
   Order,
   OrderItem,
+  OrderRefund,
   OrderStatus,
   PublicCustomer,
   ShippingDetails,
@@ -145,6 +146,8 @@ export interface PlaceOrderInput {
   shippingDetails?: ShippingDetails;
   paymentMethod: string;
   customText?: string;
+  stripePaymentId?: string;
+  stripeSessionId?: string;
 }
 
 function movementsFor(items: OrderItem[]): StockMovement[] {
@@ -189,6 +192,8 @@ export async function placeOrder(input: PlaceOrderInput): Promise<PlaceOrderResu
     items: input.items,
     trackingSteps: appendStep([], 'Processing', 'Online Store'),
     customText: input.customText,
+    stripePaymentId: input.stripePaymentId,
+    stripeSessionId: input.stripeSessionId,
     createdAt: now.toISOString(),
     updatedAt: now.toISOString(),
   };
@@ -211,6 +216,28 @@ export async function placeOrder(input: PlaceOrderInput): Promise<PlaceOrderResu
   }
 
   return { ok: true, order };
+}
+
+// ---------------------------------------------------------------------------
+// Refunds (admin)
+// ---------------------------------------------------------------------------
+
+/** Appends a Stripe refund to the order and updates the running total. */
+export async function recordRefund(id: string, refund: OrderRefund): Promise<Order | null> {
+  return orderStore.mutate(async (orders) => {
+    const index = orders.findIndex((order) => order.id === id);
+    if (index === -1) return null;
+    const order = orders[index];
+    const refunds = [...(order.refunds ?? []), refund];
+    orders[index] = {
+      ...order,
+      refunds,
+      refundedAmount: Number(refunds.reduce((sum, r) => sum + r.amount, 0).toFixed(2)),
+      updatedAt: new Date().toISOString(),
+    };
+    await orderStore.write(orders);
+    return orders[index];
+  });
 }
 
 // ---------------------------------------------------------------------------

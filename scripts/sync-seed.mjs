@@ -1,15 +1,7 @@
 import fs from "fs";
 
 const products = JSON.parse(fs.readFileSync("data/products.json", "utf-8"));
-const categories = [
-  "Personalised Necklaces",
-  "Pet Diamond Paintings",
-  "Gift Keepsakes",
-  "Pendant Necklaces",
-  "Pet Jewellery",
-  "Heart Necklaces",
-  "Pearl Necklaces"
-];
+const categories = JSON.parse(fs.readFileSync("data/categories.json", "utf-8"));
 
 const content = `/**
  * Initial catalogue for Grace & Glam.

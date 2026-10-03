@@ -167,3 +167,31 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Header nav link: gold underline that grows from the centre on hover. */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 0.65rem;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0.45rem;
+  height: 1px;
+  background: #d3a95d;
+  transition: left 0.25s ease, right 0.25s ease;
+}
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: #d3a95d;
+}
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  left: 0.65rem;
+  right: 0.65rem;
+}

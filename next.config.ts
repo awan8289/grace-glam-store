@@ -10,7 +10,7 @@ const CSP = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://images.unsplash.com",
+  "img-src 'self' data: blob: https://images.unsplash.com https://oss-cf.cjdropshipping.com https://cf.cjdropshipping.com",
   "media-src 'self' blob:",
   "font-src 'self' data:",
   "connect-src 'self' ws: wss:",
@@ -45,6 +45,8 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 31536000,
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com', pathname: '/**' },
+      { protocol: 'https', hostname: 'oss-cf.cjdropshipping.com', pathname: '/**' },
+      { protocol: 'https', hostname: 'cf.cjdropshipping.com', pathname: '/**' },
     ],
   },
 

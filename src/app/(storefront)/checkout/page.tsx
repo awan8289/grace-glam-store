@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useAuthStore, Order } from '@/store/useAuthStore';
 import { useCartStore } from '@/store/useCartStore';
 import { formatPrice } from '@/lib/format';
+import { shippingForSubtotal } from '@/lib/pricing';
 import { BRAND_CONFIG } from '@/constants/config';
 import { useIsHydrated } from '@/lib/useIsHydrated';
 
@@ -32,12 +33,75 @@ const AUSTRALIAN_STATES = [
   'Northern Territory (NT)',
 ];
 
+// ── Validation and formatting helpers ───────────────────────────────────────
+function isValidAustralianPhone(phone: string): boolean {
+  const cleaned = phone.replace(/[\s\-\(\)]/g, '');
+  // Accepts: 04XXXXXXXX (10 digits), 0[2378]XXXXXXXX (10 digits), +614XXXXXXXX (12 digits), +61[2378]XXXXXXXX (12 digits), 614XXXXXXXX (11 digits)
+  return /^(?:\+?61|0)[2-478]\d{8}$/.test(cleaned);
+}
+
+function isValidAustralianPostcode(zip: string): boolean {
+  return /^\d{4}$/.test(zip.trim());
+}
+
+function isValidLuhn(cardNumber: string): boolean {
+  const digits = cardNumber.replace(/\D/g, '');
+  if (digits.length < 13 || digits.length > 19) return false;
+  let sum = 0;
+  let isEven = false;
+  for (let i = digits.length - 1; i >= 0; i--) {
+    let digit = parseInt(digits.charAt(i), 10);
+    if (isEven) {
+      digit *= 2;
+      if (digit > 9) digit -= 9;
+    }
+    sum += digit;
+    isEven = !isEven;
+  }
+  return sum % 10 === 0;
+}
+
+function isValidExpiry(expiry: string): boolean {
+  const cleaned = expiry.trim();
+  const match = cleaned.match(/^(0[1-9]|1[0-2])\/(\d{2})$/);
+  if (!match) return false;
+  const month = parseInt(match[1], 10);
+  const year = 2000 + parseInt(match[2], 10);
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentMonth = now.getMonth() + 1;
+  if (year < currentYear) return false;
+  if (year === currentYear && month < currentMonth) return false;
+  if (year > currentYear + 25) return false;
+  return true;
+}
+
+function formatCardNumber(value: string): string {
+  const digits = value.replace(/\D/g, '').slice(0, 16);
+  const parts = [];
+  for (let i = 0; i < digits.length; i += 4) {
+    parts.push(digits.slice(i, i + 4));
+  }
+  return parts.join(' ');
+}
+
+function formatExpiryDate(value: string): string {
+  const digits = value.replace(/\D/g, '').slice(0, 4);
+  if (digits.length >= 3) {
+    return `${digits.slice(0, 2)}/${digits.slice(2)}`;
+  }
+  return digits;
+}
+
 export default function CheckoutPage() {
-  const { user, isLoggedIn, isReady, openAuthModal, loginWithGoogle, addAddress, addSavedCard } = useAuthStore();
+  const { user, isLoggedIn, isReady, openAuthModal, addAddress, addSavedCard } = useAuthStore();
   const { items: cartItems, getTotalPrice, clearCart } = useCartStore();
 
   const mounted = useIsHydrated();
-  const totalPrice = getTotalPrice();
+  const subtotalPrice = getTotalPrice();
+  // Same rule the Stripe route applies, so the total shown here is the total charged.
+  const shippingPrice = shippingForSubtotal(subtotalPrice);
+  const totalPrice = subtotalPrice + shippingPrice;
 
   // Step management: 1 = Address, 2 = Payment, 3 = Confirmation
   const [currentStep, setCurrentStep] = useState<1 | 2 | 3>(1);
@@ -72,10 +136,73 @@ export default function CheckoutPage() {
   const [isProcessingOrder, setIsProcessingOrder] = useState(false);
   const [completedOrder, setCompletedOrder] = useState<Order | null>(null);
 
+  // Stripe Australia Real Payment Verification State
+  const [isVerifyingStripe, setIsVerifyingStripe] = useState(false);
+  const [stripeVerificationError, setStripeVerificationError] = useState('');
+  const [checkoutCanceledNotice, setCheckoutCanceledNotice] = useState(false);
+
+  // Detect and process Stripe return callbacks (?success=true&session_id=... / ?canceled=true)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+    const sessionId = urlParams.get('session_id');
+    const canceled = urlParams.get('canceled');
+
+    if (canceled === 'true') {
+      setTimeout(() => {
+        setCheckoutCanceledNotice(true);
+      }, 0);
+      window.history.replaceState({}, '', '/checkout');
+      return;
+    }
+
+    if (success === 'true' && sessionId) {
+      setTimeout(() => {
+        setIsVerifyingStripe(true);
+      }, 0);
+      window.history.replaceState({}, '', '/checkout');
+
+      // The Stripe webhook may be creating this order at the same moment;
+      // the server answers 202 while it does, so poll briefly for the result.
+      const verifyOrder = async (attempt = 0): Promise<{ order?: Order }> => {
+        const res = await fetch(`/api/checkout/verify?session_id=${encodeURIComponent(sessionId)}`);
+        const data = await res.json();
+        if (res.status === 202 && attempt < 6) {
+          await new Promise((resolve) => setTimeout(resolve, 2500));
+          return verifyOrder(attempt + 1);
+        }
+        if (!res.ok || !data.order) {
+          throw new Error(data.error || 'Failed to verify Australian Stripe payment.');
+        }
+        return data;
+      };
+
+      verifyOrder()
+        .then(async (data) => {
+          clearCart();
+          setCompletedOrder(data.order as Order);
+          setCurrentStep(3);
+        })
+        .catch((err) => {
+          console.error('Error verifying Stripe payment:', err);
+          setStripeVerificationError(
+            err instanceof Error ? err.message : 'Could not verify payment with Stripe.'
+          );
+        })
+        .finally(() => {
+          setIsVerifyingStripe(false);
+        });
+    }
+  }, [clearCart]);
+
   // Everything below is derived from the store rather than copied into state by
   // an effect, so the defaults are correct on the very first render.
   const savedAddresses = user?.addresses ?? [];
-  const savedCards = user?.savedCards ?? [];
+  const rawSavedCards = user?.savedCards ?? [];
+  const savedCards = rawSavedCards.filter(
+    (c) => c.expiryDate && c.expiryDate.includes('/') && c.expiryDate.length === 5
+  );
 
   const defaultAddressId =
     (savedAddresses.find((a) => a.isDefault) ?? savedAddresses[0])?.id ?? '';
@@ -98,12 +225,37 @@ export default function CheckoutPage() {
     setAddressError('');
 
     if (!newName.trim() || !newPhone.trim() || !newStreet.trim() || !newCity.trim() || !newZip.trim()) {
-      setAddressError('Please fill in all address fields.');
+      setAddressError('Please fill in all delivery address fields.');
+      return;
+    }
+
+    if (newName.trim().length < 2) {
+      setAddressError('Please enter a valid recipient name (minimum 2 characters).');
+      return;
+    }
+
+    if (!isValidAustralianPhone(newPhone)) {
+      setAddressError('Please enter a valid Australian phone number (e.g. 0412 345 678 or +61 412 345 678).');
+      return;
+    }
+
+    if (newStreet.trim().length < 5) {
+      setAddressError('Please enter a complete street address (minimum 5 characters).');
+      return;
+    }
+
+    if (newCity.trim().length < 2) {
+      setAddressError('Please enter a valid Australian suburb or city name.');
+      return;
+    }
+
+    if (!isValidAustralianPostcode(newZip)) {
+      setAddressError('Please enter a valid 4-digit Australian postcode (e.g. 2000, 3000, 4000).');
       return;
     }
 
     const newAddrData = {
-      label: newLabel || 'Home',
+      label: newLabel.trim() || 'Home',
       fullName: newName.trim(),
       phone: newPhone.trim(),
       street: newStreet.trim(),
@@ -127,16 +279,128 @@ export default function CheckoutPage() {
   const handleProceedToPayment = () => {
     setAddressError('');
     if (!selectedAddressId && !showAddAddressForm) {
-      setAddressError('Please select a delivery location.');
+      setAddressError('Please select or add a delivery location.');
       return;
     }
     if (showAddAddressForm) {
       if (!newName.trim() || !newPhone.trim() || !newStreet.trim() || !newCity.trim() || !newZip.trim()) {
-        setAddressError('Please save your location first or select an existing address.');
+        setAddressError('Please complete your delivery address fields first.');
+        return;
+      }
+      if (!isValidAustralianPhone(newPhone)) {
+        setAddressError('Please enter a valid Australian phone number (e.g. 0412 345 678 or +61 412 345 678).');
+        return;
+      }
+      if (!isValidAustralianPostcode(newZip)) {
+        setAddressError('Please enter a valid 4-digit Australian postcode (e.g. 2000, 3000, 4000).');
         return;
       }
     }
     setCurrentStep(2);
+  };
+
+  // Initiate Real Stripe Payment (AUD) via Stripe Hosted Checkout
+  const handleProceedToStripe = async () => {
+    setPaymentError('');
+    if (!selectedAddressId && !showAddAddressForm) {
+      setPaymentError('Please select or add a delivery address in Step 1 first.');
+      return;
+    }
+
+    if (showAddAddressForm) {
+      if (!newName.trim() || !newPhone.trim() || !newStreet.trim() || !newCity.trim() || !newZip.trim()) {
+        setPaymentError('Please fill in all delivery address fields in Step 1 first.');
+        return;
+      }
+      if (!isValidAustralianPhone(newPhone)) {
+        setPaymentError('Please enter a valid Australian phone number (e.g. 0412 345 678).');
+        return;
+      }
+      if (!isValidAustralianPostcode(newZip)) {
+        setPaymentError('Please enter a valid 4-digit Australian postcode.');
+        return;
+      }
+    }
+
+    setIsProcessingOrder(true);
+    try {
+      const activeAddress = user?.addresses?.find((a) => a.id === selectedAddressId);
+      const shippingDetails = activeAddress
+        ? {
+            label: activeAddress.label,
+            fullName: activeAddress.fullName,
+            phone: activeAddress.phone,
+            street: activeAddress.street,
+            city: activeAddress.city,
+            state: activeAddress.state,
+            zipCode: activeAddress.zipCode,
+            country: 'Australia',
+          }
+        : showAddAddressForm
+        ? {
+            label: newLabel.trim() || 'Home',
+            fullName: newName.trim(),
+            phone: newPhone.trim(),
+            street: newStreet.trim(),
+            city: newCity.trim(),
+            state: newState,
+            zipCode: newZip.trim(),
+            country: 'Australia',
+          }
+        : undefined;
+
+      const response = await fetch('/api/checkout/stripe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          addressId: selectedAddressId,
+          shippingDetails,
+          items: cartItems.map((item) => ({
+            productId: item.product.id,
+            // Match on size as well as colour: products like the canvas art
+            // have one variant per size, all with the same colour name.
+            variantId:
+              (
+                item.product.variants.find(
+                  (variant) =>
+                    variant.colorName === item.selectedColor &&
+                    (!variant.size || variant.size === item.selectedSize)
+                ) ?? item.product.variants.find((variant) => variant.colorName === item.selectedColor)
+              )?.id || '',
+            size: item.selectedSize,
+            customImage: item.customImage,
+            quantity: item.quantity,
+            customText: item.customText,
+            secondaryCustomText: item.secondaryCustomText,
+            script: item.script,
+            chainLength: item.chainLength,
+            giftBox: item.giftBox,
+            isBundle: item.isBundle,
+            selectedColor: item.selectedColor,
+          })),
+        }),
+      });
+
+      let data: { url?: string; error?: string } = {};
+      try {
+        data = await response.json();
+      } catch {
+        throw new Error('Unable to parse server response from payment gateway.');
+      }
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to initiate secure Australian Stripe checkout.');
+      }
+
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        throw new Error('No checkout URL received from Stripe.');
+      }
+    } catch (err) {
+      setIsProcessingOrder(false);
+      setPaymentError(err instanceof Error ? err.message : 'Unable to connect to Stripe gateway.');
+    }
   };
 
   // Handle Final Order Placement
@@ -144,8 +408,22 @@ export default function CheckoutPage() {
     setPaymentError('');
 
     if (paymentType === 'card') {
-      if (!cardName.trim() || !cardNumber.trim() || !cardExpiry.trim() || !cardCvc.trim()) {
-        setPaymentError('Please enter valid credit/debit card details.');
+      if (!cardName.trim() || cardName.trim().length < 3) {
+        setPaymentError('Please enter the full cardholder name as displayed on your card.');
+        return;
+      }
+      const rawCardDigits = cardNumber.replace(/\D/g, '');
+      if (rawCardDigits.length < 15 || rawCardDigits.length > 16 || !isValidLuhn(rawCardDigits)) {
+        setPaymentError('Please enter a valid 16-digit credit/debit card number.');
+        return;
+      }
+      if (!isValidExpiry(cardExpiry)) {
+        setPaymentError('Please enter a valid future expiration date (MM/YY).');
+        return;
+      }
+      const rawCvc = cardCvc.replace(/\D/g, '');
+      if (rawCvc.length < 3 || rawCvc.length > 4) {
+        setPaymentError('Please enter a valid 3 or 4-digit CVC security code.');
         return;
       }
     }
@@ -167,13 +445,13 @@ export default function CheckoutPage() {
         await addSavedCard({
           cardholderName: cardName.toUpperCase() || 'CARDHOLDER',
           cardNumberMasked: lastFour,
-          expiryDate: cardExpiry || '12/28',
+          expiryDate: cardExpiry,
           brand: 'Visa',
           isDefault: true,
         });
       }
     } else if (paymentType === 'saved_card') {
-      const card = user?.savedCards?.find((entry) => entry.id === selectedSavedCardId);
+      const card = savedCards.find((entry) => entry.id === selectedSavedCardId);
       payMethodName = card
         ? `${card.brand} ending in ${card.cardNumberMasked.slice(-4)}`
         : 'Saved card';
@@ -195,12 +473,25 @@ export default function CheckoutPage() {
             )?.id,
             size: item.selectedSize,
             quantity: item.quantity,
+            customText: item.customText,
+            secondaryCustomText: item.secondaryCustomText,
+            script: item.script,
+            chainLength: item.chainLength,
+            giftBox: item.giftBox,
+            isBundle: item.isBundle,
           })),
         }),
       });
 
-      const body = await response.json();
-      if (!response.ok) throw new Error(body.error ?? 'Could not place the order.');
+      let body: { error?: string; order?: Order } = {};
+      try {
+        body = await response.json();
+      } catch {
+        const text = await response.text().catch(() => '');
+        throw new Error(text || 'Server error occurred during order confirmation.');
+      }
+
+      if (!response.ok) throw new Error(body?.error ?? 'Could not place the order.');
 
       // Pull the new order into the account view.
       await useAuthStore.getState().refresh();
@@ -214,6 +505,28 @@ export default function CheckoutPage() {
       setIsProcessingOrder(false);
     }
   };
+
+  // Verifying Stripe Payment Screen (Returns from checkout.stripe.com)
+  if (isVerifyingStripe) {
+    return (
+      <div className="min-h-dvh bg-[#faf9f6] pt-10 md:pt-32 pb-20 px-4 flex justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="text-center max-w-md w-full bg-white p-8 md:p-10 rounded-3xl border border-[#e5d5b7] shadow-2xl space-y-4"
+        >
+          <div className="w-14 h-14 rounded-full border-3 border-[#d3a95d]/20 border-t-[#d3a95d] animate-spin mx-auto mb-2" />
+          <span className="inline-block px-3 py-1 bg-[#faf6ed] text-[#b8860b] text-[10px] font-bold uppercase tracking-widest rounded-full border border-[#e5d5b7]">
+            Stripe Australia Live Gateway
+          </span>
+          <h2 className="text-xl font-serif font-bold text-black">Verifying Australian Payment</h2>
+          <p className="text-gray-500 text-xs leading-relaxed">
+            Confirming your transaction with Stripe Australia and preparing your order for tracked Sydney dispatch...
+          </p>
+        </motion.div>
+      </div>
+    );
+  }
 
   // Loading state
   if (!mounted || !isReady) {
@@ -256,11 +569,8 @@ export default function CheckoutPage() {
             </button>
             <button
               type="button"
-              onClick={async () => {
-                const res = await loginWithGoogle();
-                if (res.success) {
-                  window.location.reload();
-                }
+              onClick={() => {
+                window.location.href = '/api/account/google';
               }}
               className="w-full flex items-center justify-center gap-3 py-3 border border-gray-300 rounded-xl text-gray-700 text-xs font-semibold uppercase tracking-wider hover:bg-gray-50 transition-all cursor-pointer shadow-sm"
             >
@@ -582,8 +892,11 @@ export default function CheckoutPage() {
                         <input
                           type="tel"
                           value={newPhone}
-                          onChange={(e) => setNewPhone(e.target.value)}
-                          placeholder="+61 494 794 408"
+                          onChange={(e) => {
+                            const val = e.target.value.replace(/[^\d+()\s-]/g, '').slice(0, 18);
+                            setNewPhone(val);
+                          }}
+                          placeholder="+61 494 794 408 or 0412 345 678"
                           inputMode="tel"
                           autoComplete="tel"
                           className={inputClass}
@@ -636,12 +949,16 @@ export default function CheckoutPage() {
                       </div>
                       <div>
                         <label className="text-xs uppercase tracking-wider font-bold text-gray-500 block mb-1">
-                          Postcode
+                          Postcode (4 Digits)
                         </label>
                         <input
                           type="text"
                           value={newZip}
-                          onChange={(e) => setNewZip(e.target.value)}
+                          onChange={(e) => {
+                            const val = e.target.value.replace(/\D/g, '').slice(0, 4);
+                            setNewZip(val);
+                          }}
+                          maxLength={4}
                           placeholder="2000"
                           inputMode="numeric"
                           autoComplete="postal-code"
@@ -706,13 +1023,34 @@ export default function CheckoutPage() {
                   </button>
                 </div>
 
+                {checkoutCanceledNotice && (
+                  <div className="mb-6 p-4 bg-amber-50 border border-amber-200 text-amber-900 rounded-xl text-xs flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="text-base">ℹ️</span>
+                      <span>Payment was canceled or not completed. Your bag items have been preserved safely.</span>
+                    </div>
+                    <button
+                      onClick={() => setCheckoutCanceledNotice(false)}
+                      className="text-amber-600 hover:text-amber-800 font-bold ml-2 text-sm cursor-pointer"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                )}
+
+                {stripeVerificationError && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-700 rounded-xl text-xs">
+                    {stripeVerificationError}
+                  </div>
+                )}
+
                 {paymentError && (
                   <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-700 rounded-xl text-xs">
                     {paymentError}
                   </div>
                 )}
 
-                {/* Australia Payment Cards Reassurance */}
+                {/* Australia Payment Gateway Trust Banner */}
                 <div className="bg-[#faf6ed] rounded-2xl p-4 mb-6 border border-[#e5d5b7] flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 border border-[#d3a95d]">
                     <svg className="w-5 h-5 text-[#d3a95d]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -720,143 +1058,19 @@ export default function CheckoutPage() {
                     </svg>
                   </div>
                   <div className="text-xs text-gray-700">
-                    <p className="font-bold text-black">Australian Single Gateway Integration</p>
-                    <p className="text-[11px] text-gray-500">Visa, Mastercard, American Express & Apple Pay accepted natively.</p>
+                    <p className="font-bold text-black">Australian Single Gateway Integration (Stripe AUD)</p>
+                    <p className="text-[11px] text-gray-500">
+                      Real-time payment authorization with Australian bank 3D Secure / OTP SMS protection.
+                    </p>
                   </div>
                 </div>
 
-                {/* Option 1: Saved Cards (if available) */}
-                {savedCards.length > 0 && (
-                  <div className="mb-4">
-                    <div
-                      onClick={() => setPaymentType('saved_card')}
-                      className={`cursor-pointer rounded-2xl p-4 border-2 transition-all ${
-                        paymentType === 'saved_card' ? 'border-[#d3a95d] bg-[#faf6ed]/30' : 'border-gray-200'
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <input
-                            type="radio"
-                            name="paymentOption"
-                            checked={paymentType === 'saved_card'}
-                            onChange={() => setPaymentType('saved_card')}
-                            className="w-4 h-4 text-[#d3a95d]"
-                          />
-                          <span className="font-bold text-sm text-black">Use Saved Card ({savedCards.length})</span>
-                        </div>
-                        <span className="text-xs text-[#b8860b] font-semibold">Fast Checkout</span>
-                      </div>
-
-                      {paymentType === 'saved_card' && (
-                        <div className="mt-4 space-y-2 pl-7">
-                          {savedCards.map((card) => (
-                            <label
-                              key={card.id}
-                              className={`flex items-center justify-between p-3 rounded-xl border cursor-pointer ${
-                                selectedSavedCardId === card.id ? 'border-[#d3a95d] bg-white' : 'border-gray-200'
-                              }`}
-                            >
-                              <div className="flex items-center gap-2">
-                                <input
-                                  type="radio"
-                                  name="savedCardItem"
-                                  checked={selectedSavedCardId === card.id}
-                                  onChange={() => setSelectedSavedCardId(card.id)}
-                                  className="w-3.5 h-3.5 text-[#d3a95d]"
-                                />
-                                <span className="text-xs font-semibold text-black">{card.brand} {card.cardNumberMasked}</span>
-                              </div>
-                              <span className="text-xs text-gray-400">Exp {card.expiryDate}</span>
-                            </label>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                )}
-
-                {/* Option 2: Apple Pay */}
+                {/* Option 1: Credit / Debit Card & Stripe Australia */}
                 <div className="mb-4">
                   <div
-                    onClick={() => setPaymentType('applepay')}
-                    className={`cursor-pointer rounded-2xl p-4 border-2 transition-all ${
-                      paymentType === 'applepay' ? 'border-[#d3a95d] bg-[#faf6ed]/30' : 'border-gray-200'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <input
-                          type="radio"
-                          name="paymentOption"
-                          checked={paymentType === 'applepay'}
-                          onChange={() => setPaymentType('applepay')}
-                          className="w-4 h-4 text-[#d3a95d]"
-                        />
-                        <div className="flex items-center gap-2">
-                          <span className="font-bold text-sm text-black">Apple Pay</span>
-                          <span className="px-2 py-0.5 bg-black text-white text-[10px] font-bold rounded"> Pay</span>
-                        </div>
-                      </div>
-                      <span className="text-xs text-gray-400">1-Touch Express</span>
-                    </div>
-
-                    {paymentType === 'applepay' && (
-                      <div className="mt-4 pl-7 space-y-3" onClick={(e) => e.stopPropagation()}>
-                        <div className="p-4 bg-black text-white rounded-2xl border border-gray-800 shadow-inner">
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="text-lg font-bold tracking-tight"> Pay</span>
-                            <span className="text-[10px] bg-emerald-500/20 text-emerald-400 font-semibold px-2 py-0.5 rounded-full border border-emerald-500/30">
-                              ● Wallet Ready
-                            </span>
-                          </div>
-                          <p className="text-xs text-gray-300 mb-4 leading-relaxed">
-                            Confirm purchase instantly with Touch ID, Face ID, or your passcode via Apple Wallet.
-                          </p>
-                          <div className="bg-gray-900 rounded-xl p-3 mb-4 text-xs space-y-1.5 border border-gray-800">
-                            <div className="flex justify-between text-gray-400">
-                              <span>Merchant:</span>
-                              <span className="text-white font-medium">{BRAND_CONFIG.name} Australia</span>
-                            </div>
-                            <div className="flex justify-between text-gray-400">
-                              <span>Payment Pass:</span>
-                              <span className="text-white font-medium">Apple Pay (Default Card)</span>
-                            </div>
-                          </div>
-                          <button
-                            type="button"
-                            onClick={handlePlaceOrder}
-                            disabled={isProcessingOrder}
-                            className="w-full bg-white text-black py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-gray-100 transition-all flex items-center justify-center gap-2 shadow-lg cursor-pointer"
-                          >
-                            {isProcessingOrder ? (
-                              <>
-                                <div className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
-                                <span>Authenticating Apple Pay...</span>
-                              </>
-                            ) : (
-                              <>
-                                <span className="text-base"></span>
-                                <span>Pay with Apple Pay ({formatPrice(totalPrice)})</span>
-                              </>
-                            )}
-                          </button>
-                        </div>
-                        <p className="text-[11px] text-gray-500 flex items-center gap-1.5">
-                          <span>🛡️</span>
-                          <span>Express encrypted transaction. Australia Secure Gateway tokenized.</span>
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Option 3: Credit / Debit Card (Visa, Mastercard, Amex) */}
-                <div className="mb-6">
-                  <div
                     onClick={() => setPaymentType('card')}
-                    className={`cursor-pointer rounded-2xl p-4 border-2 transition-all ${
-                      paymentType === 'card' ? 'border-[#d3a95d] bg-[#faf6ed]/30' : 'border-gray-200'
+                    className={`cursor-pointer rounded-2xl p-5 border-2 transition-all ${
+                      paymentType === 'card' ? 'border-[#d3a95d] bg-[#faf6ed]/30' : 'border-gray-200 hover:border-gray-300'
                     }`}
                   >
                     <div className="flex items-center justify-between">
@@ -868,7 +1082,10 @@ export default function CheckoutPage() {
                           onChange={() => setPaymentType('card')}
                           className="w-4 h-4 text-[#d3a95d]"
                         />
-                        <span className="font-bold text-sm text-black">Credit / Debit Card</span>
+                        <div>
+                          <span className="font-bold text-sm text-black block">Credit / Debit Card</span>
+                          <span className="text-[11px] text-gray-500">Visa, Mastercard, American Express</span>
+                        </div>
                       </div>
                       <div className="flex items-center gap-1.5 text-xs font-bold">
                         <span className="px-1.5 py-0.5 bg-blue-900 text-white rounded text-[10px]">VISA</span>
@@ -878,84 +1095,54 @@ export default function CheckoutPage() {
                     </div>
 
                     {paymentType === 'card' && (
-                      <div className="mt-4 space-y-4 pl-7" onClick={(e) => e.stopPropagation()}>
+                      <div className="mt-4 pt-4 border-t border-gray-100 text-xs text-gray-600 space-y-3">
+                        <p className="leading-relaxed text-[11px]">
+                          You will be directed to Stripe&apos;s 256-bit bank encrypted terminal to complete your transaction in Australian Dollars (AUD).
+                        </p>
+                        <div className="flex flex-wrap gap-3 text-[11px] text-gray-500">
+                          <span className="flex items-center gap-1">🔒 3D Secure Verification</span>
+                          <span className="flex items-center gap-1">🇦🇺 Billed in AUD</span>
+                          <span className="flex items-center gap-1">📦 Australia Post Delivery</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Option 2: Apple Pay & Google Pay (1-Touch Express) */}
+                <div className="mb-6">
+                  <div
+                    onClick={() => setPaymentType('applepay')}
+                    className={`cursor-pointer rounded-2xl p-5 border-2 transition-all ${
+                      paymentType === 'applepay' ? 'border-[#d3a95d] bg-[#faf6ed]/30' : 'border-gray-200 hover:border-gray-300'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <input
+                          type="radio"
+                          name="paymentOption"
+                          checked={paymentType === 'applepay'}
+                          onChange={() => setPaymentType('applepay')}
+                          className="w-4 h-4 text-[#d3a95d]"
+                        />
                         <div>
-                          <label className="text-[11px] uppercase tracking-wider font-bold text-gray-500 block mb-1">
-                            Cardholder Name
-                          </label>
-                          <input
-                            type="text"
-                            value={cardName}
-                            onChange={(e) => setCardName(e.target.value)}
-                            placeholder="Name as it appears on card"
-                            autoComplete="cc-name"
-                            className={inputClass}
-                          />
-                        </div>
-
-                        <div>
-                          <label className="text-[11px] uppercase tracking-wider font-bold text-gray-500 block mb-1">
-                            Card Number
-                          </label>
-                          {/*
-                            `inputMode="numeric"` gives the number pad instead of a
-                            full keyboard, and the `cc-*` autocomplete tokens are what
-                            let a phone offer a saved or camera-scanned card at all.
-                          */}
-                          <input
-                            type="text"
-                            value={cardNumber}
-                            onChange={(e) => setCardNumber(e.target.value)}
-                            placeholder="4532 •••• •••• 4242"
-                            inputMode="numeric"
-                            autoComplete="cc-number"
-                            className={`${inputClass} tracking-widest font-mono`}
-                          />
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          <div>
-                            <label className="text-[11px] uppercase tracking-wider font-bold text-gray-500 block mb-1">
-                              Expiry Date
-                            </label>
-                            <input
-                              type="text"
-                              value={cardExpiry}
-                              onChange={(e) => setCardExpiry(e.target.value)}
-                              placeholder="MM/YY"
-                              inputMode="numeric"
-                              autoComplete="cc-exp"
-                              className={`${inputClass} font-mono`}
-                            />
+                          <div className="flex items-center gap-2">
+                            <span className="font-bold text-sm text-black">Apple Pay &amp; Google Pay</span>
+                            <span className="px-2 py-0.5 bg-black text-white text-[10px] font-bold rounded"> Pay</span>
+                            <span className="px-2 py-0.5 bg-gray-100 text-gray-800 text-[10px] font-bold rounded border border-gray-300">G Pay</span>
                           </div>
-                          <div>
-                            <label className="text-[11px] uppercase tracking-wider font-bold text-gray-500 block mb-1">
-                              CVC Security Code
-                            </label>
-                            <input
-                              type="text"
-                              value={cardCvc}
-                              onChange={(e) => setCardCvc(e.target.value)}
-                              placeholder="123"
-                              inputMode="numeric"
-                              autoComplete="cc-csc"
-                              className={`${inputClass} font-mono`}
-                            />
-                          </div>
+                          <span className="text-[11px] text-gray-500">Instant 1-touch biometric checkout</span>
                         </div>
+                      </div>
+                      <span className="text-xs text-gray-400 font-semibold">1-Touch Express</span>
+                    </div>
 
-                        <div className="flex items-center gap-2">
-                          <input
-                            type="checkbox"
-                            id="saveCardCheck"
-                            checked={saveCardForFuture}
-                            onChange={(e) => setSaveCardForFuture(e.target.checked)}
-                            className="w-4 h-4 text-[#d3a95d] rounded"
-                          />
-                          <label htmlFor="saveCardCheck" className="text-xs text-gray-600 cursor-pointer">
-                            Save card securely for future purchases
-                          </label>
-                        </div>
+                    {paymentType === 'applepay' && (
+                      <div className="mt-4 pt-4 border-t border-gray-100 text-xs text-gray-600 space-y-3">
+                        <p className="leading-relaxed text-[11px]">
+                          Available on supported devices via Safari or Chrome. Seamlessly authenticates with Face ID, Touch ID, or Google Wallet.
+                        </p>
                       </div>
                     )}
                   </div>
@@ -963,19 +1150,37 @@ export default function CheckoutPage() {
 
                 {/* Place Order & Pay Button */}
                 <button
-                  onClick={handlePlaceOrder}
+                  type="button"
+                  onClick={handleProceedToStripe}
                   disabled={isProcessingOrder}
-                  className="w-full bg-black text-white py-4 uppercase tracking-[0.2em] text-xs font-bold hover:bg-[#d3a95d] hover:text-black transition-colors rounded-xl shadow-xl flex items-center justify-center gap-2"
+                  className="w-full bg-black text-white py-4 uppercase tracking-[0.2em] text-xs font-bold hover:bg-[#d3a95d] hover:text-black transition-colors rounded-xl shadow-xl flex items-center justify-center gap-2 cursor-pointer"
                 >
                   {isProcessingOrder ? (
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      <span>Authorizing Australian Payment...</span>
+                      <span>Connecting to Stripe Australia...</span>
+                    </div>
+                  ) : paymentType === 'applepay' ? (
+                    <div className="flex items-center gap-2">
+                      <span className="text-base"></span>
+                      <span>PAY WITH APPLE PAY / STRIPE ({formatPrice(totalPrice)})</span>
                     </div>
                   ) : (
-                    <span>CONFIRM &amp; PLACE ORDER ({formatPrice(totalPrice)})</span>
+                    <div className="flex items-center gap-2">
+                      <span>🔒</span>
+                      <span>PAY SECURELY WITH STRIPE ({formatPrice(totalPrice)})</span>
+                    </div>
                   )}
                 </button>
+
+                {/* Reassurance Footer */}
+                <div className="mt-4 text-center">
+                  <p className="text-[11px] text-gray-400 flex items-center justify-center gap-2">
+                    <span>🛡️ Australian Consumer Law Compliant</span>
+                    <span>•</span>
+                    <span>100% Free Remake Guarantee</span>
+                  </p>
+                </div>
               </motion.div>
             )}
           </div>
@@ -987,35 +1192,64 @@ export default function CheckoutPage() {
 
               {/* Items List */}
               <div className="divide-y divide-gray-100 max-h-64 overflow-y-auto mb-6 pr-2">
-                {cartItems.map((item, idx) => (
-                  <div key={idx} className="py-3 flex items-center gap-4">
-                    <div className="w-14 h-16 bg-gray-100 rounded-lg overflow-hidden relative shrink-0">
-                      <Image
-                        src={item.product.images[0] || '/products/placeholder.webp'}
-                        alt={item.product.name}
-                        fill
-                        className="object-cover"
-                      />
+                {cartItems.map((item, idx) => {
+                  const itemUnitPrice = (item.customPrice ?? item.product.price) + (item.giftBox ? 9.95 : 0);
+                  return (
+                    <div key={idx} className="py-3 flex items-start gap-4">
+                      <div className="w-14 h-16 bg-gray-100 rounded-lg overflow-hidden relative shrink-0">
+                        <Image
+                          src={item.product.images[0] || '/products/placeholder.webp'}
+                          alt={item.product.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-xs font-bold text-black truncate">{item.product.name}</p>
+                        {item.customText ? (
+                          <div className="text-[11px] text-gray-600 mt-0.5 space-y-0.5">
+                            <p><strong className="text-black">Inscription:</strong> &ldquo;{item.customText}&rdquo;</p>
+                            {item.secondaryCustomText && (
+                              <p><strong className="text-black">2nd Name:</strong> &ldquo;{item.secondaryCustomText}&rdquo;</p>
+                            )}
+                            <p className="text-[10px] text-gray-400 font-mono">
+                              {item.script ?? 'English'} • {item.chainLength ?? item.selectedSize} • {item.selectedColor}
+                            </p>
+                            {item.giftBox && (
+                              <p className="text-[10px] text-emerald-700 font-semibold">🎁 Luxury Velvet Gift Box</p>
+                            )}
+                          </div>
+                        ) : (
+                          <p className="text-[11px] text-gray-500">Size: {item.selectedSize} • Qty: {item.quantity}</p>
+                        )}
+                        {item.customImage && (
+                          <div className="mt-1">
+                            <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                              📷 Custom Photo Attached
+                            </span>
+                          </div>
+                        )}
+                        <p className="text-xs font-serif font-bold text-[#d3a95d] mt-1">
+                          {formatPrice(itemUnitPrice * item.quantity)}
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs font-bold text-black truncate">{item.product.name}</p>
-                      <p className="text-[11px] text-gray-500">Size: {item.selectedSize} • Qty: {item.quantity}</p>
-                      <p className="text-xs font-serif font-bold text-[#d3a95d] mt-0.5">
-                        {formatPrice(item.product.price * item.quantity)}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
               {/* Delivery Destination Badge */}
               <div className="bg-[#faf6ed] rounded-xl p-3 mb-6 flex items-center justify-between border border-[#e5d5b7]">
                 <div className="flex items-center gap-2 text-xs text-gray-700">
                   <span>✈️</span>
-                  <span className="font-semibold">Express Australia Shipping</span>
+                  <span className="font-semibold">
+                    {shippingPrice === 0
+                      ? 'Free tracked delivery — every order'
+                      : 'Australia Post tracked delivery'}
+                  </span>
                 </div>
                 <span className="text-[10px] bg-[#d3a95d] text-white px-2 py-0.5 rounded font-bold uppercase">
-                  FREE
+                  {shippingPrice === 0 ? 'FREE' : formatPrice(shippingPrice)}
                 </span>
               </div>
 
@@ -1023,11 +1257,13 @@ export default function CheckoutPage() {
               <div className="space-y-2 border-t border-gray-100 pt-4 text-xs">
                 <div className="flex justify-between text-gray-600">
                   <span>Subtotal</span>
-                  <span className="font-semibold">{formatPrice(totalPrice)}</span>
+                  <span className="font-semibold">{formatPrice(subtotalPrice)}</span>
                 </div>
                 <div className="flex justify-between text-gray-600">
-                  <span>Shipping (Australia Air Express)</span>
-                  <span className="font-semibold text-[#b8860b]">FREE</span>
+                  <span>Shipping (Australia Post Tracked)</span>
+                  <span className="font-semibold text-[#b8860b]">
+                    {shippingPrice === 0 ? 'FREE' : formatPrice(shippingPrice)}
+                  </span>
                 </div>
                 <div className="flex justify-between text-gray-600">
                   <span>GST / Import Taxes</span>

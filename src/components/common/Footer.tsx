@@ -53,14 +53,14 @@ export default function Footer() {
             </div>
 
             <p className="text-sm text-gray-300 font-light leading-relaxed">
-              Questions about custom necklace engravings, pet photo rendering, or an order on its way? Email us and our atelier team will answer.
+              Questions about a custom photo, a necklace, or an order on its way? Email us and our atelier team will answer.
             </p>
 
             <div className="space-y-3 text-sm text-gray-300 font-light">
               <div className="flex items-center gap-3 group">
                 <Mail className="w-4 h-4 text-[#d3a95d] shrink-0" />
-                <a href="mailto:graceandglame.au@gmail.com" className="hover:text-[#d3a95d] transition-colors">
-                  graceandglame.au@gmail.com
+                <a href="mailto:sales@graceglam.com.au" className="hover:text-[#d3a95d] transition-colors">
+                  sales@graceglam.com.au
                 </a>
               </div>
               <div className="flex items-center gap-3 group">
@@ -139,7 +139,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/atelier" className="text-gray-400 hover:text-[#d3a95d] transition-colors duration-200 block py-0.5">
-                  Fabric &amp; Craft
+                  Materials &amp; Craft
                 </Link>
               </li>
               <li>

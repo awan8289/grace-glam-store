@@ -10,6 +10,7 @@ const NAV = [
   { href: '/admin/products', label: 'Products', exact: false },
   { href: '/admin/categories', label: 'Categories', exact: false },
   { href: '/admin/customers', label: 'Customers', exact: false },
+  { href: '/admin/reports', label: 'Reports', exact: false },
   { href: '/admin/products/new', label: 'Add product', exact: true },
 ];
 

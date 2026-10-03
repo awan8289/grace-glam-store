@@ -43,7 +43,7 @@ export async function generateMetadata({
   if (category) {
     return {
       title: `${category} — Buy Online in Australia`,
-      description: `Shop ${category.toLowerCase()} from ${SITE.name}. Free shipping over A$150 to Australia and New Zealand, with 30-day returns.`,
+      description: `Shop ${category.toLowerCase()} from ${SITE.name}. Free delivery on every order across Australia.`,
       alternates: { canonical: `/shop?category=${encodeURIComponent(category)}` },
     };
   }
@@ -52,15 +52,15 @@ export async function generateMetadata({
     const label = TAG_LABELS[tag] ?? 'Shop';
     return {
       title: `${label} — Personalised Gifts & Name Necklaces Australia`,
-      description: `${label} at ${SITE.name}: handcrafted custom photo pet diamond paintings, personalised 18K gold name necklaces, and bespoke keepsake jewelry. Free express delivery over A$150.`,
+      description: `${label} at ${SITE.name}: necklaces, keepsake gifts and custom photo paintings. Free delivery on every order.`,
       alternates: { canonical: `/shop?tag=${tag}` },
     };
   }
 
   return {
-    title: 'Shop Custom Pet Diamond Paintings & Personalised Name Necklaces',
+    title: 'Shop Necklaces, Keepsake Gifts & Custom Photo Paintings',
     description:
-      'Browse the Grace & Glam bespoke collection: custom photo pet diamond painting kits, personalized 18K gold name necklaces, and engraved keepsake jewelry. Free express shipping over A$150.',
+      'Browse the Grace & Glam bespoke collection: necklaces, earrings, keepsake gift boxes and custom photo paintings. Free delivery on every order across Australia.',
     alternates: { canonical: '/shop' },
   };
 }
@@ -90,7 +90,21 @@ export default async function ShopPage({ searchParams }: { searchParams: SearchP
 
   const visible = products.filter((product) => {
     if (tag && !product.tags.includes(tag)) return false;
-    if (category && product.category !== category) return false;
+    if (category) {
+      if (category === "Women's Necklaces") {
+        if (
+          product.category !== "Women's Necklaces" &&
+          product.secondaryCategory !== "Women's Necklaces" &&
+          product.category !== "Heart Necklaces"
+        )
+          return false;
+      } else if (
+        product.category !== category &&
+        product.secondaryCategory !== category
+      ) {
+        return false;
+      }
+    }
     return true;
   });
 

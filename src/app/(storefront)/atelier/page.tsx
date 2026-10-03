@@ -5,7 +5,7 @@ import TheMaisonPortal from '@/components/maison/TheMaisonPortal';
 export const metadata: Metadata = {
   title: 'The Atelier — Precision Laser Engraving & 5D Diamond Art',
   description:
-    'Discover the Grace & Glam bespoke process: precision laser-cut 18K gold name pendants and custom photo pet diamond paintings crafted with museum-grade brilliance.',
+    'Discover the Grace & Glam bespoke process: how custom photo paintings and personalised gifts are made to order.',
   alternates: { canonical: '/atelier' },
 };
 

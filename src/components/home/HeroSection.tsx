@@ -20,7 +20,7 @@ const THUMB_BACKGROUNDS = [
 const MOBILE_VISIBLE = 3;
 const DESKTOP_VISIBLE = 5;
 
-const MOBILE_SPACING = 110;
+const MOBILE_SPACING = 105;
 const DESKTOP_SPACING = 240;
 
 /**
@@ -37,8 +37,8 @@ function slotFor(index: number, count: number, isMobile: boolean) {
 
   const scale = isMobile
     ? distance < 0.5
-      ? 1.08
-      : 0.86
+      ? 1
+      : 0.82
     : distance < 0.5
       ? 1.12
       : distance < 1.5
@@ -55,7 +55,15 @@ function slotFor(index: number, count: number, isMobile: boolean) {
   };
 }
 
-export default function HeroSection({ products }: { products: Product[] }) {
+export default function HeroSection({
+  products,
+  heroImages = {},
+}: {
+  products: Product[];
+  /** Transparent cut-outs keyed by product id; falls back to the product photo. */
+  heroImages?: Record<string, string>;
+}) {
+  const heroImage = (product: Product) => heroImages[product.id] ?? getPrimaryImage(product);
   const [startIndex, setStartIndex] = useState(0);
   const [showWhiteBg, setShowWhiteBg] = useState(false);
   const [hasIntroPlayed, setHasIntroPlayed] = useState(false);
@@ -250,8 +258,8 @@ export default function HeroSection({ products }: { products: Product[] }) {
                   href={`/product/${product.slug}`}
                   className={`relative flex items-center justify-center ${
                     isCenter
-                      ? 'w-[190px] h-[300px] sm:w-[230px] sm:h-[340px] md:w-[250px] md:h-[370px]'
-                      : 'w-[135px] h-[240px] sm:w-[170px] sm:h-[280px] md:w-[180px] md:h-[300px]'
+                      ? 'w-[150px] h-[220px] sm:w-[200px] sm:h-[290px] md:w-[250px] md:h-[370px]'
+                      : 'w-[100px] h-[160px] sm:w-[140px] sm:h-[220px] md:w-[180px] md:h-[300px]'
                   }`}
                   onClick={(event) => {
                     // Suppress the click that ends a drag.
@@ -260,7 +268,7 @@ export default function HeroSection({ products }: { products: Product[] }) {
                   draggable={false}
                 >
                   <Image
-                    src={getPrimaryImage(product)}
+                    src={heroImage(product)}
                     alt={product.name}
                     fill
                     priority={isCenter}
@@ -346,7 +354,7 @@ export default function HeroSection({ products }: { products: Product[] }) {
                     }}
                   >
                     <Image
-                      src={getPrimaryImage(product)}
+                      src={heroImage(product)}
                       alt={product.name}
                       fill
                       sizes="20vw"
@@ -394,9 +402,6 @@ export default function HeroSection({ products }: { products: Product[] }) {
                       <p className="font-bold tracking-tight truncate max-w-[80px] sm:max-w-[100px] md:max-w-[120px] text-xs md:text-sm leading-tight text-gray-900">
                         {product.name}
                       </p>
-                      <span className="flex items-center text-amber-500 text-[11px] mt-0.5 font-medium">
-                        ★ <span className="ml-1 text-gray-600 font-semibold">4.8</span>
-                      </span>
                     </div>
                     <span className="font-extrabold text-xs md:text-sm text-gray-900 bg-gray-100 px-2 py-0.5 md:px-2.5 md:py-1 rounded-md border border-gray-300/80 whitespace-nowrap shadow-sm">
                       {formatPrice(product.price)}

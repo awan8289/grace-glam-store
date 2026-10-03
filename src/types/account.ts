@@ -89,6 +89,16 @@ export interface OrderItem {
   color: string;
   /** Custom engraved or inscribed text (e.g. name for custom necklace) */
   customText?: string;
+  secondaryCustomText?: string;
+  /** URL of the photo the customer uploaded for custom artwork. */
+  customImage?: string;
+  /** What this unit cost us (supplier price + supplier shipping), captured when
+   *  the order was placed, so profit reports stay right if prices change later. */
+  unitCost?: number;
+  script?: 'English' | 'Arabic';
+  chainLength?: string;
+  giftBox?: boolean;
+  isBundle?: boolean;
 }
 
 /**
@@ -144,6 +154,22 @@ export interface Order {
   stockRestored?: boolean;
   /** Consolidated custom text for custom items in this order */
   customText?: string;
+  /** Real Stripe transaction identifier and session for payment verification */
+  stripePaymentId?: string;
+  stripeSessionId?: string;
+  /** Refunds issued through Stripe from the admin panel, newest last. */
+  refunds?: OrderRefund[];
+  /** Sum of `refunds`, in AUD. */
+  refundedAmount?: number;
   createdAt: string;
   updatedAt: string;
+}
+
+export interface OrderRefund {
+  /** Stripe refund id (re_…). */
+  id: string;
+  amount: number;
+  reason: string;
+  status: string;
+  createdAt: string;
 }

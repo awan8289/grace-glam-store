@@ -11,6 +11,11 @@ export interface ProductVariant {
   stock: number;
   /** Variant-specific gallery. Falls back to the product gallery when empty. */
   images: string[];
+  price?: number;
+  compareAtPrice?: number;
+  size?: string;
+  style?: string;
+  weight?: string;
 }
 
 /** A video asset attached to a product, uploaded through the admin panel. */
@@ -39,6 +44,7 @@ export interface Product {
   /** Struck-through reference price. */
   compareAtPrice?: number;
   category: string;
+  secondaryCategory?: string;
   /** Base gallery, used when a variant carries no imagery of its own. */
   images: string[];
   video?: ProductVideo | null;
@@ -53,6 +59,12 @@ export interface Product {
   status: ProductStatus;
   createdAt: string;
   updatedAt: string;
+  sku?: string;
+  weight?: string;
+  baseCost?: number;
+  shippingCost?: number;
+  requiresCustomText?: boolean;
+  requiresPhotoUpload?: boolean;
 }
 
 export interface CartItem {
@@ -60,6 +72,14 @@ export interface CartItem {
   selectedSize: string;
   selectedColor: string;
   quantity: number;
+  customText?: string;
+  secondaryCustomText?: string;
+  customImage?: string;
+  script?: 'English' | 'Arabic';
+  chainLength?: string;
+  giftBox?: boolean;
+  isBundle?: boolean;
+  customPrice?: number;
 }
 
 export interface Category {
@@ -127,9 +147,13 @@ export function getAllImages(product: Product): string[] {
 
 /** Gallery to show for a given variant, falling back to the base gallery. */
 export function getVariantImages(product: Product, variantId?: string): string[] {
+  const baseImages = product.images.length > 0 ? product.images : getAllImages(product);
   const variant = product.variants.find((v) => v.id === variantId);
-  if (variant && variant.images.length > 0) return variant.images;
-  return product.images.length > 0 ? product.images : getAllImages(product);
+  if (variant && variant.images.length > 0) {
+    const otherImages = baseImages.filter((img) => !variant.images.includes(img));
+    return [...variant.images, ...otherImages];
+  }
+  return baseImages;
 }
 
 export function getPrimaryImage(product: Product): string {

@@ -215,7 +215,7 @@ export default function ProductForm({
                   type="text"
                   value={form.name}
                   onChange={(event) => set('name', event.target.value)}
-                  placeholder="Personalised Gold Name Necklace"
+                  placeholder="Signature Royal Abaya"
                   required
                   className={fieldClass}
                 />
@@ -259,7 +259,7 @@ export default function ProductForm({
                   value={form.description}
                   onChange={(event) => set('description', event.target.value)}
                   rows={3}
-                  placeholder="Crafted with premium breathable fabric and hand-stitched detailing."
+                  placeholder="Crafted with certified 18K gold plating over 316L surgical stainless steel or 5D resin drills."
                   className="w-full rounded-md border border-[#e2e2df] bg-white px-3 py-2 text-[13px] leading-relaxed text-[#16161a] outline-none transition-colors focus:border-[#16161a]"
                 />
               </div>

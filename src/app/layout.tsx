@@ -18,16 +18,23 @@ const inter = Inter({
 });
 
 const DESCRIPTION =
-  'Bespoke custom keepsakes & personalized gifts Australia. Handcrafted Custom Photo Pet Diamond Paintings, Personalised 18K Gold Name Necklaces, and custom engraved jewelry. Free express delivery Australia & New Zealand.';
+  'Bespoke custom keepsakes & personalized gifts Australia. Necklaces, keepsake gift boxes and custom photo paintings. Free delivery on every order, Australia-wide.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: `${SITE.name} | Custom Photo Pet Diamond Painting & Personalised Gold Name Necklaces`,
+    default: `${SITE.name} | Necklaces, Keepsake Gifts & Custom Photo Paintings Australia`,
     template: `%s | ${SITE.name}`,
   },
   description: DESCRIPTION,
+  keywords: [
+    'Custom Photo Painting Australia',
+    'Necklaces Australia',
+    'Keepsake Gift Boxes Australia',
+    '5D Diamond Art Australia',
+    'Personalized Jewelry Sydney Melbourne Brisbane',
+  ],
   applicationName: SITE.name,
   authors: [{ name: SITE.name, url: SITE_URL }],
   creator: SITE.name,
@@ -44,14 +51,16 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     locale: SITE.locale,
     url: SITE_URL,
-    title: `${SITE.name} | Custom Photo Pet Diamond Painting & Personalised Gold Name Necklaces`,
+    title: `${SITE.name} | Necklaces, Keepsake Gifts & Custom Photo Paintings`,
     description: DESCRIPTION,
+    images: [{ url: '/brand/og-default.jpg', width: 1200, height: 630, alt: 'Grace & Glam' }],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE.name} | Custom Photo Pet Diamond Painting & Personalised Gold Name Necklaces`,
+    title: `${SITE.name} | Necklaces, Keepsake Gifts & Custom Photo Paintings`,
     description: DESCRIPTION,
+    images: ['/brand/og-default.jpg'],
   },
 
   robots: {

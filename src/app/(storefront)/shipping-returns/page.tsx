@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import TheMaisonPortal from '@/components/maison/TheMaisonPortal';
 
 export const metadata: Metadata = {
-  title: 'Shipping Policy — Australia & New Zealand',
+  title: 'Shipping Policy — Australia-Wide Tracked Delivery',
   description:
-    'Free standard shipping on Grace & Glam orders over A$150 to Australia and New Zealand. Orders processed in 1–2 business days, with tracking on every parcel.',
+    'Free tracked delivery on every Grace & Glam order across Australia — no minimum spend.',
   alternates: { canonical: '/shipping-returns' },
 };
 

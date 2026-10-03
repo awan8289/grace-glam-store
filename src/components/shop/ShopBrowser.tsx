@@ -50,7 +50,6 @@ export default function ShopBrowser({
   const selectedCategory =
     categoryChoice && categoryChoice.view === viewKey ? categoryChoice.value : initialCategory;
   const setSelectedCategory = (value: string | null) => setCategoryChoice({ view: viewKey, value });
-  const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [sort, setSort] = useState('featured');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
@@ -65,14 +64,25 @@ export default function ShopBrowser({
     };
   }, [isFilterOpen]);
 
-  const allSizes = [...new Set(products.flatMap((product) => product.sizes))];
-
   const filtered = (() => {
     const result = products.filter((product) => {
       if (product.price > maxPrice) return false;
-      if (selectedCategory && product.category !== selectedCategory) return false;
+      if (selectedCategory) {
+        if (selectedCategory === "Women's Necklaces") {
+          if (
+            product.category !== "Women's Necklaces" &&
+            product.secondaryCategory !== "Women's Necklaces" &&
+            product.category !== "Heart Necklaces"
+          )
+            return false;
+        } else if (
+          product.category !== selectedCategory &&
+          product.secondaryCategory !== selectedCategory
+        ) {
+          return false;
+        }
+      }
       if (activeTag && !product.tags.includes(activeTag)) return false;
-      if (selectedSize && !product.sizes.includes(selectedSize)) return false;
       return true;
     });
 
@@ -92,7 +102,7 @@ export default function ShopBrowser({
     const firstAvailable = product.variants.find((variant) => variant.stock > 0);
     addItem(
       product,
-      selectedSize ?? product.sizes[0] ?? 'One Size',
+      product.sizes[0] ?? 'One Size',
       firstAvailable?.colorName ?? product.variants[0]?.colorName ?? 'Default',
       1
     );
@@ -100,7 +110,6 @@ export default function ShopBrowser({
 
   const clearFilters = () => {
     setSelectedCategory(null);
-    setSelectedSize(null);
     setMaxPrice(null);
   };
 
@@ -185,30 +194,6 @@ export default function ShopBrowser({
               </Link>
             ))}
           </div>
-        </div>
-      </div>
-
-      <div className="border-t border-gray-100" />
-
-      {/* Size */}
-      <div>
-        <h2 className="text-[#d3a95d] font-bold text-base mb-4">Size</h2>
-        <div className="flex gap-2.5 flex-wrap">
-          {allSizes.map((size) => (
-            <button
-              key={size}
-              type="button"
-              onClick={() => setSelectedSize(selectedSize === size ? null : size)}
-              aria-pressed={selectedSize === size}
-              className={`border px-4 py-2 text-xs rounded-lg font-bold transition-all shadow-sm ${
-                selectedSize === size
-                  ? 'border-[#d3a95d] bg-black text-white'
-                  : 'border-gray-200 bg-white text-gray-600 hover:border-[#d3a95d] hover:text-black'
-              }`}
-            >
-              {size}
-            </button>
-          ))}
         </div>
       </div>
     </div>
@@ -336,26 +321,15 @@ export default function ShopBrowser({
             </div>
 
             {/* Active filter pills */}
-            {(selectedCategory || selectedSize) && (
+            {selectedCategory && (
               <div className="flex items-center gap-2 mb-6 flex-wrap">
-                {selectedCategory && (
-                  <button
-                    type="button"
-                    onClick={() => setSelectedCategory(null)}
-                    className="bg-black text-[#d3a95d] text-xs font-bold px-3 py-1 rounded-full"
-                  >
-                    {selectedCategory} ✕
-                  </button>
-                )}
-                {selectedSize && (
-                  <button
-                    type="button"
-                    onClick={() => setSelectedSize(null)}
-                    className="bg-black text-[#d3a95d] text-xs font-bold px-3 py-1 rounded-full"
-                  >
-                    Size {selectedSize} ✕
-                  </button>
-                )}
+                <button
+                  type="button"
+                  onClick={() => setSelectedCategory(null)}
+                  className="bg-black text-[#d3a95d] text-xs font-bold px-3 py-1 rounded-full"
+                >
+                  {selectedCategory} ✕
+                </button>
               </div>
             )}
 

@@ -156,7 +156,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ id:
           </div>
 
           <div style={{ fontSize: 22, color: '#7c7c85', marginTop: 40 }}>
-            Free shipping on orders over A$150
+            Free delivery on every order
           </div>
         </div>
       </div>

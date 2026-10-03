@@ -27,9 +27,6 @@ export const REVALIDATE_INTERVAL = {
 
 // Every entry must resolve to a real route
 export const NAV_LINKS = [
-  { name: 'Shop All', href: '/shop' },
-  { name: 'Name Necklaces', href: '/shop?category=Personalised%20Necklaces' },
-  { name: 'Pet Diamond Art', href: '/shop?category=Pet%20Diamond%20Paintings' },
+  { name: 'Shop', href: '/shop' },
   { name: 'The Maison', href: '/maison' },
-  { name: 'Bespoke Atelier', href: '/atelier' },
 ];

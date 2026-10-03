@@ -31,6 +31,11 @@ interface CartLine {
   size?: string;
   quantity?: number;
   customText?: string;
+  secondaryCustomText?: string;
+  script?: 'English' | 'Arabic';
+  chainLength?: string;
+  giftBox?: boolean;
+  isBundle?: boolean;
 }
 
 /**
@@ -41,105 +46,124 @@ interface CartLine {
  * client-supplied price would let anyone buy at any amount.
  */
 export async function POST(request: NextRequest) {
-  const customerId = await getCustomerId();
-  if (!customerId) return unauthorized();
+  // Admin-only manual order entry. Customers pay through Stripe; an order
+  // created here is unpaid, so it must never be reachable by a shopper.
+  if (!(await isAuthenticated())) return unauthorized();
 
-  const customer = await getCustomer(customerId);
-  if (!customer) return unauthorized();
-
-  let body: { items?: CartLine[]; addressId?: string; paymentMethod?: string };
   try {
-    body = await request.json();
-  } catch {
-    return Response.json({ error: 'Invalid request.' }, { status: 400 });
-  }
+    const customerId = await getCustomerId();
+    if (!customerId) return unauthorized();
 
-  const lines = Array.isArray(body.items) ? body.items : [];
-  if (lines.length === 0) {
-    return Response.json({ error: 'Your bag is empty.' }, { status: 400 });
-  }
+    const customer = await getCustomer(customerId);
+    if (!customer) return unauthorized();
 
-  const items: OrderItem[] = [];
-
-  for (const line of lines) {
-    const product = await getProduct(String(line.productId ?? ''));
-    if (!product || product.status !== 'active') {
-      return Response.json(
-        { error: `A product in your bag is no longer available.` },
-        { status: 409 }
-      );
+    let body: { items?: CartLine[]; addressId?: string; paymentMethod?: string };
+    try {
+      body = await request.json();
+    } catch {
+      return Response.json({ error: 'Invalid request body.' }, { status: 400 });
     }
 
-    // Floor, never round: a fractional quantity must not bill for more than asked.
-    const quantity = Math.max(1, Math.min(99, Math.floor(Number(line.quantity) || 1)));
-    const variant = product.variants.find((entry) => entry.id === line.variantId);
+    const lines = Array.isArray(body.items) ? body.items : [];
+    if (lines.length === 0) {
+      return Response.json({ error: 'Your bag is empty.' }, { status: 400 });
+    }
 
-    // Stock is NOT checked here on purpose. `reserveStock` inside placeOrder is
-    // the single authoritative check-and-take; a check at this point would be
-    // stale by the time the stock is actually taken.
-    const customText = line.customText ? String(line.customText).trim().slice(0, 50) : undefined;
+    const items: OrderItem[] = [];
 
-    items.push({
-      productId: product.id,
-      variantId: variant?.id,
-      name: product.name,
-      price: formatPrice(product.price),
-      unitPrice: product.price,
-      quantity,
-      image: getVariantImages(product, variant?.id)[0] ?? '/products/placeholder.webp',
-      size: String(line.size ?? product.sizes[0] ?? 'One Size'),
-      color: variant?.colorName ?? 'Default',
-      customText,
+    for (const line of lines) {
+      const product = await getProduct(String(line.productId ?? ''));
+      if (!product || product.status !== 'active') {
+        return Response.json(
+          { error: `A product in your bag is no longer available.` },
+          { status: 409 }
+        );
+      }
+
+      // Floor, never round: a fractional quantity must not bill for more than asked.
+      const quantity = Math.max(1, Math.min(99, Math.floor(Number(line.quantity) || 1)));
+      const variant = product.variants.find((entry) => entry.id === line.variantId);
+
+      const customText = line.customText ? String(line.customText).trim().slice(0, 50) : undefined;
+      const secondaryCustomText = line.secondaryCustomText ? String(line.secondaryCustomText).trim().slice(0, 50) : undefined;
+      const isBundle = Boolean(line.isBundle);
+      const giftBox = Boolean(line.giftBox);
+      const baseProductPrice = isBundle ? product.price * 1.8 : product.price;
+      const unitPrice = baseProductPrice + (giftBox ? 9.95 : 0);
+
+      items.push({
+        productId: product.id,
+        variantId: variant?.id ?? '',
+        name: product.name,
+        price: formatPrice(unitPrice),
+        unitPrice,
+        quantity,
+        image: getVariantImages(product, variant?.id)[0] ?? '/products/placeholder.webp',
+        size: String(line.size ?? product.sizes[0] ?? 'One Size'),
+        color: variant?.colorName ?? 'Default',
+        customText,
+        secondaryCustomText,
+        script: line.script === 'Arabic' ? 'Arabic' : 'English',
+        chainLength: line.chainLength ? String(line.chainLength) : undefined,
+        giftBox,
+        isBundle,
+      });
+    }
+
+    const address =
+      customer.addresses.find((entry) => entry.id === body.addressId) ??
+      customer.addresses.find((entry) => entry.isDefault) ??
+      customer.addresses[0];
+
+    if (!address) {
+      return Response.json({ error: 'Please add or select a delivery address first.' }, { status: 400 });
+    }
+
+    const primaryCustomText = items.find((it) => it.customText)?.customText;
+
+    const result = await placeOrder({
+      customer,
+      items,
+      shippingAddress: `${address.street}, ${address.city}, ${address.state} ${address.zipCode}, ${address.country}`,
+      shippingDetails: {
+        label: address.label ?? '',
+        fullName: address.fullName ?? customer.name,
+        phone: address.phone ?? customer.phone ?? '',
+        street: address.street ?? '',
+        city: address.city ?? '',
+        state: address.state ?? '',
+        zipCode: address.zipCode ?? '',
+        country: address.country ?? 'Australia',
+      },
+      paymentMethod: String(body.paymentMethod ?? 'Card').slice(0, 60),
+      customText: primaryCustomText,
     });
+
+    if (!result.ok) {
+      return Response.json({ error: result.error }, { status: 409 });
+    }
+
+    // Trigger post-purchase automated email (background, non-blocking)
+    sendOrderConfirmationEmail({
+      to: customer.email,
+      order: result.order,
+      customText: primaryCustomText,
+    }).catch((err) => console.error('Order email error:', err));
+
+    // Trigger CJ Dropshipping order dispatch (background, non-blocking)
+    pushOrderToCjDropshipping(result.order, primaryCustomText).catch((err) =>
+      console.error('CJ Dropshipping push error:', err)
+    );
+
+    // Stock changed, so the storefront's cached pages are now stale.
+    revalidatePath('/', 'layout');
+
+    return Response.json({ order: result.order }, { status: 201 });
+  } catch (error) {
+    console.error('Error placing order in /api/orders:', error);
+    return Response.json(
+      { error: error instanceof Error ? error.message : 'An unexpected error occurred while placing your order.' },
+      { status: 500 }
+    );
   }
-
-  const address =
-    customer.addresses.find((entry) => entry.id === body.addressId) ??
-    customer.addresses.find((entry) => entry.isDefault) ??
-    customer.addresses[0];
-
-  if (!address) {
-    return Response.json({ error: 'Add a delivery address first.' }, { status: 400 });
-  }
-
-  const primaryCustomText = items.find((it) => it.customText)?.customText;
-
-  const result = await placeOrder({
-    customer,
-    items,
-    shippingAddress: `${address.street}, ${address.city}, ${address.state} ${address.zipCode}, ${address.country}`,
-    shippingDetails: {
-      label: address.label ?? '',
-      fullName: address.fullName ?? customer.name,
-      phone: address.phone ?? customer.phone ?? '',
-      street: address.street,
-      city: address.city,
-      state: address.state,
-      zipCode: address.zipCode,
-      country: address.country,
-    },
-    paymentMethod: String(body.paymentMethod ?? 'Card').slice(0, 60),
-    customText: primaryCustomText,
-  });
-
-  if (!result.ok) {
-    return Response.json({ error: result.error }, { status: 409 });
-  }
-
-  // Trigger post-purchase automated email (background, non-blocking)
-  sendOrderConfirmationEmail({
-    to: customer.email,
-    order: result.order,
-    customText: primaryCustomText,
-  }).catch((err) => console.error('Order email error:', err));
-
-  // Trigger CJ Dropshipping order dispatch (background, non-blocking)
-  pushOrderToCjDropshipping(result.order, primaryCustomText).catch((err) =>
-    console.error('CJ Dropshipping push error:', err)
-  );
-
-  // Stock changed, so the storefront's cached pages are now stale.
-  revalidatePath('/', 'layout');
-
-  return Response.json({ order: result.order }, { status: 201 });
 }

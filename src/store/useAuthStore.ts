@@ -127,25 +127,11 @@ export const useAuthStore = create<AuthState>()((set, get) => ({
     }
   },
 
-  loginWithGoogle: async (profile) => {
-    try {
-      const response = await fetch('/api/account/google/mock', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(profile ?? {}),
-      });
-      const body = await response.json();
-
-      if (!response.ok) return { success: false, error: body.error ?? 'Google sign in failed.' };
-
-      await get().refresh();
-
-      pendingCallback?.();
-      pendingCallback = null;
-      return { success: true };
-    } catch {
-      return { success: false, error: 'Could not reach the server. Please try again.' };
+  loginWithGoogle: async () => {
+    if (typeof window !== 'undefined') {
+      window.location.href = '/api/account/google';
     }
+    return { success: true };
   },
 
   logout: async () => {

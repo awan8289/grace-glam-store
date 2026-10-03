@@ -165,7 +165,7 @@ export default function Header() {
         <div className="marquee-track" style={{ '--marquee-duration': '22s' } as React.CSSProperties}>
           {[...Array(8)].map((_, i) => (
             <span key={i} className="text-black text-[10px] font-bold uppercase tracking-[0.18em] whitespace-nowrap px-10">
-              ✈️ Free Shipping Over A$150 &nbsp;•&nbsp; Australia &amp; New Zealand &nbsp;•&nbsp; Shop Now
+              ✈️ Free Delivery on Every Order — No Minimum &nbsp;•&nbsp; Personalised Gifts &nbsp;•&nbsp; Secure Checkout
             </span>
           ))}
         </div>
@@ -191,26 +191,81 @@ export default function Header() {
             <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-[#d3a95d] flex items-center justify-center bg-[#111] transition-transform duration-300 group-hover:scale-105">
               <span className="text-[#d3a95d] font-serif font-bold text-xs md:text-sm tracking-tighter">G&amp;G</span>
             </div>
-            <span className="font-serif text-base md:text-lg tracking-[0.2em] text-[#d3a95d] font-bold group-hover:text-amber-300 transition-colors">
+            <span className="font-serif whitespace-nowrap text-base md:text-lg tracking-[0.2em] text-[#d3a95d] font-bold group-hover:text-amber-300 transition-colors">
               {BRAND_CONFIG.name}
             </span>
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <ul className="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-[0.15em] text-white">
-            <li><Link href="/" className="hover:text-[#d3a95d] cursor-pointer transition-colors">Home</Link></li>
-            <li><Link href="/shop" className="hover:text-[#d3a95d] cursor-pointer transition-colors">Shop</Link></li>
-            <li><Link href="/maison" className="hover:text-[#d3a95d] cursor-pointer transition-colors">The Maison</Link></li>
+          {/* Desktop Navigation — one link per thing we sell, so shoppers can go
+              straight to it. Category links use the shop's ?category= filter. */}
+          <ul className="hidden lg:flex items-center gap-0 xl:gap-1 text-[11px] xl:text-xs font-bold uppercase tracking-[0.14em] text-white">
+            <li>
+              <Link href="/shop?tag=new-arrivals" className="nav-link">
+                New In
+              </Link>
+            </li>
+            <li className="relative group">
+              <span tabIndex={0} className="nav-link inline-flex items-center gap-1 cursor-default">
+                Necklaces
+                <svg aria-hidden viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3 opacity-70 transition-transform group-hover:rotate-180">
+                  <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+                </svg>
+              </span>
+              <div className="invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50">
+                <ul className="min-w-[210px] rounded-xl border border-gray-800 bg-[#111] p-2 shadow-2xl normal-case tracking-normal">
+                  {[
+                    { label: "Women's Necklaces", category: "Women's Necklaces" },
+                    { label: 'Heart Necklaces', category: 'Heart Necklaces' },
+                    { label: "Men's Necklaces", category: "Men's Necklaces" },
+                  ].map((item) => (
+                    <li key={item.category}>
+                      <Link
+                        href={`/shop?category=${encodeURIComponent(item.category)}`}
+                        className="block rounded-lg px-4 py-2.5 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-[#d3a95d] transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+            <li>
+              <Link href={`/shop?category=${encodeURIComponent('Pearl Earrings')}`} className="nav-link">
+                Earrings
+              </Link>
+            </li>
+            <li>
+              <Link href={`/shop?category=${encodeURIComponent('Gift Keepsakes')}`} className="nav-link">
+                Gift Boxes
+              </Link>
+            </li>
+            <li>
+              <Link href={`/shop?category=${encodeURIComponent('Custom Photo Art')}`} className="nav-link text-[#d3a95d]">
+                Photo Art
+              </Link>
+            </li>
+            <li className="hidden xl:block">
+              <Link href={`/shop?category=${encodeURIComponent('Diamond Paintings')}`} className="nav-link">
+                Diamond Painting
+              </Link>
+            </li>
+            <li aria-hidden className="hidden 2xl:block mx-1 h-4 w-px bg-gray-700" />
+            <li className="hidden 2xl:block">
+              <Link href="/maison" className="nav-link text-gray-300">
+                About
+              </Link>
+            </li>
           </ul>
 
           {/* Right Section: Search & Icons */}
           <div className="flex items-center gap-3 md:gap-6">
             
             {/* Search Input Box - Desktop only */}
-            <div className="relative hidden md:block w-56 lg:w-64">
+            <div className="relative hidden md:block w-56 lg:w-40 xl:w-48 2xl:w-60">
               <input
                 type="text"
-                placeholder="Search necklaces, pet art..."
+                placeholder="Search necklaces, gifts, photo art..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onFocus={() => setIsSearchOpen(true)}
@@ -476,7 +531,7 @@ export default function Header() {
                 {cartItems.length === 0 ? (
                   <div className="text-center py-16 text-gray-500">
                     <p className="font-serif text-lg mb-2">Your shopping bag is empty</p>
-                    <p className="text-xs font-light mb-6">Discover our custom name necklaces and pet diamond paintings.</p>
+                    <p className="text-xs font-light mb-6">Discover our necklaces, keepsake gifts and custom photo art.</p>
                     <Link
                       href="/shop"
                       onClick={() => closeCart()}
@@ -486,42 +541,74 @@ export default function Header() {
                     </Link>
                   </div>
                 ) : (
-                  cartItems.map((item, idx) => (
-                    <div key={`cart-${item.product.id}-${item.selectedSize}-${item.selectedColor}-${idx}`} className="flex gap-4">
-                      <div className="relative w-24 h-32 bg-gray-50 border border-gray-100 rounded-md shrink-0 overflow-hidden">
-                        <Image src={item.product.images[0] || '/products/placeholder.webp'} alt={item.product.name} fill sizes="96px" className="object-contain" />
-                      </div>
-                      <div className="flex-1 flex flex-col justify-center">
-                        <h4 className="font-bold text-black text-sm">{item.product.name}</h4>
-                        <p className="text-gray-500 text-xs mt-1">Size: {item.selectedSize}</p>
-                        <div className="flex justify-between items-end mt-4">
-                          <div className="flex items-center border border-gray-200 rounded">
-                            <button 
-                              onClick={() => updateQuantity(item.product.id, item.selectedSize, item.selectedColor, item.quantity - 1)}
-                              className="flex h-10 w-10 items-center justify-center text-gray-500 hover:text-black"
-                            >
-                              -
-                            </button>
-                            <span className="px-2 text-sm">{item.quantity}</span>
-                            <button 
-                              onClick={() => updateQuantity(item.product.id, item.selectedSize, item.selectedColor, item.quantity + 1)}
-                              className="flex h-10 w-10 items-center justify-center text-gray-500 hover:text-black"
-                            >
-                              +
-                            </button>
-                          </div>
-                          <p className="text-[#d3a95d] font-bold text-sm">{formatPrice(item.product.price * item.quantity)}</p>
+                  cartItems.map((item, idx) => {
+                    const itemUnitPrice = (item.customPrice ?? item.product.price) + (item.giftBox ? 9.95 : 0);
+                    return (
+                      <div key={`cart-${item.product.id}-${item.selectedSize}-${item.selectedColor}-${item.customText ?? ''}-${idx}`} className="flex gap-4">
+                        <div className="relative w-24 h-32 bg-gray-50 border border-gray-100 rounded-md shrink-0 overflow-hidden">
+                          <Image src={item.product.images[0] || '/products/placeholder.webp'} alt={item.product.name} fill sizes="96px" className="object-contain" />
                         </div>
+                        <div className="flex-1 flex flex-col justify-center">
+                          <h4 className="font-bold text-black text-sm">{item.product.name}</h4>
+                          
+                          {item.customText ? (
+                            <div className="mt-1 space-y-0.5 text-xs text-gray-700 bg-amber-50/80 p-2 rounded-lg border border-amber-200/60">
+                              <p><span className="font-semibold text-black">Inscription:</span> &ldquo;{item.customText}&rdquo;</p>
+                              {item.secondaryCustomText && (
+                                <p><span className="font-semibold text-black">2nd Name:</span> &ldquo;{item.secondaryCustomText}&rdquo;</p>
+                              )}
+                              <p className="text-[10px] text-gray-500 font-mono">
+                                {item.script ?? 'English'} Script • {item.chainLength ?? item.selectedSize} • {item.selectedColor}
+                              </p>
+                              {item.giftBox && (
+                                <p className="text-[10px] text-emerald-700 font-semibold">🎁 Luxury Velvet Gift Box (+A$9.95)</p>
+                              )}
+                              {item.isBundle && (
+                                <p className="text-[10px] text-indigo-700 font-bold uppercase">✦ Two-Name Matching Bundle (20% OFF 2nd)</p>
+                              )}
+                            </div>
+                          ) : (
+                            <p className="text-gray-500 text-xs mt-1">Size: {item.selectedSize} • Color: {item.selectedColor}</p>
+                          )}
+
+                          {item.customImage && (
+                            <div className="mt-1.5 flex items-center gap-2 bg-amber-50/80 p-1.5 rounded-lg border border-amber-200/60">
+                              <div className="relative w-7 h-7 rounded border border-gray-200 overflow-hidden shrink-0">
+                                <Image src={item.customImage} alt="Custom uploaded photo" fill className="object-cover" />
+                              </div>
+                              <span className="text-[10px] font-semibold text-gray-800 truncate">📷 Photo Attached ✓</span>
+                            </div>
+                          )}
+
+                          <div className="flex justify-between items-end mt-3">
+                            <div className="flex items-center border border-gray-200 rounded">
+                              <button 
+                                onClick={() => updateQuantity(item.product.id, item.selectedSize, item.selectedColor, item.quantity - 1, item.customText, item.giftBox)}
+                                className="flex h-9 w-9 items-center justify-center text-gray-500 hover:text-black"
+                              >
+                                -
+                              </button>
+                              <span className="px-2 text-sm">{item.quantity}</span>
+                              <button 
+                                onClick={() => updateQuantity(item.product.id, item.selectedSize, item.selectedColor, item.quantity + 1, item.customText, item.giftBox)}
+                                className="flex h-9 w-9 items-center justify-center text-gray-500 hover:text-black"
+                              >
+                                +
+                              </button>
+                            </div>
+                            <p className="text-[#d3a95d] font-bold text-sm">{formatPrice(itemUnitPrice * item.quantity)}</p>
+                          </div>
+                        </div>
+                        <button 
+                          onClick={() => removeItem(item.product.id, item.selectedSize, item.selectedColor, item.customText, item.giftBox)}
+                          className="text-gray-400 hover:text-red-500 self-start mt-2"
+                          aria-label="Remove item"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
                       </div>
-                      <button 
-                        onClick={() => removeItem(item.product.id, item.selectedSize, item.selectedColor)}
-                        className="text-gray-400 hover:text-red-500 self-start mt-2"
-                        aria-label="Remove item"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
-                      </button>
-                    </div>
-                  ))
+                    );
+                  })
                 )}
               </div>
               
@@ -570,9 +657,16 @@ export default function Header() {
               {/* Nav Links */}
               <nav className="flex-1 px-4 py-6 space-y-1">
                 {[
-                  { href: '/', label: 'Home' },
-                  { href: '/shop', label: 'Shop' },
-                  { href: '/maison', label: 'The Maison' },
+                  { href: '/shop', label: 'Shop All' },
+                  { href: '/shop?tag=new-arrivals', label: 'New In' },
+                  { href: `/shop?category=${encodeURIComponent("Women's Necklaces")}`, label: "Women's Necklaces" },
+                  { href: `/shop?category=${encodeURIComponent('Heart Necklaces')}`, label: 'Heart Necklaces' },
+                  { href: `/shop?category=${encodeURIComponent("Men's Necklaces")}`, label: "Men's Necklaces" },
+                  { href: `/shop?category=${encodeURIComponent('Pearl Earrings')}`, label: 'Earrings' },
+                  { href: `/shop?category=${encodeURIComponent('Gift Keepsakes')}`, label: 'Gift Boxes' },
+                  { href: `/shop?category=${encodeURIComponent('Custom Photo Art')}`, label: 'Custom Photo Art' },
+                  { href: `/shop?category=${encodeURIComponent('Diamond Paintings')}`, label: 'Diamond Painting' },
+                  { href: '/maison', label: 'About Grace & Glam' },
                   { href: '/account', label: 'My Account' },
                 ].map((link) => (
                   <Link

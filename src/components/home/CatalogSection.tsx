@@ -86,7 +86,9 @@ export default function CatalogSection({
 
           <div
             className="marquee-track gap-6 px-6 md:px-12"
-            style={{ '--marquee-duration': '35s' } as React.CSSProperties}
+            // Speed scales with the number of cards (~7s per card), so adding
+            // products never makes the strip race. Lower = faster.
+            style={{ '--marquee-duration': `${Math.max(40, trending.length * 7)}s` } as React.CSSProperties}
           >
             {marquee.map((product, index) => (
               <div

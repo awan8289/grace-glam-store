@@ -92,34 +92,12 @@ function AuthPanel({ initialMode }: { initialMode: 'login' | 'signup' }) {
     }
   };
 
-  const handleGoogleClick = async () => {
+  const handleGoogleClick = () => {
     setError('');
     setSuccess('');
     setGoogleLoading(true);
-
-    if (googleConfigured) {
-      // Live Google Cloud OAuth redirect
-      // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- Full external OAuth redirect
-      window.location.href = '/api/account/google';
-      return;
-    }
-
-    // Direct verified Google sign-in
-    const googleEmail = email.trim() && email.includes('@') ? email.trim() : 'member.google@gmail.com';
-    const googleName = name.trim() || (email.split('@')[0] ? email.split('@')[0].replace(/[._-]/g, ' ') : 'Google Member');
-
-    const result = await loginWithGoogle({
-      email: googleEmail,
-      name: googleName,
-    });
-    setGoogleLoading(false);
-
-    if (!result.success) {
-      setError(result.error ?? 'Google sign-in failed. Please try again.');
-    } else {
-      setSuccess('Signed in with Google! ✨');
-      setTimeout(() => { reset(); closeAuthModal(); }, 1200);
-    }
+    // Live Google Cloud OAuth redirect
+    window.location.href = '/api/account/google';
   };
 
   return (

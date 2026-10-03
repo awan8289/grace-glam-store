@@ -1,5 +1,5 @@
 import { Product, ProductStatus, ProductVariant, InventoryStats, getTotalStock } from '@/types';
-import { SEED_PRODUCTS } from '@/lib/seed';
+import { SEED_PRODUCTS, PRODUCT_CATEGORIES } from '@/lib/seed';
 import { slugify } from '@/lib/format';
 import { createFirestoreStore } from '@/lib/firestore-store';
 
@@ -123,7 +123,18 @@ export async function listProducts(query: ProductQuery = {}): Promise<Product[]>
   }
 
   if (query.category) {
-    products = products.filter((p) => p.category === query.category);
+    if (query.category === "Women's Necklaces") {
+      products = products.filter(
+        (p) =>
+          p.category === "Women's Necklaces" ||
+          p.secondaryCategory === "Women's Necklaces" ||
+          p.category === "Heart Necklaces"
+      );
+    } else {
+      products = products.filter(
+        (p) => p.category === query.category || p.secondaryCategory === query.category
+      );
+    }
   }
 
   if (query.tag) {
@@ -431,5 +442,6 @@ export async function getInventoryStats(): Promise<InventoryStats> {
 
 export async function listCategories(): Promise<string[]> {
   const products = await readFile();
-  return [...new Set(products.map((p) => p.category))].sort();
+  const productCats = products.map((p) => p.category).filter(Boolean);
+  return [...new Set([...PRODUCT_CATEGORIES, ...productCats])].sort();
 }

@@ -67,15 +67,15 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
         </p>
 
         <p className={p}>
-          At Grace &amp; Glam, we specialize in two flagship bespoke creations: <strong>Custom Photo Pet Diamond Paintings</strong>, where your favourite pet photography is transformed into a sparkling 5D masterpiece, and <strong>Personalised 18K Gold Name Necklaces</strong>, precision laser-cut to showcase your name in timeless elegance.
+          At Grace &amp; Glam you&apos;ll find <strong>Custom Photo Paintings</strong>, where a favourite photo of your home, family or a special place becomes canvas wall art, alongside a curated range of necklaces, earrings and keepsake gift boxes.
         </p>
 
         <p className={p}>
-          Every order is treated as a unique commission. Our designers carefully review each custom name spelling and calibrate pet photo hues before our artisans begin engraving and canvas production.
+          Every custom photo order is checked by our team before it goes into production.
         </p>
 
         <p className={p}>
-          Our goal is simple: to deliver museum-grade personalized keepsakes that evoke joy every single day, backed by caring support and seamless delivery across Australia and New Zealand.
+          Our goal is simple: thoughtful gifts, honest descriptions, caring support and free delivery across Australia.
         </p>
 
         <div className="pt-6 border-t border-gray-100">
@@ -84,21 +84,20 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
             Bespoke. Meaningful. Uncompromising.
           </p>
           <p className={p}>
-            We believe true luxury is personal. A mass-produced piece can never hold the same heartbeat as a necklace bearing your child&apos;s name or diamond art capturing the eyes of a cherished pet.
+            We believe true luxury is personal. A gift means most when it carries a memory &mdash; like a painting of the place you call home.
           </p>
           <p className={p}>
-            Every Grace &amp; Glam commission combines high-grade materials with personal sentiment, ensuring your keepsake endures for years to come.
+            We choose every piece in our collection with gifting in mind.
           </p>
         </div>
 
         <div className="pt-6 border-t border-gray-100">
           <h3 className={h3}>The Grace &amp; Glam Promise</h3>
           <ul className={ul}>
-            <li>Certified 18K gold plated stainless steel &mdash; tarnish-resistant and hypoallergenic</li>
-            <li>5D high-definition resin diamond drills with vibrant colour matching</li>
-            <li>12-hour spelling &amp; photo modification grace period after checkout</li>
-            <li>Signature velvet gift packaging ready for presentation</li>
-            <li>Dedicated Australian client support via WhatsApp and Email</li>
+            <li>Free tracked delivery on every order, Australia-wide</li>
+            <li>12-hour window to change your photo after checkout</li>
+            <li>Damaged, faulty or not as described? We replace it or refund you</li>
+            <li>Support via WhatsApp and email</li>
           </ul>
 
           <div className="mt-8 p-6 bg-[#faf8f4] border border-[#e5d5b7] rounded-2xl text-center">
@@ -120,7 +119,7 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
             The Atelier
           </span>
           <h2 className={h2}>Crafting Your Keepsakes</h2>
-          <p className={subtitle}>Precision Laser Engraving &amp; 5D Diamond Rendition</p>
+          <p className={subtitle}>How your custom photo painting is made</p>
         </div>
 
         <p className={p}>
@@ -128,16 +127,9 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
         </p>
 
         <div className="space-y-4 pt-2">
-          <h3 className={h3}>1. Personalised 18K Gold Name Necklaces</h3>
+          <h3 className={h3}>Custom Photo Paintings</h3>
           <p className={p}>
-            Our custom necklaces are precision laser-cut from high-grade 316L surgical stainless steel and electroplated with certified 18K Gold, Sterling Silver, or Rose Gold. Every letter curve is polished by hand to prevent snagging and guarantee lasting shine that resists water, sweat, and daily wear.
-          </p>
-        </div>
-
-        <div className="space-y-4 pt-4 border-t border-gray-100">
-          <h3 className={h3}>2. Custom Photo Pet Diamond Painting Kits</h3>
-          <p className={p}>
-            Translating a photograph into diamond art requires expert colour calibration. Our artists review your pet photo, remove distracting noise, and generate high-density 5D poured-glue canvases with DMC-coded resin drills. Every kit includes 30% extra diamonds, ergonomic drill pens, wax, and precision trays.
+            Upload a photo on the product page, choose a canvas size, and we check it before it goes into production. Canvases ship rolled in a protective tube.
           </p>
         </div>
 
@@ -146,7 +138,7 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
             The Atelier Standard
           </p>
           <p className="font-serif text-2xl md:text-3xl text-black font-semibold">
-            Handcrafted with love. Built to last forever.
+            Your photo, made into something to keep.
           </p>
         </div>
       </div>
@@ -162,49 +154,49 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
             Our Distinction
           </span>
           <h2 className={h2}>Why Grace &amp; Glam?</h2>
-          <p className={subtitle}>Built on six pillars of personalized craftsmanship and trust</p>
+          <p className={subtitle}>What you can count on with every order</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
           <div className="p-6 bg-[#faf8f4] border border-gray-200/80 rounded-2xl space-y-2">
             <h4 className="font-serif text-xl font-bold text-black">1. Custom Photo Rendition</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Every pet diamond painting canvas is individually colour-calibrated to preserve pet facial details and expressive eyes.
+              Every customer photo is checked before production so the finished canvas looks its best.
             </p>
           </div>
 
           <div className="p-6 bg-[#faf8f4] border border-gray-200/80 rounded-2xl space-y-2">
-            <h4 className="font-serif text-xl font-bold text-black">2. Certified 18K Gold Plated</h4>
+            <h4 className="font-serif text-xl font-bold text-black">2. Free Delivery, Every Order</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Hypoallergenic 316L stainless steel dipped in certified 18K gold &mdash; shower-safe, skin-safe, and tarnish-free.
+              Tracked delivery anywhere in Australia, with no minimum spend and no delivery charges.
             </p>
           </div>
 
           <div className="p-6 bg-[#faf8f4] border border-gray-200/80 rounded-2xl space-y-2">
-            <h4 className="font-serif text-xl font-bold text-black">3. 12-Hour Spelling Grace Window</h4>
+            <h4 className="font-serif text-xl font-bold text-black">3. 12-Hour Photo Change Window</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Spotted a typo after paying? Reply to your order email within 12 hours for instant correction before engraving begins.
+              Want a different photo after paying? Reply to your order email within 12 hours and we will update it before production.
             </p>
           </div>
 
           <div className="p-6 bg-[#faf8f4] border border-gray-200/80 rounded-2xl space-y-2">
-            <h4 className="font-serif text-xl font-bold text-black">4. Complete Artist Toolkits</h4>
+            <h4 className="font-serif text-xl font-bold text-black">4. Secure Checkout</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
-              All diamond painting kits come with high-adhesion poured glue, premium trays, applicators, and 30% spare drills.
+              Pay by card, Apple Pay or Google Pay through Stripe. We never see or store your card number.
             </p>
           </div>
 
           <div className="p-6 bg-[#faf8f4] border border-gray-200/80 rounded-2xl space-y-2">
-            <h4 className="font-serif text-xl font-bold text-black">5. Keepsake Gift Packaging</h4>
+            <h4 className="font-serif text-xl font-bold text-black">5. Arrives As Described</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Every necklace arrives in a branded luxury gift box and velvet pouch, ready to bring tears of joy to whoever receives it.
+              If an item arrives damaged, faulty or not as described, send us a photo and we will replace it or refund you.
             </p>
           </div>
 
           <div className="p-6 bg-[#faf8f4] border border-gray-200/80 rounded-2xl space-y-2">
-            <h4 className="font-serif text-xl font-bold text-black">6. Dedicated Sydney Support</h4>
+            <h4 className="font-serif text-xl font-bold text-black">6. Real Support</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Direct access to our Australian atelier team via WhatsApp (+61 494 794 408) for custom sizing and photo advice.
+              Message us on WhatsApp (+61 494 794 408) or email for help with sizing, photos or your order.
             </p>
           </div>
         </div>
@@ -218,48 +210,38 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
       <div className="space-y-6 max-w-3xl">
         <div>
           <span className="text-xs uppercase tracking-[0.25em] text-[#d3a95d] font-bold block mb-2">
-            Delivery Information
+            Australia-Wide Delivery
           </span>
-          <h2 className={h2}>Shipping Information</h2>
+          <h2 className={h2}>Shipping &amp; Delivery</h2>
           <p className={subtitle}>
-            We want your Grace &amp; Glam order to reach you safely and conveniently.
+            Fast, secure, and fully tracked domestic delivery across Australia.
           </p>
         </div>
 
         <div>
-          <h3 className={h3}>Order Processing</h3>
+          <h3 className={h3}>Free Delivery on Every Order</h3>
           <p className={p}>
-            Orders are carefully prepared and dispatched within our stated processing timeframe (1&ndash;2 business days).
+            Delivery is <strong>free on every order</strong> anywhere in Australia — no minimum spend and no delivery charges.
           </p>
           <p className={p}>
-            Once your order has been shipped, you will receive tracking information where available.
-          </p>
-        </div>
-
-        <div className="pt-4 border-t border-gray-100">
-          <h3 className={h3}>Delivery</h3>
-          <p className={p}>
-            Delivery times may vary depending on your location, shipping method, courier, and
-            circumstances outside our control.
-          </p>
-          <p className={p}>
-            Please ensure your shipping address is correct before completing your order.
+            Every order is dispatched with an official Australia Post tracking number sent straight to your email and SMS.
           </p>
         </div>
 
         <div className="pt-4 border-t border-gray-100">
-          <h3 className={h3}>Express Shipping</h3>
+          <h3 className={h3}>Bespoke Crafting &amp; Dispatch Timeline</h3>
           <p className={p}>
-            Where express shipping is available, the estimated delivery timeframe and shipping cost
-            will be displayed at checkout.
+            Because each personalized gold necklace is individually laser-cut and each photo canvas is made to order, production takes 5&ndash;7 business days before dispatch.
+          </p>
+          <p className={p}>
+            Once dispatched, standard delivery across NSW, VIC, QLD, WA, SA, TAS, and NT typically arrives within 3&ndash;7 business days.
           </p>
         </div>
 
         <div className="pt-4 border-t border-gray-100">
-          <h3 className={h3}>Delayed or Lost Orders</h3>
+          <h3 className={h3}>Address Changes &amp; Inquiries</h3>
           <p className={p}>
-            If your order appears to be delayed or has not arrived within the expected timeframe,
-            please contact our customer service team with your order details so we can assist you.
+            You have a 12-hour grace period after placing your order to amend your shipping address or correct name spellings. For urgent updates, message our Australian team directly on WhatsApp (+61 494 794 408).
           </p>
         </div>
       </div>
@@ -272,43 +254,52 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
       <div className="space-y-6 max-w-3xl">
         <div>
           <span className="text-xs uppercase tracking-[0.25em] text-[#d3a95d] font-bold block mb-2">
-            Returns &amp; Exchanges
+            Returns &amp; Guarantee Policy
           </span>
-          <h2 className={h2}>Returns &amp; Exchanges</h2>
-          <p className={subtitle}>We want you to love your Grace &amp; Glam purchase.</p>
+          <h2 className={h2}>Refund &amp; Returns Policy</h2>
+          <p className={subtitle}>Transparent, honest policies complying with the Australian Consumer Law.</p>
         </div>
 
         <p className={p}>
-          Our returns policy explains the conditions and process for returning or exchanging eligible
-          products.
-        </p>
-        <p className={p}>
-          Please contact us before sending an item back so that we can guide you through the correct
-          process.
+          Every Grace &amp; Glam piece &mdash; from our necklaces to custom photo paintings &mdash; is individually crafted to order according to your personal specifications.
         </p>
 
         <div className="pt-4 border-t border-gray-100">
-          <h3 className={h3}>Personalized &amp; Custom Items Policy</h3>
+          <h3 className={h3}>Change of Mind Policy (Made-to-Order &amp; Personalised Goods)</h3>
           <p className={p}>
-            Because personalized name necklaces and custom photo pet diamond paintings are custom-crafted specifically for you, they enter production promptly after our 12-hour modification grace period.
-          </p>
-          <p className={p}>
-            You may request spelling changes, pet photo replacements, or order cancellations within 12 hours of placing your order. Once bespoke production or laser-cutting begins, custom items cannot be cancelled or returned for change-of-mind.
+            In accordance with the <strong>Australian Consumer Law (ACL)</strong>, because each piece is uniquely personalized and custom-manufactured specifically for you, <strong>personalised and made-to-order items cannot be returned or refunded for change of mind</strong> once crafting has begun.
           </p>
         </div>
 
         <div className="pt-4 border-t border-gray-100">
-          <h3 className={h3}>Faulty or Incorrect Items</h3>
+          <h3 className={h3}>Order Cancellation &amp; Modification Window</h3>
           <p className={p}>
-            If your item arrives faulty, damaged, or different from what you ordered, please contact
-            us as soon as possible with your order number and photographs where appropriate.
+            We provide a strict <strong>12-hour grace window</strong> immediately following your order confirmation:
           </p>
+          <ul className={ul}>
+            <li><strong>Within 12 hours:</strong> You may cancel your order for a 100% full refund, amend your shipping address, or modify your custom text, inscription font, or photo upload with zero fees.</li>
+            <li><strong>After 12 hours:</strong> Laser cutting, metal electroplating, and custom drill canvas printing commence. Once production has started, cancellations or change of mind returns cannot be accepted.</li>
+          </ul>
         </div>
 
         <div className="pt-4 border-t border-gray-100">
-          <h3 className={h3}>Australian Consumer Law</h3>
+          <h3 className={h3}>Spelling Mistakes &amp; Customer Inscription Errors</h3>
           <p className={p}>
-            Your rights under the Australian Consumer Law are not affected by our store return policy.
+            We know mistakes can happen. Here is how we handle spelling discrepancies:
+          </p>
+          <ul className={ul}>
+            <li><strong>Workshop or Production Error:</strong> If the engraved name, script, or canvas rendering differs in any way from the text you submitted at checkout, we will immediately rush a <strong>100% free remake</strong> at our expense, or provide a full immediate refund. You will never be asked to return the faulty item.</li>
+            <li><strong>Customer-Submitted Typo:</strong> If you notice an error in the name you provided after our 12-hour grace period has elapsed, please reach out to us immediately. While we cannot offer a full refund for customer typos, we understand how important the gift is and will provide a heavily subsidized remake at direct workshop cost (up to 50% discount).</li>
+          </ul>
+        </div>
+
+        <div className="pt-4 border-t border-gray-100">
+          <h3 className={h3}>Faulty, Damaged, or Misdescribed Items (ACL Consumer Guarantees)</h3>
+          <p className={p}>
+            Our goods come with guarantees that cannot be excluded under the Australian Consumer Law. You are entitled to a replacement or refund for a major failure and compensation for any other reasonably foreseeable loss or damage. You are also entitled to have the goods repaired or replaced if the goods fail to be of acceptable quality and the failure does not amount to a major failure.
+          </p>
+          <p className={p}>
+            If your piece arrives with a broken clasp, transit damage, tarnishing, or defective resin drills, simply contact our Sydney team with your order number and a clear photo via WhatsApp (<strong>+61 494 794 408</strong>) or email (<strong>graceandglame.au@gmail.com</strong>) within 30 days of arrival.
           </p>
         </div>
       </div>
@@ -470,22 +461,22 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
           </span>
           <h2 className={h2}>We’d Love to Hear From You</h2>
           <p className={subtitle}>
-            Have a question about a necklace, your order, shipping, or returns?
+            Have a question about a product, your custom photo painting, delivery, or returns?
           </p>
         </div>
 
         <p className={p}>
-          Our team is here to help you find the perfect piece and assist with any inquiries.
+          Our Australian team is here to guide your custom commission and assist with any inquiries.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
           <div className="p-6 bg-[#faf8f4] border border-gray-200 rounded-2xl">
             <p className="text-xs uppercase tracking-widest text-[#d3a95d] font-bold mb-1">Email</p>
             <a
-              href="mailto:graceandglame.au@gmail.com"
+              href="mailto:sales@graceglam.com.au"
               className="text-black font-semibold text-sm sm:text-base hover:text-[#d3a95d] transition-colors break-all"
             >
-              graceandglame.au@gmail.com
+              sales@graceglam.com.au
             </a>
           </div>
 
@@ -510,8 +501,8 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
         <div className="pt-6 border-t border-gray-100">
           <h3 className={h3}>Follow Grace &amp; Glam</h3>
           <p className={p}>
-            Follow us on social media for new collections, styling inspiration, and Grace &amp; Glam
-            updates.
+            Follow us on social media for new bespoke drops, customer commissions, and Grace &amp; Glam
+            atelier updates.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <a

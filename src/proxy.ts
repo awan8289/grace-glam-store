@@ -39,7 +39,10 @@ export default function proxy(request: NextRequest) {
     pathname.startsWith('/api/upload') ||
     (pathname.startsWith('/api/products') && isMutation) ||
     (pathname.startsWith('/api/categories') && isMutation) ||
-    (pathname === '/api/orders' && !isMutation) ||
+    // Orders are only ever created by a verified Stripe payment
+    // (/api/webhooks/stripe or /api/checkout/verify). A POST here would place
+    // an unpaid order and push it to CJ, so the whole route is admin-only.
+    pathname === '/api/orders' ||
     (pathname.startsWith('/api/orders/') && isMutation) ||
     pathname.startsWith('/api/customers');
 

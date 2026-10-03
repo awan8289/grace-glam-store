@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 const features = [
   {
     id: 1,
-    title: "Free Shipping Over A$150",
-    desc: "To Australia and New Zealand.",
+    title: "Free Delivery, Every Order",
+    desc: "Australia-wide tracked delivery. No minimum spend.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
         <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
@@ -44,8 +44,8 @@ const features = [
   },
   {
     id: 5,
-    title: "18K Gold & 5D Drills",
-    desc: "Crafted with certified 18K gold plated stainless steel and high-definition resin diamond drills for lasting brilliance.",
+    title: "Made From Your Photo",
+    desc: "Custom photo paintings are made to order from the picture you upload, and we check every photo before production.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
@@ -64,8 +64,8 @@ const features = [
   },
   {
     id: 7,
-    title: "Personalization Guidance",
-    desc: "Questions about your pet photo or custom necklace inscription? WhatsApp +61 494 794 408 or email graceandglame.au@gmail.com.",
+    title: "Need Help Choosing?",
+    desc: "Questions about a product, your photo upload or an order? WhatsApp +61 494 794 408 or email graceandglame.au@gmail.com.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
@@ -74,8 +74,8 @@ const features = [
   },
   {
     id: 8,
-    title: "Keepsake Gift Packaging",
-    desc: "Delivered in signature keepsake gift boxes with velvet pouches, perfectly prepared for gifting.",
+    title: "Ready to Gift",
+    desc: "Rose boxes, LED domes and jewellery chosen for birthdays, anniversaries and Mother's Day.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 19.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0-2.625V7.5m-9 0h18v2.25H3V7.5Z" />
@@ -87,15 +87,15 @@ const features = [
 const EXPECTATIONS = [
   {
     title: 'Bespoke Production & Shipping',
-    body: 'Custom necklaces and photo diamond painting kits are precision crafted within 2–4 business days. Free tracked shipping on orders over A$150 across Australia & New Zealand.',
+    body: 'Custom photo paintings are made to order after you upload your photo. Free tracked delivery on every order across Australia.',
   },
   {
     title: '12-Hour Modification Window',
-    body: 'Changed your mind on spelling or want a different pet photo? Reply to your confirmation email within 12 hours of placing your order for instant updates.',
+    body: 'Want to use a different photo? Reply to your confirmation email within 12 hours of placing your order and we will update it.',
   },
   {
-    title: 'Artisanal Quality Guarantee',
-    body: 'Diamond painting kits arrive with HD canvas, full toolkits, and 30% extra drills. Name necklaces are guaranteed tarnish-resistant, hypoallergenic, and crafted with genuine 18K gold plating.',
+    title: 'Arrives As Described',
+    body: 'If anything arrives damaged, faulty or not as described, message us with a photo and we will replace it or refund you.',
   },
 ];
 
@@ -125,7 +125,7 @@ export default function BrandStoryReviews() {
             Where Memories Turn Into <span className="text-[#b8860b]">Timeless Treasures</span>
           </h2>
           <p className="text-gray-600 text-sm md:text-base leading-relaxed font-light">
-            Welcome to Grace &amp; Glam, an Australian bespoke atelier dedicated to celebrating your deepest connections. From custom 5D diamond paintings meticulously rendered from your pet&apos;s photo to personalized 18K gold engraved name necklaces, every piece is individually handcrafted to hold meaning that lasts forever.
+            Welcome to Grace &amp; Glam, an Australian bespoke atelier dedicated to celebrating your deepest connections. From custom canvas art made from your own photos to necklaces and keepsake gift boxes, every piece is chosen to hold meaning that lasts.
           </p>
         </motion.div>
 
