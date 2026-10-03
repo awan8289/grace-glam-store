@@ -108,6 +108,18 @@ export async function POST(request: NextRequest) {
       // Charge the selected variant's price (e.g. a larger canvas size), not
       // the product's base price.
       const variant = resolveVariant(product, line.variantId, line.size);
+      // Same rules reserveStock applies after payment; checking them here stops
+      // a shopper being charged for an order that cannot then be created.
+      if (product.variants.length > 0 && !variant) {
+        return Response.json({ error: `Please choose a colour for "${product.name}".` }, { status: 400 });
+      }
+      const available = variant ? variant.stock : product.stock;
+      if (available < quantity) {
+        return Response.json(
+          { error: available > 0 ? `Only ${available} left of "${product.name}".` : `"${product.name}" is out of stock.` },
+          { status: 409 }
+        );
+      }
       const unitPrice = unitPriceFor(product, variant, { isBundle, giftBox });
       const customImage = sanitizeCustomImageUrl(line.customImage);
       if (product.requiresPhotoUpload && !customImage) {

@@ -2230,8 +2230,7 @@ export const SEED_PRODUCTS: Product[] = [
       "50x60cm"
     ],
     "images": [
-      "/products/cj-diamond-cross-1.png",
-      "/products/cj-diamond-cross-2.jpg"
+      "/products/cj-diamond-cross-1.png"
     ],
     "variants": [
       {
@@ -2350,8 +2349,7 @@ export const SEED_PRODUCTS: Product[] = [
       "60x80cm"
     ],
     "images": [
-      "/products/cj-diamond-rosa-rosen-1.jpg",
-      "/products/cj-diamond-rosa-rosen-2.jpg"
+      "/products/cj-diamond-rosa-rosen-1.jpg"
     ],
     "variants": [
       {
@@ -4015,8 +4013,7 @@ export const SEED_PRODUCTS: Product[] = [
       "50x50cm"
     ],
     "images": [
-      "/products/cj-diamond-3d-scenic-1.jpg",
-      "/products/cj-diamond-3d-scenic-2.jpg"
+      "/products/cj-diamond-3d-scenic-1.jpg"
     ],
     "variants": [
       {
