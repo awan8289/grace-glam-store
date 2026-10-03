@@ -77,6 +77,35 @@ shop after a green deploy means missing Firebase variables, not a broken build.
 Never prefix a server-side secret with `NEXT_PUBLIC_`; that ships it to the
 browser. Never commit a `*-firebase-adminsdk-*.json` service-account key.
 
+## Products live in Firestore, not in the repo
+
+The live catalogue is the Firestore `products` collection. `data/products.json`
+and `src/lib/seed.ts` only seed an *empty* collection, so editing them and
+pushing changes nothing on the site. That has already caused one "I added the
+products but they are not there".
+
+- **New product:** put its photos in `public/products/` (commit them), add the
+  product to `data/products.json` with the next free numeric `id`, run
+  `node scripts/sync-seed.mjs`, then typecheck/lint/build and push. Once the
+  deploy is live (the photo URL returns 200), write it to Firestore:
+  `node scripts/upsert-products.mjs <id>` (dry run), then add `--apply`. The
+  script reads the three `FIREBASE_*` values from a local `.env.local`, which is
+  never committed.
+- **Edit, hide or delete an existing product:** use `/admin/products`. Hide it
+  by setting status to Draft. Do not re-upsert an existing product from the
+  JSON: that overwrites every admin edit to it (only stock is kept).
+- **Never use the image upload button in the admin panel.** It saves to
+  `public/uploads/` on the server's disk, which every deploy wipes, so the
+  photos break on the next push. Photos go through `public/products/` in git.
+- Each colour variant's `sku` is the CJ variant SKU; orders cannot be sent to
+  CJ without it. Copy it from CJ exactly.
+
+Copy rules, because the shop sells in Australia under Australian Consumer Law:
+no supplier names (CJ, CJPacket, China, Yiwu) in any customer-facing text; no
+"18K", "925/S925 sterling", "hypoallergenic", "tarnish-free" or "waterproof"
+unless the supplier has given proof; no `compareAtPrice` unless the product
+genuinely sold at that price before.
+
 ## Before you push
 
 ```bash
