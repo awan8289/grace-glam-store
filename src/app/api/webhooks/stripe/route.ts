@@ -14,7 +14,7 @@ export const runtime = 'nodejs';
  * non-2xx answer, so infrastructure errors return 500 on purpose.
  *
  * Setup (Stripe dashboard → Developers → Webhooks → Add endpoint):
- *   URL:    https://graceandglam.com.au/api/webhooks/stripe
+ *   URL:    https://graceandglame.com/api/webhooks/stripe
  *   Events: checkout.session.completed
  *           checkout.session.async_payment_succeeded
  * Copy the endpoint's signing secret (whsec_…) into STRIPE_WEBHOOK_SECRET.

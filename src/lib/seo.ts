@@ -10,7 +10,7 @@ import { Product, getAllImages, getDiscountPercent, getTotalStock } from '@/type
  * NEXT_PUBLIC_SITE_URL in the deployment environment.
  */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://graceandglam.com.au'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://graceandglame.com'
 ).replace(/\/$/, '');
 
 interface PostalAddress {
@@ -29,7 +29,7 @@ export const SITE = {
   language: 'en-AU',
   country: 'AU',
   currency: BRAND_CONFIG.currency,
-  email: 'sales@graceglam.com.au',
+  email: 'graceandglame.au@gmail.com',
   // No street address or phone until real ones exist. The placeholders that
   // were here ("72 Luxury Boulevard, Suite 4B" and a made-up 1800 number) were
   // being published in the Organization JSON-LD, where a false address is the

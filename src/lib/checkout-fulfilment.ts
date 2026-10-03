@@ -144,7 +144,7 @@ async function resolveCustomer(session: Stripe.Checkout.Session): Promise<Public
       session.customer_details?.email ||
       session.metadata?.customerEmail ||
       session.customer_email ||
-      'customer@graceandglam.com.au',
+      'customer@graceandglame.com',
     avatar: 'GG',
     addresses: [],
     savedCards: [],

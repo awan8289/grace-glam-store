@@ -473,10 +473,10 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
           <div className="p-6 bg-[#faf8f4] border border-gray-200 rounded-2xl">
             <p className="text-xs uppercase tracking-widest text-[#d3a95d] font-bold mb-1">Email</p>
             <a
-              href="mailto:sales@graceglam.com.au"
+              href="mailto:graceandglame.au@gmail.com"
               className="text-black font-semibold text-sm sm:text-base hover:text-[#d3a95d] transition-colors break-all"
             >
-              sales@graceglam.com.au
+              graceandglame.au@gmail.com
             </a>
           </div>
 

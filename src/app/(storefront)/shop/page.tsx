@@ -58,7 +58,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: 'Shop Necklaces, Keepsake Gifts & Custom Photo Paintings',
+    title: 'Shop Necklaces, Earrings & Keepsake Gifts',
     description:
       'Browse the Grace & Glam bespoke collection: necklaces, earrings, keepsake gift boxes and custom photo paintings. Free delivery on every order across Australia.',
     alternates: { canonical: '/shop' },
