@@ -309,7 +309,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Dimensions: 150 x 150 x 190 mm (Weight: ~581g)",
       "Materials: Composite acrylic display, velvet lining, preserved floral botanicals",
       "A memorable keepsake for Mother's Day, anniversaries, and romantic milestones",
-      "Free Tracked Delivery across Australia (CJPacket Eub Special Line)"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "mothers-day",
@@ -399,7 +399,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Necklace: 18K Gold-Plated with sparkling cubic zirconia crystal",
       "Style options: Boxes and necklaces, Box, Necklace",
       "Ideal for: Valentine's Day, anniversaries, birthdays, romantic surprises",
-      "Free Tracked Delivery across Australia (CJPacket Eub)"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "gift-keepsake",
@@ -604,7 +604,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Drawer: Bottom pop-up jewelry display compartment for rings and necklaces",
       "Dimensions: 100 x 100 x 120 mm (Weight: ~225g)",
       "Available colors & sets: Red, Pink, Blue, Lake Blue, White, Black, Deluxe Sets",
-      "Tracked Delivery to Australia via CJPacket Eub Special Line"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "gift-keepsake",
@@ -750,7 +750,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Process: Half-handmade artisan floral arrangement",
       "Dimensions: ~25 x 20 x 15 cm (Weight: 230g)",
       "Uses: Wedding bridal bouquet, bridesmaid gifts, birthday decor, romantic keepsake",
-      "Free Tracked Delivery across Australia via CJPacket Eub"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "gift-keepsake",
@@ -824,7 +824,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Colors & Pricing: Gold Tone (A$8.45), Silver Tone (A$8.40)",
       "Chain Length: 51cm - 80cm adjustable clavicle fit",
       "Closure: Secure lobster claw clasp with extension",
-      "Tracked Delivery to Australia via CJPacket Eub"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "heart-necklace",
@@ -912,7 +912,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Colors: Ruby Red, Diamond White, Scarlet Love Heart",
       "Chain: 45cm fine link chain with lobster clasp",
       "Hypoallergenic: Nickel-free and lead-free alloy",
-      "Tracked Delivery to Australia via CJPacket Eub"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "heart-necklace",
@@ -1014,7 +1014,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Variants & Pricing: Gold Crown (A$8.25), Silver Crown (A$8.25), White Heart (A$8.65), Angel Wings (A$9.45)",
       "Chain Length: 45cm + 5cm extension",
       "Material: Lead-free and nickel-free vintage jewelry alloy",
-      "Tracked Delivery to Australia via CJPacket Eub"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "heart-necklace",
@@ -1102,7 +1102,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Chain Length: 45cm + 5cm extension",
       "Design: Twisted rope circular halo ring with hanging MOM charm",
       "Material: Hypoallergenic tarnish-resistant stainless steel",
-      "Delivery: Tracked Delivery across Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "mothers-day",
@@ -1157,7 +1157,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Stones: High-brilliance micro-pavé cubic zirconia crystals",
       "Finish: Shimmering rhodium silver plating",
       "Lengths: 38cm inner choker + 44cm outer drop with 5cm extension",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "butterfly-necklace",
@@ -1258,7 +1258,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Chain Type: Industrial welding link curb chain",
       "Variants: Cross Steel (A$12.70), Cross Gold (A$13.55), Double Steel (A$13.25), Double Gold (A$14.55)",
       "Gender: Unisex design for men & women",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "gothic-necklace",
@@ -1388,7 +1388,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Pendant Size: 3.6 x 3.6 cm wide filigree cage",
       "Chain Length: 45cm + 5cm extension",
       "Glow Colors: Sky Blue, Bluegreen, Yellow Green, Love Purple, Owl Blue",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "glow-in-the-dark",
@@ -1479,7 +1479,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Set Options: His Queen (A$12.35), Her King (A$12.35), Both Couple Set (A$15.65)",
       "Material: Premium polished titanium stainless steel (hypoallergenic)",
       "Chain: 50cm link chain with lobster clasp",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "couple-necklace",
@@ -1609,7 +1609,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Charms: Sculpted feather and leaf pendants with hanging chain tassels",
       "Finishes: Vintage Silver and Warm 18K Gold Tone",
       "Chain Length: 70cm + 7cm extension drop",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "bohemian",
@@ -1671,7 +1671,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Pearl: High-luster teardrop simulated freshwater pearls",
       "Stones: Pavé-set cubic zirconia crystal accents",
       "Finish: Platinum-tone tarnish-resistant rhodium plating",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "pearl-set",
@@ -1734,7 +1734,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Finish: Scratch-resistant PVD matte black plating",
       "Chain Length: 60cm + 5cm extension heavyweight box chain",
       "Waterproof, sweatproof, and hypoallergenic",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "mens-jewelry",
@@ -1808,7 +1808,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Colors: Polished Silver Steel, 18K Gold Finish (A$13.95 each)",
       "Length: 55cm standard collar drop (Weight: 75g)",
       "Closure: Heavy-duty reinforced lobster claw clasp",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "curb-chain",
@@ -1864,7 +1864,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Style: Concentric scalloped floral stud earrings",
       "Backing: Hypoallergenic post with secure butterfly friction back",
       "Dimensions: 18mm diameter (Weight: 7g)",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "pearl-earrings",
@@ -1918,7 +1918,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Finish: High-polish 18K gold electroplate",
       "Pearl: Plump round high-luster simulated freshwater pearl",
       "Weight: 30g substantial designer weight",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "pearl-earrings",
@@ -1972,7 +1972,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Center Stone: Simulated Mediterranean turquoise cabochon",
       "Dangles: Cascading high-shine pearl droplets",
       "Inspiration: Baroque royal court jewelry archive",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "pearl-earrings",
@@ -2026,7 +2026,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Center: 8mm lustrous button pearl",
       "Dimensions: 22mm x 22mm floral bloom profile",
       "Closure: Hypoallergenic post with soft-cushion comfort back",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "pearl-earrings",
@@ -2080,7 +2080,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Contrast Finish: Black vitreous enamel with platinum silver plating",
       "Pearl: High-luster teardrop baroque simulated pearl",
       "Drop Length: 42mm elegant shoulder-grazing drop",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "pearl-earrings",
@@ -2137,7 +2137,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Finish: French antique gold electroplated alloy",
       "Drop Length: 38mm elegant drop silhouette",
       "Closure: Hypoallergenic post with soft comfort back",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "pearl-earrings",
@@ -2192,7 +2192,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Pearl: High-luster dangling baroque pearl",
       "Weight: 30g substantial designer weight",
       "Closure: Hypoallergenic post with secure back",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "pearl-earrings",
@@ -2310,7 +2310,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Kit Includes: Color resin diamonds, point drill pen, adhesive wax, sorting tray",
       "Sizes: 20x25cm up to 50x60cm (select size above for exact price)",
       "Display: Suitable for standard picture framing or canvas stretching",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "diamond-paintings",
@@ -2443,7 +2443,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Drill Type: High-precision sparkling resin faceted gems",
       "Full Kit: Includes precision tweezers, diamond pen, grooved tray & wax",
       "Sizes: 20x20cm up to 60x80cm (select size for exact price)",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "diamond-paintings",
@@ -3976,7 +3976,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Canvas: Eco-friendly pour-glue adhesive canvas with ultra-crisp symbols",
       "7 Canvas Sizes Available: 25x25cm up to 80x80cm",
       "Full Accessory Kit Included: Drill pen, wax, multi-placer tool & sorting tray",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "diamond-paintings",
@@ -4079,7 +4079,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Colors: High-contrast rich color palette with colorfast diamonds",
       "Sizes: 25x25cm up to 50x50cm (select size for exact price)",
       "Included: Ergonomic grip stylus pen, wax cube, and gem tray",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "diamond-paintings",
@@ -4218,7 +4218,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Pendant Motif: Norse Berserker Bear Paw Amulet of Courage & Protection",
       "Chain Lengths: 50cm (20\"), 60cm (24\"), 70cm (28\") Heavy Wheat Chain",
       "Clasp: Secure stainless steel lobster claw clasp",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "mens-necklaces",
@@ -4624,7 +4624,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Finishing: Antique blackened oxidized contrast with brushed steel",
       "Chain Included: Sturdy matching stainless steel curb chain with lobster clasp",
       "Amulet Themes: Mjolnir, Valknut, Celtic Tree, Fenrir Wolf, Jormungand, Raven & Runes",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "mens-necklaces",
@@ -4711,7 +4711,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Core Metal: Hypoallergenic tarnish-resistant jeweler's brass alloy",
       "Wearability: Wear solo for minimalist luxury or layer with pendants",
       "Closure: Reinforced high-security lobster clasp",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "mens-necklaces",
@@ -4873,7 +4873,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Lighting: Integrated micro fairy LED lights creating a warm ambient glow",
       "Base Options: Natural polished grain wood base or contemporary matte black base",
       "Longevity: Preserved florals maintain vibrant color and soft touch for 3-5+ years",
-      "Tracked Delivery to Australia via CJPacket Eub Special Line"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "gift-keepsakes",
@@ -5006,7 +5006,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Pendant Finish: Platinum-tone rhodium electroplated alloy with cubic crystal accents",
       "Chain: 45cm + 5cm extension matching cable chain with lobster clasp",
       "Hypoallergenic: Lead-free, nickel-free, skin-friendly daily wear",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "heart-necklaces",
@@ -5063,7 +5063,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Material: Hypoallergenic Solid Titanium Steel with Gunmetal PVD Plating",
       "Chain: 60cm heavy stainless steel curb chain with reinforced clasp",
       "Finish: Hand-distressed oxidized black matte with high-polish metallic highlights",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "mens-necklaces",
@@ -5149,7 +5149,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Pendant: Intricate sculpted Phantom Mask with piercing cutouts",
       "Material: Premium 316L Titanium Steel (hypoallergenic & sweat-proof)",
       "Chain: 55cm stainless steel box link chain with durable spring ring",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "mens-necklaces",
@@ -5220,7 +5220,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Motif: Intertwining Celtic branches and roots (Yggdrasil World Tree)",
       "Material: Marine-grade 316L Stainless Steel (scratch & water proof)",
       "Chain: 60cm matching steel link chain with heavy-duty lobster clasp",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "mens-necklaces",
@@ -5348,7 +5348,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Material: Heavyweight Zinc Alloy & Titanium Steel with Antiqued Patina",
       "Chain Options: Heavy Byzantine/Keel Steel Chain or Braided Waterproof Cord (60cm)",
       "Weight: 65g substantial artisan weight and feel",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "mens-necklaces",
@@ -5434,7 +5434,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Material: Heavyweight 316L Surgical Titanium Steel (hypoallergenic & tarnish-proof)",
       "Finishes Available: Brushed Antique Silver, Obsidian Matte Black, and 18K Yellow Gold",
       "Chain: 60cm matching link chain with high-security clasp",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "mens-necklaces",
@@ -5533,7 +5533,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Chain: 45cm high-polish fluid snake bone clavicle chain + 5cm extender",
       "Material: Hypoallergenic copper core with triple electroplated anti-tarnish coating",
       "Finish Options: 18K Yellow Gold or Luminous Rhodium Silver",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "womens-necklaces",
@@ -5620,7 +5620,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Material: Corrosion-resistant premium metal alloy with mirror-shine electroplate",
       "Chain: 45cm fine link chain with lobster claw closure + extension link",
       "Finish Options: 18K Gold, Platinum Silver, and Warm Rose Gold",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "womens-necklaces",
@@ -5677,7 +5677,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Center Gem: Iridescent optical synthetic Moonstone with ethereal blue-white glow",
       "Chain: 45cm fine link silver-toned chain with secure spring ring clasp",
       "Pendant Size: Approx. 22mm x 18mm",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "womens-necklaces",
@@ -5750,7 +5750,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Chain: 42cm delicate clavicle chain + 5cm extension link",
       "Material: Premium hypoallergenic metal alloy with mirror-finish electroplating",
       "Finish Options: 18K Yellow Gold and Platinum Silver",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "womens-necklaces",
@@ -5822,7 +5822,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Metal Quality: Certified solid 925 Sterling Silver hallmarked core",
       "Pendant Motif: Celtic Moon & Sun union with sparkling pavé micro-gem",
       "Chain: 45cm 925 sterling silver box chain with lobster clasp",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "womens-necklaces",
@@ -5895,7 +5895,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Stones: Pavé AAA micro-faceted cubic zirconia gems",
       "Chain: 45cm fine link chain with lobster clasp and extender",
       "Finish: Anti-tarnish platinum silver electroplating",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "womens-necklaces",
@@ -5983,7 +5983,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Material: Solid corrosion-proof 316L Stainless Steel",
       "Chains: Two stainless steel link chains (approx. 50cm each) with lobster clasps",
       "Finishes: High-polish Silver, Gunmetal Black, and 18K Yellow Gold",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "heart-necklaces",
@@ -6085,7 +6085,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Colors: Aquamarine Blue, Crystal Diamond White, Ruby Red, and Amethyst Purple",
       "Chain: 45cm fine gold-plated link chain with 5cm extender",
       "Gift Ready: Perfect gift for Valentine's Day, anniversaries, or birthdays",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "heart-necklaces",
@@ -6144,7 +6144,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Chain Style: Layered dual chain with ball-bead and link accents",
       "Material: Hypoallergenic anti-tarnish stainless alloy with antique finish",
       "Pendant Size: Approx. 38mm x 25mm",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "womens-necklaces",
@@ -6217,7 +6217,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Material: Hypoallergenic anti-tarnish alloy with high-polish luster",
       "Chain Length: 40cm inner chain + 45cm outer chain + 5cm extender",
       "Finish: Midnight Black enamel and dark faceted Austrian crystal",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "womens-necklaces",
@@ -6276,7 +6276,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Chain: Threaded metallic beadwork chain with secure spring clasp",
       "Length: 42cm + 5cm extension link",
       "Material: Hypoallergenic corrosion-resistant silver alloy",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "womens-necklaces",
@@ -6363,7 +6363,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Stones: Micro-pavé Austrian rhinestones in White, Sapphire Blue, and Amethyst",
       "Chain: 45cm fine link chain with lobster claw clasp + 5cm extender",
       "Material: Anti-tarnish premium electroplated metal alloy",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "womens-necklaces",
@@ -6436,7 +6436,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Colors: Pastel Lilac Purple and Sky Blue glossy electroplated enamel",
       "Chain: 45cm lightweight silver-toned chain with secure clasp",
       "Style: Whimsical cute cartoon fantasy aesthetic",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "womens-necklaces",
@@ -6496,7 +6496,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Motif: Double interlinked entwined hearts signifying eternal connection",
       "Stones: Micro-pavé set brilliant-cut Austrian rhinestones",
       "Chain: 45cm fine sterling silver cable chain with stamped clasp",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "heart-necklaces",
@@ -6585,7 +6585,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Pair Set: Includes 2 matching necklaces (one for each partner)",
       "Chains: Two durable chains (approx. 50cm each) with lobster claw clasps",
       "Material: Hypoallergenic anti-tarnish stainless alloy with antique finish",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "heart-necklaces",
@@ -6803,7 +6803,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Pendant Motif: Celestial crescent moon with filigree astral sphere cage",
       "Chain: 50cm durable silver-plated stainless link chain with lobster clasp",
       "Unisex Design: Thoughtfully sized for women and men alike",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "womens-necklaces",
@@ -6892,7 +6892,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Chain: 45cm fluid clavicle curb chain + 5cm extension tail",
       "Material: Premium electroplated anti-tarnish metal alloy",
       "Finish Options: High-polish Platinum Silver, Warm 18K Gold, and Matte Obsidian Black",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "heart-necklaces",
@@ -6994,7 +6994,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Cage Design: Antiqued silver Celtic scroll filigree sweetheart cage",
       "Colors: Cyan Blue-Green, Aqua Blue, Neon Green, and Warm Amber Orange",
       "Chain: 45cm fine link chain with lobster clasp",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "heart-necklaces",
@@ -7052,7 +7052,7 @@ export const SEED_PRODUCTS: Product[] = [
       "Mounting: 3-prong precision bezel with high-reflectance backplate",
       "Chain: 45cm fine link silver-plated chain + 5cm extension link",
       "Material: Hypoallergenic nickel-free copper-silver alloy",
-      "Tracked Delivery to Australia via CJPacket Super Pure Electricity"
+      "Free tracked delivery Australia-wide"
     ],
     "tags": [
       "heart-necklaces",

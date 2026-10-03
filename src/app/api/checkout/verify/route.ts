@@ -1,6 +1,7 @@
 import { NextRequest } from 'next/server';
 import { getStripe } from '@/lib/stripe';
 import { fulfilCheckoutSession } from '@/lib/checkout-fulfilment';
+import { getCustomerId } from '@/lib/auth';
 
 export const dynamic = 'force-dynamic';
 
@@ -21,6 +22,12 @@ export async function GET(request: NextRequest) {
     const result = await fulfilCheckoutSession(session);
 
     if (result.ok) {
+      // The session id travels in a URL; only the signed-in buyer gets the
+      // name, address and email back. Anyone else just learns it went through.
+      const owner = session.metadata?.customerId;
+      if (owner && owner !== 'guest' && owner !== (await getCustomerId())) {
+        return Response.json({ ok: true, orderId: result.order.id, alreadyProcessed: result.alreadyProcessed });
+      }
       return Response.json({ ok: true, order: result.order, alreadyProcessed: result.alreadyProcessed });
     }
     if (result.pending) {

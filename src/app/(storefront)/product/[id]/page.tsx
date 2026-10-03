@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getProduct, listStorefrontProducts } from '@/lib/products';
+import { getProduct, listStorefrontProducts, toPublicProduct } from '@/lib/products';
 import { getTotalStock } from '@/types';
 import {
   absoluteUrl,
@@ -98,7 +98,7 @@ export default async function DynamicProductDetailPage({ params }: Props) {
           ]),
         ]}
       />
-      <ProductDetailPage product={product} related={related} />
+      <ProductDetailPage product={toPublicProduct(product)} related={related} />
     </>
   );
 }

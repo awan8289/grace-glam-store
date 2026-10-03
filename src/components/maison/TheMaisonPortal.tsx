@@ -364,9 +364,28 @@ export default function TheMaisonPortal({ initialTab = 'about' }: TheMaisonPorta
             We may work with trusted third-party providers for services such as payment processing,
             delivery, analytics, website functionality, and marketing.
           </p>
+        </div>
+
+        <div className="pt-4 border-t border-gray-100">
+          <h3 className={h3}>Storage &amp; Overseas Disclosure</h3>
           <p className={p}>
-            For full details about how personal information is collected, used, stored, and disclosed,
-            please refer to our complete Privacy Policy.
+            Your account and order details are stored with our cloud database provider. Card payments
+            are handled by Stripe, so your full card number never reaches us. To deliver your order we
+            share your name, delivery address and phone number with our fulfilment and delivery
+            partners, some of whom are located outside Australia. Photos you upload for a custom piece
+            are used only to make that piece.
+          </p>
+        </div>
+
+        <div className="pt-4 border-t border-gray-100">
+          <h3 className={h3}>Access, Correction &amp; Deletion</h3>
+          <p className={p}>
+            You can update your name, phone and addresses in your account at any time. To get a copy of
+            the information we hold about you, correct it, or ask us to delete your account, email{' '}
+            <a href="mailto:graceandglame.au@gmail.com" className="underline">graceandglame.au@gmail.com</a>.
+            We may keep order records where the law requires us to. If you are unhappy with how we
+            handled a privacy request, you can contact the Office of the Australian Information
+            Commissioner (oaic.gov.au).
           </p>
         </div>
       </div>

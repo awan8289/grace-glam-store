@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server';
 import { revalidatePath } from 'next/cache';
 import { isAuthenticated, unauthorized } from '@/lib/auth';
-import { deleteProduct, getProduct, setStock, updateProduct } from '@/lib/products';
+import { deleteProduct, getProduct, setStock, toPublicProduct, updateProduct } from '@/lib/products';
 
 export const dynamic = 'force-dynamic';
 
@@ -18,11 +18,12 @@ export async function GET(_request: NextRequest, { params }: Context) {
   }
 
   // 404, not 403 — confirming a draft exists is itself the leak.
-  if (product.status !== 'active' && !(await isAuthenticated())) {
+  const admin = await isAuthenticated();
+  if (product.status !== 'active' && !admin) {
     return Response.json({ error: 'Product not found.' }, { status: 404 });
   }
 
-  return Response.json({ product });
+  return Response.json({ product: admin ? product : toPublicProduct(product) });
 }
 
 export async function PATCH(request: NextRequest, { params }: Context) {

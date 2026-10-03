@@ -187,11 +187,19 @@ export async function listProducts(query: ProductQuery = {}): Promise<Product[]>
   return products;
 }
 
+/** Supplier and shipping costs are admin-only; strip them before a product reaches a shopper. */
+export function toPublicProduct(product: Product): Product {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { baseCost, shippingCost, ...rest } = product;
+  return rest;
+}
+
 /** Storefront listing: active products only, oldest-first so the shop is stable. */
 export async function listStorefrontProducts(
   query: Omit<ProductQuery, 'status'> = {}
 ): Promise<Product[]> {
-  return listProducts({ ...query, status: 'active', sort: query.sort ?? 'oldest' });
+  const products = await listProducts({ ...query, status: 'active', sort: query.sort ?? 'oldest' });
+  return products.map(toPublicProduct);
 }
 
 /** Looks a product up by id first, then by slug. */

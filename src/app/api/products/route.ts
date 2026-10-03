@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server';
 import { revalidatePath } from 'next/cache';
 import { isAuthenticated, unauthorized } from '@/lib/auth';
-import { createProduct, listProducts, ProductQuery } from '@/lib/products';
+import { createProduct, listProducts, ProductQuery, toPublicProduct } from '@/lib/products';
 import { ProductStatus } from '@/types';
 
 /** Admin edits must show on the storefront immediately, so never cache reads. */
@@ -28,7 +28,8 @@ export async function GET(request: NextRequest) {
     sort: (params.get('sort') as ProductQuery['sort']) ?? undefined,
   };
 
-  const products = await listProducts(query);
+  const found = await listProducts(query);
+  const products = admin ? found : found.map(toPublicProduct);
   return Response.json({ products, count: products.length });
 }
 

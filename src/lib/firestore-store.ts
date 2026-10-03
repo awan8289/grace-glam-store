@@ -39,7 +39,7 @@ export function createFirestoreStore<T extends WithId>(
 
   // ── reads ──────────────────────────────────────────────────────────────────
 
-  async function read(): Promise<T[]> {
+  async function read(strict = false): Promise<T[]> {
     const now = Date.now();
     if (cache && now - cache.timestamp < CACHE_TTL_MS) {
       return cache.data;
@@ -64,13 +64,16 @@ export function createFirestoreStore<T extends WithId>(
       cache = { data, timestamp: now };
       return data;
     } catch (err) {
+      // A write built on the fallback would replace the real collection with
+      // the seed (or nothing), so writers get the error instead.
+      if (strict) throw err;
       console.warn(`[firestore-store] read('${collectionName}') warning: ${err instanceof Error ? err.message : err}. Falling back to cached or seed data.`);
       return cache?.data ?? seed;
     }
   }
 
   async function readForWrite(): Promise<T[]> {
-    return structuredClone(await read());
+    return structuredClone(await read(true));
   }
 
   // ── writes ─────────────────────────────────────────────────────────────────
@@ -79,22 +82,24 @@ export function createFirestoreStore<T extends WithId>(
     const db     = getDb();
     const colRef = db.collection(collectionName);
 
-    // 1. Delete every existing document (chunked to stay under 500-op limit).
-    const existing = await colRef.get();
-    for (const batch_docs of chunkArray(existing.docs, 400)) {
-      const batch = db.batch();
-      batch_docs.forEach((doc) => batch.delete(doc.ref));
-      await batch.commit();
-    }
-
-    // 2. Write new documents (use item.id as the Firestore doc ID).
+    // 1. Write first. Deleting first meant a failure part-way (a rejected
+    //    field, a dropped connection) left the collection empty — every
+    //    customer or order gone, and products silently re-seeded on next read.
     for (const batch_items of chunkArray(items, 400)) {
       const batch = db.batch();
       batch_items.forEach((item) => {
-        const docRef = colRef.doc(item.id);
-        const cleanItem = JSON.parse(JSON.stringify(item));
-        batch.set(docRef, cleanItem);
+        batch.set(colRef.doc(item.id), JSON.parse(JSON.stringify(item)));
       });
+      await batch.commit();
+    }
+
+    // 2. Only now remove documents that are no longer in the list.
+    const keep     = new Set(items.map((item) => item.id));
+    const existing = await colRef.get();
+    const stale    = existing.docs.filter((doc) => !keep.has(doc.id));
+    for (const batch_docs of chunkArray(stale, 400)) {
+      const batch = db.batch();
+      batch_docs.forEach((doc) => batch.delete(doc.ref));
       await batch.commit();
     }
     cache = { data: items, timestamp: Date.now() };
